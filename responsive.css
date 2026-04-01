@@ -1,0 +1,195 @@
+/* ===== GLOBAL MOBILE RESPONSIVE ===== */
+
+/* ===== HOME ===== */
+@media(max-width:768px){
+  .home-hero { flex-direction:column; padding:32px 16px 60px; gap:24px; }
+  .hero-text h1 { font-size:1.8rem; }
+  .hero-text p  { font-size:.9rem; }
+  .hero-img { width:100%; height:200px; }
+  .hero-stats { gap:12px; }
+  .hero-stat .hs-num { font-size:1.2rem; }
+  .stats-bar { grid-template-columns:repeat(2,1fr); }
+  .stat-item { padding:14px 12px; }
+  .stat-num  { font-size:1.1rem; }
+  .berita, .fitur, .harga { padding:24px 16px; }
+  .fitur-grid-static { grid-template-columns:repeat(2,1fr); gap:12px; }
+  .fitur-card { padding:20px 14px; }
+  .fitur-card .icon { font-size:2rem; }
+  .berita-card img { height:150px; }
+}
+@media(max-width:480px){
+  .fitur-grid-static { grid-template-columns:1fr; }
+  .stats-bar { grid-template-columns:repeat(2,1fr); }
+  .hero-btns { flex-direction:column; }
+  .hero-btn-primary, .hero-btn-secondary { width:100%; justify-content:center; }
+}
+
+/* ===== NAVBAR ===== */
+@media(max-width:860px){
+  header h1 { font-size:1rem; }
+  nav a { font-size:.82rem; padding:11px 14px; }
+}
+
+/* ===== MARKETPLACE ===== */
+@media(max-width:768px){
+  .mp-layout { grid-template-columns:1fr; }
+  .mp-sidebar { position:static; height:auto; border-right:none; border-bottom:2px solid #f0f0f0; flex-direction:row; flex-wrap:wrap; padding:12px; }
+  .mp-filter-card { flex:1; min-width:160px; padding:12px; border-bottom:none; }
+  .mp-main { padding:16px; }
+  .mp-grid { grid-template-columns:repeat(2,1fr); gap:12px; }
+  .mp-hero { padding:40px 16px 70px; }
+  .mp-hero h2 { font-size:1.7rem; }
+  .mp-search-bar input { font-size:.88rem; }
+}
+@media(max-width:400px){
+  .mp-grid { grid-template-columns:1fr; }
+}
+
+/* ===== FORUM ===== */
+@media(max-width:768px){
+  .forum-layout { grid-template-columns:1fr; }
+  .forum-sidebar { position:static; padding:16px; }
+  .forum-main { padding:16px 16px 16px 0; }
+  .forum-hero { padding:40px 16px 80px; }
+  .forum-hero h2 { font-size:1.7rem; }
+  .topik-card { padding:14px 16px; }
+  .topik-body h3 { font-size:.9rem; }
+  .topik-stats { gap:10px; font-size:.75rem; }
+}
+
+/* ===== BERITA ===== */
+@media(max-width:768px){
+  .berita-page-hero { padding:40px 16px 80px; }
+  .berita-page-hero h2 { font-size:1.7rem; }
+  .berita-main-grid { padding:16px; grid-template-columns:1fr; }
+  .berita-item-card.featured { grid-column:span 1; flex-direction:column; }
+  .berita-item-card.featured .card-img { width:100%; }
+  .berita-filter { padding:0 12px; }
+  .filter-btn { padding:14px 12px; font-size:.8rem; }
+}
+
+/* ===== DETAIL PRODUK ===== */
+@media(max-width:768px){
+  .detail-page { padding:16px 0 80px; }
+  .detail-breadcrumb { padding:16px 16px 0; }
+  .detail-wrapper { grid-template-columns:1fr; }
+  .detail-img-section { position:static; border-right:none; border-bottom:2px solid #f0f0f0; padding:16px; }
+  .detail-info-section { padding:16px; }
+  .detail-nama { font-size:1.3rem; }
+  .detail-harga { font-size:1.6rem; }
+  .ulasan-layout { grid-template-columns:1fr; }
+  .pu-stats { grid-template-columns:repeat(2,1fr); }
+}
+
+/* ===== PANDUAN ===== */
+@media(max-width:768px){
+  .panduan-container { grid-template-columns:1fr; margin-top:-20px; }
+  .kategori-list { position:static; }
+  .kategori-list ul { flex-direction:row; flex-wrap:wrap; gap:6px; }
+  .kategori-list ul li { padding:8px 12px; font-size:.82rem; }
+  .panduan-konten { padding:20px 16px; }
+  .tab-nav { width:100%; }
+  .tab-btn { flex:1; padding:10px 8px; font-size:.82rem; }
+  .panduan-hero { padding:40px 16px 80px; }
+}
+
+/* ===== PUPUK ===== */
+@media(max-width:768px){
+  .form-wrapper { padding:0 12px; }
+  .tanaman-grid { grid-template-columns:repeat(3,1fr); }
+  .rekomendasi-grid { grid-template-columns:repeat(2,1fr); }
+  .pupuk-hero { padding:40px 16px 80px; }
+}
+@media(max-width:400px){
+  .tanaman-grid { grid-template-columns:repeat(2,1fr); }
+  .rekomendasi-grid { grid-template-columns:1fr; }
+}
+
+/* ===== KEUANGAN ===== */
+@media(max-width:768px){
+  .keu-summary { grid-template-columns:repeat(2,1fr); gap:10px; }
+  .keu-content { grid-template-columns:1fr; }
+  .keu-form-section { position:static; }
+  .keu-hero { padding:40px 16px 80px; }
+  .form-row-2 { grid-template-columns:1fr; }
+  .table-header { flex-wrap:wrap; gap:8px; }
+}
+
+/* ===== AKUN ===== */
+@media(max-width:768px){
+  .akun-layout { grid-template-columns:1fr; }
+  .akun-sidebar { position:static; min-height:auto; border-right:none; border-bottom:2px solid #f0f0f0; padding:20px 16px; }
+  .akun-main { padding:16px; }
+  .akun-form { padding:20px 16px; }
+  .akun-hero { padding:40px 16px 80px; }
+  .checkbox-grid-akun { grid-template-columns:repeat(2,1fr); }
+}
+
+/* ===== HARGA PASAR ===== */
+@media(max-width:768px){
+  .hp-layout { grid-template-columns:1fr; }
+  .hp-hero { padding:40px 16px 100px; }
+  .hp-hero h2 { font-size:1.7rem; }
+  .kota-grid { grid-template-columns:repeat(2,1fr); }
+  .hp-content { padding:0 12px; }
+  .hp-kota-header { flex-wrap:wrap; gap:10px; }
+  .ph-musim { margin-left:0; width:100%; }
+  .cuaca-grid { grid-template-columns:repeat(2,1fr); }
+}
+
+/* ===== CUACA ===== */
+@media(max-width:768px){
+  .cuaca-hero { padding:40px 16px 100px; }
+  .cuaca-hero h2 { font-size:1.7rem; }
+  .prov-section { padding:0 12px 32px; }
+  .prov-all-grid { grid-template-columns:repeat(2,1fr); }
+  .cuaca-hasil { padding:0 12px; }
+  .rek-grid { grid-template-columns:repeat(2,1fr); }
+}
+@media(max-width:400px){
+  .prov-all-grid { grid-template-columns:repeat(2,1fr); }
+  .rek-grid { grid-template-columns:1fr; }
+}
+
+/* ===== SEWA ===== */
+@media(max-width:768px){
+  .sewa-hero { padding:40px 16px 70px; }
+  .sewa-hero h2 { font-size:1.7rem; }
+  .sewa-tabs { top:64px; }
+  .sewa-tab { min-width:120px; font-size:.8rem; padding:14px 8px; }
+  .tab-inner { padding:20px 12px; }
+  .lahan-grid, .petani-grid { grid-template-columns:1fr; }
+  .jp-layout { grid-template-columns:1fr; }
+  .jp-preview-card { position:static; }
+}
+
+/* ===== LOGIN ===== */
+@media(max-width:480px){
+  .login-card { padding:28px 20px; }
+  .login-title { font-size:1.3rem; }
+}
+
+/* ===== COVER ===== */
+@media(max-width:600px){
+  .cover-title { font-size:2rem; }
+  .cover-logo  { font-size:3.5rem; }
+  .cover-desc  { font-size:.85rem; }
+  .cover-features { gap:6px; }
+  .cf-item { font-size:.75rem; padding:6px 10px; }
+  .btn-masuk { padding:13px 28px; font-size:.9rem; }
+}
+
+/* ===== KERANJANG ===== */
+@media(max-width:480px){
+  .keranjang-panel { width:100%; right:-100%; }
+  .keranjang-panel.open { right:0; }
+  .keranjang-fab { bottom:20px; right:16px; padding:12px 18px; font-size:.9rem; }
+}
+
+/* ===== UMUM ===== */
+@media(max-width:768px){
+  .hero-dots, .hero-circle-sm, .hero-line { display:none; }
+  footer { padding:20px 16px; font-size:.8rem; }
+  .section-head { padding:18px 16px 14px; }
+  .section-head h3 { font-size:1rem; }
+}
