@@ -1,0 +1,205 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#2e7d32" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="Tani App" />
+  <title>Portal Pertanian</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="navbar.css" />
+  <link rel="stylesheet" href="hero.css" />
+  <link rel="stylesheet" href="home.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Portal Pertanian 🌽</h1>
+    <button class="hamburger" onclick="toggleNav()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="mainNav">
+      <a href="home.html">🏠 Beranda</a>
+      <a href="berita.html">📰 Berita</a>
+      <a href="forum.html">👥 Forum</a>
+      <a href="marketplace.html">🛒 Marketplace</a>
+      <a href="keuangan.html">📒 Keuangan</a>
+      <a href="akun.html" id="navAkun" style="display:none">👤 Akun</a>
+      <a href="login.html" id="navLogin">🔐 Login</a>
+      <button class="btn-install" id="btnInstall" style="display:none" onclick="installApp()">📲 Install App</button>
+    </nav>
+  </header>
+
+  <!-- HERO BANNER -->
+  <div class="home-hero">
+    <div class="hero-text">
+      <span class="hero-tag">🌾 Platform Pertanian Digital #1</span>
+      <h1>Tani Lebih Cerdas,<br/><span>Panen Lebih Banyak</span></h1>
+      <p>Portal pertanian terlengkap untuk petani Indonesia — berita terkini, harga pasar real-time, panduan bertani, diagnosa tanaman, dan komunitas petani.</p>
+      <div class="hero-btns">
+        <a href="diagnosa.html" class="hero-btn-primary">🔬 Diagnosa Tanaman</a>
+        <a href="harga-pasar.html" class="hero-btn-secondary">💰 Cek Harga Pasar</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat"><div class="hs-num">50+</div><div class="hs-label">Kota Terpantau</div></div>
+        <div class="hero-stat"><div class="hs-num">16</div><div class="hs-label">Jenis Tanaman</div></div>
+        <div class="hero-stat"><div class="hs-num">70+</div><div class="hs-label">Produk Tersedia</div></div>
+      </div>
+    </div>
+    <div class="hero-img" id="heroStack">
+      <div class="stack-container" id="stackContainer"></div>
+    </div>
+  </div>
+
+  <!-- STATS BAR -->
+  <div class="stats-bar">
+    <div class="stat-item"><span class="stat-icon">📰</span><div><div class="stat-num" id="statBerita">—</div><div class="stat-label">Berita Pertanian</div></div></div>
+    <div class="stat-item"><span class="stat-icon">👥</span><div><div class="stat-num" id="statTopik">—</div><div class="stat-label">Topik Forum Aktif</div></div></div>
+    <div class="stat-item"><span class="stat-icon">🛒</span><div><div class="stat-num" id="statProduk">—</div><div class="stat-label">Produk Marketplace</div></div></div>
+    <div class="stat-item"><span class="stat-icon">🗺️</span><div><div class="stat-num" id="statProvinsi">38</div><div class="stat-label">Provinsi Terpantau</div></div></div>
+  </div>
+
+  <!-- Berita Pertanian Slider -->
+  <section class="berita">
+    <div class="berita-section-header">
+      <h2>Berita Pertanian</h2>
+      <a href="berita.html" class="lihat-semua">Lihat Semua →</a>
+    </div>
+    <div class="slider-wrapper">
+      <button class="slider-btn prev" onclick="slideBerita(-1)">&#8249;</button>
+      <div class="slider-track-outer">
+        <div class="slider-track" id="sliderTrack">
+          <div class="berita-card">
+            <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=400&h=220&fit=crop" alt="Berita 1" />
+            <div class="berita-card-body">
+              <h3>Panen Padi Meningkat 20% di Jawa Tengah</h3>
+              <p>Petani di Jawa Tengah berhasil meningkatkan hasil panen berkat teknologi irigasi modern.</p>
+              <a href="#">Baca selengkapnya →</a>
+            </div>
+          </div>
+          <div class="berita-card">
+            <img src="https://images.unsplash.com/photo-1583119022894-919a68a3d0e3?w=400&h=220&fit=crop" alt="Berita 2" />
+            <div class="berita-card-body">
+              <h3>Harga Cabai Stabil Jelang Lebaran</h3>
+              <p>Pemerintah memastikan pasokan cabai mencukupi kebutuhan masyarakat menjelang hari raya.</p>
+              <a href="#">Baca selengkapnya →</a>
+            </div>
+          </div>
+          <div class="berita-card">
+            <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=400&h=220&fit=crop" alt="Berita 3" />
+            <div class="berita-card-body">
+              <h3>Pupuk Organik Jadi Solusi Pertanian Berkelanjutan</h3>
+              <p>Penggunaan pupuk organik semakin diminati petani karena ramah lingkungan dan hemat biaya.</p>
+              <a href="#">Baca selengkapnya →</a>
+            </div>
+          </div>
+          <div class="berita-card">
+            <img src="https://images.unsplash.com/photo-1586771107445-d3ca888129ff?w=400&h=220&fit=crop" alt="Berita 4" />
+            <div class="berita-card-body">
+              <h3>Teknologi Drone Bantu Petani Semprot Pestisida</h3>
+              <p>Penggunaan drone pertanian mulai meluas di berbagai daerah untuk efisiensi penyemprotan lahan.</p>
+              <a href="#">Baca selengkapnya →</a>
+            </div>
+          </div>
+          <div class="berita-card">
+            <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=400&h=220&fit=crop" alt="Berita 5" />
+            <div class="berita-card-body">
+              <h3>Ekspor Komoditas Pertanian Naik 15% Kuartal Ini</h3>
+              <p>Nilai ekspor produk pertanian Indonesia meningkat signifikan didorong permintaan dari pasar Asia.</p>
+              <a href="#">Baca selengkapnya →</a>
+            </div>
+          </div>
+          <div class="berita-card">
+            <img src="https://images.unsplash.com/photo-1536657464919-892534f60d6e?w=400&h=220&fit=crop" alt="Berita 6" />
+            <div class="berita-card-body">
+              <h3>Program Subsidi Benih Unggul Diperluas ke 20 Provinsi</h3>
+              <p>Kementerian Pertanian memperluas program subsidi benih unggul untuk meningkatkan produktivitas petani.</p>
+              <a href="#">Baca selengkapnya →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="slider-btn next" onclick="slideBerita(1)">&#8250;</button>
+    </div>
+    <div class="slider-dots" id="sliderDots"></div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- Ringkasan Fitur -->
+  <section class="fitur">
+    <h2>Fitur Unggulan</h2>
+    <div class="fitur-grid-static">
+          <div class="fitur-card" onclick="window.location='diagnosa.html'" style="cursor:pointer">
+            <span class="icon">🔬</span>
+            <h3>Diagnosa Tanaman</h3>
+            <p>Deteksi penyakit dan hama tanaman dengan foto atau gejala yang kamu alami.</p>
+          </div>
+          <div class="fitur-card" onclick="window.location='panduan.html'" style="cursor:pointer">
+            <span class="icon">📖</span>
+            <h3>Panduan Bertani</h3>
+            <p>Panduan lengkap cara bercocok tanam dari persiapan lahan hingga panen.</p>
+          </div>
+          <div class="fitur-card" onclick="window.location='pupuk.html'" style="cursor:pointer">
+            <span class="icon">🌿</span>
+            <h3>Rekomendasi Pupuk</h3>
+            <p>Dapatkan rekomendasi pupuk yang tepat sesuai jenis tanaman dan kondisi tanah.</p>
+          </div>
+          <div class="fitur-card" onclick="window.location='harga-pasar.html'" style="cursor:pointer">
+            <span class="icon">💰</span>
+            <h3>Harga Pasar</h3>
+            <p>Pantau harga komoditas pertanian terkini langsung dari pasar induk seluruh Indonesia.</p>
+          </div>
+          <div class="fitur-card" onclick="window.location='cuaca.html'" style="cursor:pointer">
+            <span class="icon">🌦️</span>
+            <h3>Cuaca & Waktu Tanam</h3>
+            <p>Info cuaca terkini dan rekomendasi waktu tanam terbaik sesuai kondisi iklim daerahmu.</p>
+          </div>
+          <div class="fitur-card" onclick="window.location='sewa.html'" style="cursor:pointer">
+            <span class="icon">🤝</span>
+            <h3>Sewa Tanah & Petani</h3>
+            <p>Temukan lahan pertanian untuk disewa atau cari petani berpengalaman di daerahmu.</p>
+          </div>
+    </div>
+  </section>
+
+  <!-- Info Harga Hari Ini -->
+  <section class="harga">
+    <div class="berita-section-header">
+      <h2>Info Harga Hari Ini</h2>
+      <a href="harga-pasar.html" class="lihat-semua">Lihat Semua →</a>
+    </div>
+    <div class="harga-table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>Komoditas</th>
+            <th>Harga (Rp/kg)</th>
+            <th>Perubahan</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>🌾 Beras</td><td>Rp 12.000</td><td class="naik">▲ +200</td></tr>
+          <tr><td>🌶️ Cabai Merah</td><td>Rp 35.000</td><td class="turun">▼ -1.000</td></tr>
+          <tr><td>🧅 Bawang Merah</td><td>Rp 28.000</td><td class="stabil">— Stabil</td></tr>
+          <tr><td>🌽 Jagung</td><td>Rp 5.500</td><td class="naik">▲ +100</td></tr>
+          <tr><td>🫘 Kedelai</td><td>Rp 9.000</td><td class="turun">▼ -500</td></tr>
+          <tr><td>🥬 Kangkung</td><td>Rp 3.000</td><td class="stabil">— Stabil</td></tr>
+          <tr><td>🍅 Tomat</td><td>Rp 9.000</td><td class="naik">▲ +500</td></tr>
+          <tr><td>🥕 Wortel</td><td>Rp 12.000</td><td class="turun">▼ -300</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Portal Pertanian Indonesia</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="supabase.js"></script>
+  <script src="navbar.js"></script>
+</body>
+</html>

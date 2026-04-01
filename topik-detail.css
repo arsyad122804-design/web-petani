@@ -1,0 +1,124 @@
+.td-page { background:#f0f7f0; min-height:calc(100vh - 64px); padding:24px 24px 60px; }
+
+.td-breadcrumb { max-width:860px; margin:0 auto 20px; }
+.td-breadcrumb a {
+  color:#2e7d32; font-size:.88rem; font-weight:700;
+  text-decoration:none; display:inline-flex; align-items:center; gap:6px;
+  padding:9px 18px; background:white; border-radius:99px;
+  box-shadow:0 2px 10px rgba(0,0,0,.08); transition:.2s; border:2px solid #e8f5e9;
+}
+.td-breadcrumb a:hover { background:#e8f5e9; transform:translateX(-3px); }
+
+.td-wrapper { max-width:860px; margin:0 auto; display:flex; flex-direction:column; gap:20px; }
+
+/* TOPIK UTAMA */
+.td-topik {
+  background:white; border-radius:20px; padding:28px;
+  box-shadow:0 4px 20px rgba(0,0,0,.08);
+}
+
+.td-topik-header { display:flex; align-items:flex-start; gap:14px; margin-bottom:18px; }
+.td-avatar {
+  width:52px; height:52px; border-radius:50%; flex-shrink:0;
+  background:linear-gradient(135deg,#e8f5e9,#c8e6c9);
+  display:flex; align-items:center; justify-content:center; font-size:1.6rem;
+}
+.td-meta { flex:1; }
+.td-penulis { font-size:.95rem; font-weight:800; color:#1a1a1a; }
+.td-waktu   { font-size:.78rem; color:#aaa; margin-top:2px; }
+.td-kat-badge {
+  background:#e8f5e9; color:#2e7d32;
+  font-size:.72rem; font-weight:800; padding:4px 12px; border-radius:99px;
+  border:1px solid #c8e6c9;
+}
+
+.td-judul { font-size:1.4rem; font-weight:800; color:#1a1a1a; margin-bottom:12px; line-height:1.4; }
+.td-isi   { font-size:.92rem; color:#555; line-height:1.8; margin-bottom:20px; }
+
+.td-stats {
+  display:flex; align-items:center; gap:16px;
+  padding-top:16px; border-top:2px solid #f0f0f0; flex-wrap:wrap;
+}
+.td-stat { font-size:.82rem; color:#aaa; display:flex; align-items:center; gap:5px; }
+
+.btn-like {
+  display:flex; align-items:center; gap:6px;
+  padding:9px 20px; border-radius:99px;
+  border:2px solid #e8f5e9; background:white;
+  font-size:.88rem; font-weight:700; color:#555;
+  cursor:pointer; transition:.2s; margin-left:auto;
+}
+.btn-like:hover { border-color:#e53935; color:#e53935; background:#ffebee; }
+.btn-like.liked { border-color:#e53935; color:#e53935; background:#ffebee; }
+
+/* KOMENTAR SECTION */
+.td-komentar-section { background:white; border-radius:20px; padding:28px; box-shadow:0 4px 20px rgba(0,0,0,.08); }
+
+.td-komentar-header {
+  display:flex; align-items:center; justify-content:space-between;
+  margin-bottom:24px; padding-bottom:16px; border-bottom:2px solid #f0f0f0;
+}
+.td-komentar-header h3 { font-size:1.05rem; font-weight:800; color:#1b5e20; }
+.td-komentar-count { font-size:.82rem; color:#aaa; background:#f5f5f5; padding:4px 12px; border-radius:99px; }
+
+/* LIST KOMENTAR */
+.komentar-list { display:flex; flex-direction:column; gap:16px; margin-bottom:28px; }
+
+.komentar-item {
+  display:flex; gap:12px; align-items:flex-start;
+  padding:16px; background:#f9fbe7; border-radius:14px;
+  border:2px solid #e8f5e9; transition:.2s;
+}
+.komentar-item:hover { border-color:#c8e6c9; }
+.komentar-item.highlight { border-color:#2e7d32; background:#e8f5e9; }
+
+.km-avatar {
+  width:40px; height:40px; border-radius:50%; flex-shrink:0;
+  background:linear-gradient(135deg,#e8f5e9,#c8e6c9);
+  display:flex; align-items:center; justify-content:center; font-size:1.2rem;
+}
+.km-body { flex:1; }
+.km-top  { display:flex; align-items:center; gap:8px; margin-bottom:6px; flex-wrap:wrap; }
+.km-nama { font-size:.88rem; font-weight:800; color:#1a1a1a; }
+.km-waktu{ font-size:.72rem; color:#aaa; }
+.km-teks { font-size:.88rem; color:#555; line-height:1.7; }
+
+.km-actions { display:flex; align-items:center; gap:10px; margin-top:8px; }
+.btn-like-km {
+  display:flex; align-items:center; gap:4px;
+  background:none; border:none; color:#aaa;
+  font-size:.78rem; font-weight:700; cursor:pointer; transition:.2s; padding:4px 8px; border-radius:8px;
+}
+.btn-like-km:hover { color:#e53935; background:#ffebee; }
+.btn-like-km.liked { color:#e53935; }
+.btn-balas-km {
+  background:none; border:none; color:#2e7d32;
+  font-size:.78rem; font-weight:700; cursor:pointer; transition:.2s; padding:4px 8px; border-radius:8px;
+}
+.btn-balas-km:hover { background:#e8f5e9; }
+
+/* FORM KOMENTAR */
+.form-komentar {
+  background:#f9fbe7; border-radius:16px; padding:20px;
+  border:2px solid #c8e6c9; display:flex; flex-direction:column; gap:12px;
+}
+.form-komentar h4 { font-size:.95rem; font-weight:800; color:#1b5e20; }
+.form-komentar input, .form-komentar textarea {
+  border:2px solid #e8f5e9; border-radius:12px;
+  padding:12px 16px; font-size:.9rem; outline:none;
+  font-family:inherit; transition:.2s; background:white; width:100%;
+}
+.form-komentar input:focus, .form-komentar textarea:focus {
+  border-color:#2e7d32; box-shadow:0 0 0 3px rgba(46,125,50,.1);
+}
+.btn-kirim-km {
+  align-self:flex-end; padding:11px 28px;
+  background:linear-gradient(135deg,#2e7d32,#43a047);
+  color:white; border:none; border-radius:99px;
+  font-size:.9rem; font-weight:800; cursor:pointer;
+  transition:.2s; box-shadow:0 4px 12px rgba(46,125,50,.3);
+}
+.btn-kirim-km:hover { transform:translateY(-2px); box-shadow:0 8px 20px rgba(46,125,50,.4); }
+
+.kosong-komentar { text-align:center; padding:32px; color:#ccc; }
+.kosong-komentar span { font-size:2.5rem; display:block; margin-bottom:8px; }

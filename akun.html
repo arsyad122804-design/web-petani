@@ -1,0 +1,278 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#2e7d32" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="Tani App" />
+  <title>Akun Saya</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="navbar.css" />
+  <link rel="stylesheet" href="hero.css" />
+  <link rel="stylesheet" href="akun.css" />
+</head>
+<body>
+  <header>
+    <h1>Portal Pertanian 🌽</h1>
+    <button class="hamburger" onclick="toggleNav()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="mainNav">
+      <a href="home.html">🏠 Beranda</a>
+      <a href="berita.html">📰 Berita</a>
+      <a href="forum.html">👥 Forum</a>
+      <a href="marketplace.html">🛒 Marketplace</a>
+      <a href="keuangan.html">📒 Keuangan</a>
+      <a href="akun.html" id="navAkun" style="display:none">👤 Akun</a>
+      <a href="login.html" id="navLogin">🔐 Login</a>
+    </nav>
+  </header>
+
+  <div class="akun-page">
+    <div class="akun-hero">
+      <div class="hero-dots"></div><div class="hero-circle-sm"></div><div class="hero-line"></div>
+      <h2>👤 Profil Saya</h2>
+      <p>Kelola informasi akun dan data pribadimu.</p>
+    </div>
+
+    <div class="akun-wrapper">
+      <div class="akun-layout">
+
+        <!-- Sidebar Profil -->
+        <aside class="akun-sidebar">
+          <div class="profil-card">
+            <!-- Foto Profil -->
+            <div class="foto-wrapper">
+              <div class="foto-circle" id="fotoCircle">
+                <span id="fotoEmoji">🧑‍🌾</span>
+                <img id="fotoImg" src="" alt="Foto Profil" style="display:none" />
+              </div>
+              <label class="foto-upload-btn" for="fotoInput">📷 Ganti Foto</label>
+              <input type="file" id="fotoInput" accept="image/*" hidden onchange="gantiPhoto(this)" />
+            </div>
+            <div class="profil-nama" id="sidebarNama">Nama Pengguna</div>
+            <div class="profil-lokasi" id="sidebarLokasi">📍 Lokasi belum diisi</div>
+            <div class="profil-badge">🌾 Petani Aktif</div>
+            <button onclick="isiContoh()" style="margin-top:12px;background:#f0f7f0;color:#2e7d32;border:2px solid #c8e6c9;padding:8px 16px;border-radius:99px;font-size:.78rem;font-weight:700;cursor:pointer;transition:.2s" onmouseover="this.style.background='#c8e6c9'" onmouseout="this.style.background='#f0f7f0'">📝 Isi Data Contoh</button>
+          </div>
+
+          
+        </aside>
+
+        <!-- Konten -->
+        <main class="akun-main">
+
+          <!-- DATA PRIBADI -->
+          <div class="akun-section aktif" id="sec-profil">
+            <div class="section-head">
+              <h3>👤 Data Pribadi</h3>
+              <p>Informasi dasar tentang dirimu.</p>
+            </div>
+            <div class="akun-form">
+              <div class="form-row-2">
+                <div class="fg"><label>Nama Depan</label><input type="text" id="namaDepan" placeholder="Contoh: Budi" /></div>
+                <div class="fg"><label>Nama Belakang</label><input type="text" id="namaBelakang" placeholder="Contoh: Santoso" /></div>
+              </div>
+              <div class="form-row-2">
+                <div class="fg"><label>Jenis Kelamin</label>
+                  <select id="jenisKelamin">
+                    <option value="">-- Pilih --</option>
+                    <option>Laki-laki</option>
+                    <option>Perempuan</option>
+                  </select>
+                </div>
+                <div class="fg"><label>Tanggal Lahir</label><input type="date" id="tglLahir" /></div>
+              </div>
+              <div class="form-row-2">
+                <div class="fg"><label>No. HP / WhatsApp</label><input type="tel" id="noHp" placeholder="08xxxxxxxxxx" /></div>
+                <div class="fg"><label>Email</label><input type="email" id="email" placeholder="email@contoh.com" /></div>
+              </div>
+              <div class="fg"><label>Bio Singkat</label><textarea id="bio" rows="3" placeholder="Ceritakan sedikit tentang dirimu..."></textarea></div>
+              <button class="btn-simpan" onclick="simpanProfil()">💾 Simpan Perubahan</button>
+            </div>
+          </div>
+
+          <!-- ALAMAT & LOKASI -->
+          <div class="akun-section aktif" id="sec-alamat">
+            <div class="section-head">
+              <h3>📍 Alamat & Lokasi</h3>
+              <p>Informasi tempat tinggal dan lokasi lahan pertanianmu.</p>
+            </div>
+            <div class="akun-form">
+              <div class="fg"><label>Alamat Lengkap</label><input type="text" id="alamatLengkap" placeholder="Jl. Contoh No. 1, RT/RW, Desa/Kelurahan" /></div>
+              <div class="form-row-2">
+                <div class="fg"><label>Kecamatan</label><input type="text" id="kecamatan" placeholder="Nama kecamatan" /></div>
+                <div class="fg"><label>Kota / Kabupaten</label><input type="text" id="kota" placeholder="Nama kota/kabupaten" /></div>
+              </div>
+              <div class="form-row-2">
+                <div class="fg"><label>Provinsi</label>
+                  <select id="provinsi">
+                    <option value="">-- Pilih Provinsi --</option>
+                    <option>Aceh</option><option>Sumatera Utara</option><option>Sumatera Barat</option>
+                    <option>Riau</option><option>Jambi</option><option>Sumatera Selatan</option>
+                    <option>Bengkulu</option><option>Lampung</option><option>Bangka Belitung</option>
+                    <option>Kepulauan Riau</option><option>DKI Jakarta</option><option>Jawa Barat</option>
+                    <option>Jawa Tengah</option><option>DI Yogyakarta</option><option>Jawa Timur</option>
+                    <option>Banten</option><option>Bali</option><option>Nusa Tenggara Barat</option>
+                    <option>Nusa Tenggara Timur</option><option>Kalimantan Barat</option>
+                    <option>Kalimantan Tengah</option><option>Kalimantan Selatan</option>
+                    <option>Kalimantan Timur</option><option>Kalimantan Utara</option>
+                    <option>Sulawesi Utara</option><option>Sulawesi Tengah</option>
+                    <option>Sulawesi Selatan</option><option>Sulawesi Tenggara</option>
+                    <option>Gorontalo</option><option>Sulawesi Barat</option>
+                    <option>Maluku</option><option>Maluku Utara</option>
+                    <option>Papua</option><option>Papua Barat</option>
+                  </select>
+                </div>
+                <div class="fg"><label>Kode Pos</label><input type="text" id="kodePos" placeholder="Contoh: 40123" maxlength="5" /></div>
+              </div>
+
+              <div class="maps-section">
+                <label>📍 Tandai Lokasi di Maps</label>
+                <div class="maps-embed">
+                  <iframe id="mapsFrame"
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15865!2d107.6!3d-6.9!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sid!2sid!4v1"
+                    allowfullscreen loading="lazy"></iframe>
+                </div>
+                <div class="fg" style="margin-top:12px">
+                  <label>Link Google Maps (opsional)</label>
+                  <input type="url" id="linkMaps" placeholder="https://maps.google.com/..." />
+                </div>
+                <a class="btn-buka-maps" href="https://maps.google.com" target="_blank">🗺️ Buka Google Maps untuk Cari Lokasi</a>
+              </div>
+
+              <button class="btn-simpan" onclick="simpanAlamat()">💾 Simpan Alamat</button>
+            </div>
+          </div>
+
+          <!-- INFO PERTANIAN -->
+          <div class="akun-section aktif" id="sec-pertanian">
+            <div class="section-head">
+              <h3>🌾 Info Pertanian</h3>
+              <p>Data tentang kegiatan pertanianmu.</p>
+            </div>
+            <div class="akun-form">
+              <div class="form-row-2">
+                <div class="fg"><label>Jenis Petani</label>
+                  <select id="jenisPetani">
+                    <option>Petani Padi</option><option>Petani Sayuran</option>
+                    <option>Petani Buah</option><option>Petani Palawija</option>
+                    <option>Petani Perkebunan</option><option>Peternak</option><option>Lainnya</option>
+                  </select>
+                </div>
+                <div class="fg"><label>Pengalaman Bertani</label>
+                  <select id="pengalaman">
+                    <option>Kurang dari 1 tahun</option><option>1 - 3 tahun</option>
+                    <option>3 - 5 tahun</option><option>5 - 10 tahun</option>
+                    <option>Lebih dari 10 tahun</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-row-2">
+                <div class="fg"><label>Luas Lahan (hektar)</label><input type="number" id="luasLahan" placeholder="Contoh: 0.5" min="0" step="0.1" /></div>
+                <div class="fg"><label>Status Lahan</label>
+                  <select id="statusLahan">
+                    <option>Milik Sendiri</option><option>Sewa</option><option>Bagi Hasil</option><option>Gadai</option>
+                  </select>
+                </div>
+              </div>
+              <div class="fg"><label>Komoditas Utama</label>
+                <div class="checkbox-grid-akun">
+                  <label class="cb-akun"><input type="checkbox" /> 🌾 Padi</label>
+                  <label class="cb-akun"><input type="checkbox" /> 🌽 Jagung</label>
+                  <label class="cb-akun"><input type="checkbox" /> 🌶️ Cabai</label>
+                  <label class="cb-akun"><input type="checkbox" /> 🍅 Tomat</label>
+                  <label class="cb-akun"><input type="checkbox" /> 🧅 Bawang</label>
+                  <label class="cb-akun"><input type="checkbox" /> 🥬 Sayuran</label>
+                  <label class="cb-akun"><input type="checkbox" /> 🍌 Buah</label>
+                  <label class="cb-akun"><input type="checkbox" /> 🌿 Lainnya</label>
+                </div>
+              </div>
+              <button class="btn-simpan" onclick="simpanPertanian()">💾 Simpan Info Pertanian</button>
+            </div>
+          </div>
+
+          <!-- KEAMANAN -->
+          <div class="akun-section aktif" id="sec-keamanan">
+            <div class="section-head">
+              <h3>🔒 Keamanan Akun</h3>
+              <p>Ubah password dan pengaturan keamanan.</p>
+            </div>
+            <div class="akun-form">
+              <div class="fg"><label>Password Lama</label><input type="password" placeholder="Masukkan password lama" /></div>
+              <div class="fg"><label>Password Baru</label><input type="password" id="passBaru" placeholder="Minimal 8 karakter" /></div>
+              <div class="fg"><label>Konfirmasi Password Baru</label><input type="password" id="passKonfirm" placeholder="Ulangi password baru" /></div>
+              <div class="pass-strength" id="passStrength"></div>
+              <button class="btn-simpan" onclick="gantiPassword()">🔒 Ubah Password</button>
+            </div>
+          </div>
+
+          <!-- PRODUK SAYA -->
+          <div class="akun-section aktif" id="sec-produk">
+            <div class="section-head">
+              <h3>🛒 Produk Saya</h3>
+              <p>Kelola produk yang kamu jual di Marketplace Pertanian.</p>
+            </div>
+            <div class="akun-form">
+              <div class="produk-saya-toolbar">
+                <span id="jumlahProdukSaya" class="jp-label">0 produk</span>
+                <button class="btn-tambah-produk" onclick="toggleFormProduk()">+ Tambah Produk</button>
+              </div>
+
+              <!-- Form Tambah Produk -->
+              <div class="form-produk-baru" id="formProdukBaru" style="display:none">
+                <div class="fpb-title">📦 Tambah Produk Baru</div>
+                <div class="form-row-2">
+                  <div class="fg"><label>Nama Produk</label><input type="text" id="pNama" placeholder="Contoh: Cabai Merah Segar" /></div>
+                  <div class="fg"><label>Kategori</label>
+                    <select id="pKategori">
+                      <option value="hasil">🌾 Hasil Panen</option>
+                      <option value="bibit">🌱 Bibit & Benih</option>
+                      <option value="pupuk">🌿 Pupuk</option>
+                      <option value="alat">🔧 Alat Pertanian</option>
+                      <option value="pestisida">🧪 Pestisida</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-row-2">
+                  <div class="fg"><label>Harga (Rp)</label><input type="number" id="pHarga" placeholder="Contoh: 35000" min="0" /></div>
+                  <div class="fg"><label>Satuan</label>
+                    <select id="pSatuan">
+                      <option value="per kg">per kg</option>
+                      <option value="per pak">per pak</option>
+                      <option value="per sachet">per sachet</option>
+                      <option value="per unit">per unit</option>
+                      <option value="per botol">per botol</option>
+                      <option value="per sak">per sak</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="fg"><label>Deskripsi Produk</label><textarea id="pDeskripsi" rows="3" placeholder="Ceritakan detail produkmu..."></textarea></div>
+                <div class="form-row-2">
+                  <div class="fg"><label>Stok Tersedia</label><input type="number" id="pStok" placeholder="Contoh: 100" min="0" /></div>
+                  <div class="fg"><label>Berat / Ukuran</label><input type="text" id="pBerat" placeholder="Contoh: 1 kg, 500 gram" /></div>
+                </div>
+                <div class="fpb-actions">
+                  <button class="btn-batal-produk" onclick="toggleFormProduk()">Batal</button>
+                  <button class="btn-simpan-produk" onclick="simpanProdukBaru()">💾 Simpan Produk</button>
+                </div>
+              </div>
+
+              <!-- List Produk -->
+              <div id="listProdukSaya"></div>
+            </div>
+          </div>
+
+        </main>
+      </div>
+    </div>
+  </div>
+
+  <footer><p>© 2026 Portal Pertanian Indonesia</p></footer>
+  <script src="akun.js"></script>
+  <script src="supabase.js"></script>
+  <script src="navbar.js"></script>
+</body>
+</html>

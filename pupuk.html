@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#2e7d32" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="Tani App" />
+  <title>Rekomendasi Pupuk</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="pupuk.css" />
+  <link rel="stylesheet" href="navbar.css" />
+  <link rel="stylesheet" href="hero.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Portal Pertanian 🌽</h1>
+    <button class="hamburger" onclick="toggleNav()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="mainNav">
+      <a href="home.html">🏠 Beranda</a>
+      <a href="berita.html">📰 Berita</a>
+      <a href="forum.html">👥 Forum</a>
+      <a href="marketplace.html">🛒 Marketplace</a>
+      <a href="keuangan.html">📒 Keuangan</a>
+      <a href="akun.html" id="navAkun" style="display:none">👤 Akun</a>
+    </nav>
+  </header>
+
+  <div class="pupuk-page">
+
+    <!-- Hero -->
+    <div class="pupuk-hero">
+    <div class="hero-dots"></div><div class="hero-circle-sm"></div><div class="hero-line"></div>
+      <div class="pupuk-hero-text">
+        <h2>🌿 Rekomendasi Pupuk</h2>
+        <p>Pilih tanaman dan masukkan umur tanaman untuk mendapatkan rekomendasi pupuk, dosis, dan jadwal yang tepat.</p>
+      </div>
+    </div>
+
+    <!-- Step Form -->
+    <div class="form-wrapper">
+
+      <!-- Step 1: Pilih Tanaman -->
+      <div class="step-section">
+        <div class="step-label"><span class="step-num-badge">1</span> Pilih Jenis Tanaman</div>
+        <div class="tanaman-grid" id="tanamanGrid"></div>
+      </div>
+
+      <!-- Step 2: Umur Tanaman -->
+      <div class="step-section" id="stepUmur" style="display:none">
+        <div class="step-label"><span class="step-num-badge">2</span> Masukkan Umur Tanaman</div>
+        <div class="umur-wrapper">
+          <div class="umur-input-group">
+            <input type="number" id="umurInput" min="1" max="365" placeholder="Contoh: 30" />
+            <select id="satuanUmur">
+              <option value="hst">HST (Hari Setelah Tanam)</option>
+              <option value="mst">MST (Minggu Setelah Tanam)</option>
+              <option value="bst">BST (Bulan Setelah Tanam)</option>
+            </select>
+          </div>
+          <button class="btn-cari" onclick="cariRekomendasi()">🔍 Cari Rekomendasi</button>
+        </div>
+      </div>
+
+      <!-- Hasil -->
+      <div id="hasilSection" style="display:none">
+        <div class="hasil-header">
+          <div class="hasil-tanaman-info" id="hasilTanamanInfo"></div>
+        </div>
+        <div class="rekomendasi-grid" id="rekomendasiGrid"></div>
+        <div class="jadwal-section">
+          <h3>📅 Jadwal Pemupukan</h3>
+          <div class="jadwal-timeline" id="jadwalTimeline"></div>
+        </div>
+        <button class="btn-ulang" onclick="ulangPilih()">🔄 Pilih Tanaman Lain</button>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2026 Portal Pertanian Indonesia</p>
+  </footer>
+
+  <script src="pupuk.js"></script>
+  <script src="navbar.js"></script>
+</body>
+</html>

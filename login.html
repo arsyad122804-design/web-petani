@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - Portal Pertanian</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="navbar.css" />
+  <link rel="stylesheet" href="login.css" />
+</head>
+<body>
+  <header>
+    <h1>Portal Pertanian 🌽</h1>
+    <button class="hamburger" onclick="toggleNav()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="mainNav">
+      <a href="home.html">🏠 Beranda</a>
+      <a href="berita.html">📰 Berita</a>
+      <a href="forum.html">👥 Forum</a>
+      <a href="marketplace.html">🛒 Marketplace</a>
+      <a href="keuangan.html">📒 Keuangan</a>
+      <a href="akun.html">👤 Akun</a>
+    </nav>
+  </header>
+
+  <div class="login-page">
+    <div class="login-hero">
+      <div class="lh-deco">🌾</div>
+      <div class="lh-deco2">🌱</div>
+    </div>
+
+    <div class="login-card">
+      <div class="login-logo">🌽</div>
+      <h2 class="login-title">Selamat Datang</h2>
+      <p class="login-sub">Masuk untuk mulai beli & jual produk pertanian</p>
+
+      <!-- Tab -->
+      <div class="login-tabs">
+        <button class="ltab aktif" id="tabMasuk" onclick="switchLoginTab('masuk')">Masuk</button>
+        <button class="ltab" id="tabDaftar" onclick="switchLoginTab('daftar')">Daftar</button>
+      </div>
+
+      <!-- Form Masuk -->
+      <div id="formMasuk">
+        <div class="lfg"><label>Email</label><input type="email" id="loginEmail" placeholder="email@contoh.com" /></div>
+        <div class="lfg"><label>Password</label>
+          <div class="pass-wrap">
+            <input type="password" id="loginPass" placeholder="Password kamu" />
+            <button class="toggle-pass" onclick="togglePass('loginPass', this)">👁️</button>
+          </div>
+        </div>
+        <div class="login-error" id="loginError"></div>
+        <button class="btn-login" onclick="doLogin()">🚀 Masuk</button>
+      </div>
+
+      <!-- Form Daftar -->
+      <div id="formDaftar" style="display:none">
+        <div class="lfg"><label>Nama Lengkap</label><input type="text" id="regNama" placeholder="Nama lengkap kamu" /></div>
+        <div class="lfg"><label>Email</label><input type="email" id="regEmail" placeholder="email@contoh.com" /></div>
+        <div class="lfg"><label>Password</label>
+          <div class="pass-wrap">
+            <input type="password" id="regPass" placeholder="Minimal 6 karakter" />
+            <button class="toggle-pass" onclick="togglePass('regPass', this)">👁️</button>
+          </div>
+        </div>
+        <div class="login-error" id="regError"></div>
+        <button class="btn-login" onclick="doRegister()">✅ Buat Akun</button>
+      </div>
+
+      <div class="login-divider"><span>atau</span></div>
+      <a href="home.html" class="btn-skip">Lanjut tanpa login (hanya lihat)</a>
+    </div>
+  </div>
+
+  <script src="supabase.js"></script>
+  <script src="login.js"></script>
+  <script src="navbar.js"></script>
+</body>
+</html>

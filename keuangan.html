@@ -1,0 +1,174 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#2e7d32" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="Tani App" />
+  <title>Catatan Keuangan</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="navbar.css" />
+  <link rel="stylesheet" href="hero.css" />
+  <link rel="stylesheet" href="keuangan.css" />
+</head>
+<body>
+  <header>
+    <h1>Portal Pertanian 🌽</h1>
+    <button class="hamburger" onclick="toggleNav()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="mainNav">
+      <a href="home.html">🏠 Beranda</a>
+      <a href="berita.html">📰 Berita</a>
+      <a href="forum.html">👥 Forum</a>
+      <a href="marketplace.html">🛒 Marketplace</a>
+      <a href="keuangan.html">📒 Keuangan</a>
+      <a href="akun.html" id="navAkun" style="display:none">👤 Akun</a>
+      <a href="login.html" id="navLogin">🔐 Login</a>
+    </nav>
+  </header>
+
+  <div class="keu-page">
+    <div class="keu-hero">
+    <div class="hero-dots"></div><div class="hero-circle-sm"></div><div class="hero-line"></div>
+      <h2>📒 Catatan Keuangan Tani</h2>
+      <p>Catat modal, hasil panen, dan pantau untung rugi usaha tanimu secara otomatis.</p>
+    </div>
+
+    <div class="keu-wrapper">
+      <!-- Ringkasan -->
+      <div class="keu-summary">
+        <div class="summary-card modal-card">
+          <span class="s-icon">💸</span>
+          <div>
+            <div class="s-label">Total Modal</div>
+            <div class="s-val" id="totalModal">Rp 0</div>
+          </div>
+        </div>
+        <div class="summary-card panen-card">
+          <span class="s-icon">🌾</span>
+          <div>
+            <div class="s-label">Total Hasil Panen</div>
+            <div class="s-val" id="totalPanen">Rp 0</div>
+          </div>
+        </div>
+        <div class="summary-card hasil-card" id="hasilCard">
+          <span class="s-icon" id="hasilIcon">📊</span>
+          <div>
+            <div class="s-label">Untung / Rugi</div>
+            <div class="s-val" id="totalHasil">Rp 0</div>
+          </div>
+        </div>
+        <div class="summary-card roi-card">
+          <span class="s-icon">📈</span>
+          <div>
+            <div class="s-label">ROI</div>
+            <div class="s-val" id="totalROI">0%</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Form + Tabel -->
+      <div class="keu-content">
+        <!-- Form Input -->
+        <div class="keu-form-section">
+          <div class="form-tabs">
+            <button class="form-tab aktif" id="tabModal" onclick="switchTab('modal')">💸 Input Modal</button>
+            <button class="form-tab" id="tabPanen" onclick="switchTab('panen')">🌾 Input Hasil Panen</button>
+          </div>
+
+          <div class="form-body" id="formModal">
+            <div class="form-group">
+              <label>Tanggal</label>
+              <input type="date" id="modalTanggal" />
+            </div>
+            <div class="form-group">
+              <label>Keterangan</label>
+              <input type="text" id="modalKet" placeholder="Contoh: Beli pupuk urea, sewa traktor..." />
+            </div>
+            <div class="form-group">
+              <label>Kategori</label>
+              <select id="modalKat">
+                <option value="Pupuk">🌿 Pupuk</option>
+                <option value="Bibit">🌱 Bibit/Benih</option>
+                <option value="Tenaga Kerja">👷 Tenaga Kerja</option>
+                <option value="Alat">🔧 Alat & Mesin</option>
+                <option value="Pengairan">💧 Pengairan</option>
+                <option value="Lainnya">📦 Lainnya</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Jumlah (Rp)</label>
+              <input type="number" id="modalJumlah" placeholder="Contoh: 150000" min="0" />
+            </div>
+            <button class="btn-tambah" onclick="tambahModal()">+ Tambah Modal</button>
+          </div>
+
+          <div class="form-body" id="formPanen" style="display:none">
+            <div class="form-group">
+              <label>Tanggal</label>
+              <input type="date" id="panenTanggal" />
+            </div>
+            <div class="form-group">
+              <label>Komoditas</label>
+              <input type="text" id="panenKomoditas" placeholder="Contoh: Padi, Cabai, Jagung..." />
+            </div>
+            <div class="form-group">
+              <label>Berat Panen (kg)</label>
+              <input type="number" id="panenBerat" placeholder="Contoh: 500" min="0" />
+            </div>
+            <div class="form-group">
+              <label>Harga Jual (Rp/kg)</label>
+              <input type="number" id="panenHarga" placeholder="Contoh: 12000" min="0" />
+            </div>
+            <div class="form-group">
+              <label>Total Otomatis</label>
+              <div class="auto-total" id="autoTotal">Rp 0</div>
+            </div>
+            <button class="btn-tambah panen" onclick="tambahPanen()">+ Tambah Hasil Panen</button>
+          </div>
+        </div>
+
+        <!-- Tabel Transaksi -->
+        <div class="keu-table-section">
+          <div class="table-header">
+            <h3>📋 Riwayat Transaksi</h3>
+            <div class="table-filter">
+              <button class="tf-btn aktif" onclick="filterTabel('semua',this)">Semua</button>
+              <button class="tf-btn" onclick="filterTabel('modal',this)">Modal</button>
+              <button class="tf-btn" onclick="filterTabel('panen',this)">Panen</button>
+            </div>
+            <button class="btn-hapus-semua" onclick="hapusSemua()">🗑️ Hapus Semua</button>
+          </div>
+          <div class="table-wrapper">
+            <table id="tabelTransaksi">
+              <thead>
+                <tr>
+                  <th>Tanggal</th>
+                  <th>Keterangan</th>
+                  <th>Kategori</th>
+                  <th>Tipe</th>
+                  <th>Jumlah</th>
+                  <th>Aksi</th>
+                </tr>
+              </thead>
+              <tbody id="tabelBody"></tbody>
+            </table>
+            <div class="empty-tabel" id="emptyTabel">
+              <span>📝</span>
+              <p>Belum ada transaksi. Mulai catat modal atau hasil panenmu.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer><p>© 2026 Portal Pertanian Indonesia</p></footer>
+  <script src="keuangan.js"></script>
+  <script src="supabase.js"></script>
+  <script src="navbar.js"></script>
+</body>
+</html>

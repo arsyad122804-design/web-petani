@@ -1,0 +1,173 @@
+﻿.forum-page { background: #f0f7f0; min-height: calc(100vh - 64px); padding-bottom: 60px; }
+
+.forum-hero {
+  background: linear-gradient(135deg, #1b5e20, #43a047, #66bb6a);
+  padding: 56px 40px 100px;
+  text-align: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+.forum-hero::before { content:'ðŸ‘¥'; position:absolute; font-size:14rem; opacity:.06; top:-20px; right:0; }
+.forum-hero h2 { font-size:2.2rem; font-weight:800; margin-bottom:10px; }
+.forum-hero p  { font-size:1rem; opacity:.88; max-width:480px; margin:0 auto 24px; line-height:1.7; }
+
+.btn-buat-topik {
+  background: white;
+  color: #2e7d32;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 99px;
+  font-size: 0.95rem;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  transition: all 0.2s;
+}
+.btn-buat-topik:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.2); }
+
+.forum-layout {
+  max-width: 100%;
+  margin: -50px auto 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 0;
+  align-items: start;
+}
+
+/* SIDEBAR */
+.forum-sidebar { display: flex; flex-direction: column; gap: 20px; position: sticky; top: 80px; padding: 24px 0 24px 24px; }
+
+.sidebar-card {
+  background: white;
+  border-radius: 18px;
+  padding: 22px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+}
+.sidebar-card h4 { font-size:0.8rem; font-weight:800; color:#999; text-transform:uppercase; letter-spacing:1.5px; margin-bottom:14px; }
+
+.kategori-forum { list-style:none; display:flex; flex-direction:column; gap:4px; }
+.kategori-forum li {
+  display: flex; align-items: center; gap: 8px;
+  padding: 10px 12px; border-radius: 10px;
+  cursor: pointer; font-size: 0.88rem; color: #555;
+  transition: all 0.2s; font-weight: 500;
+  justify-content: space-between;
+}
+.kategori-forum li:hover { background:#f0f7f0; color:#2e7d32; }
+.kategori-forum li.aktif { background:linear-gradient(135deg,#2e7d32,#43a047); color:white; font-weight:700; }
+.kategori-forum li .badge {
+  background: rgba(0,0,0,0.1); color: inherit;
+  font-size: 0.72rem; padding: 2px 8px; border-radius: 99px; font-weight:700;
+}
+.kategori-forum li.aktif .badge { background: rgba(255,255,255,0.25); }
+
+.petani-aktif { list-style:none; display:flex; flex-direction:column; gap:10px; }
+.petani-aktif li { display:flex; align-items:center; gap:12px; }
+.avatar { font-size:1.8rem; }
+.petani-aktif strong { display:block; font-size:0.88rem; color:#222; }
+.petani-aktif small { font-size:0.75rem; color:#aaa; }
+
+/* MAIN */
+.forum-main { display:flex; flex-direction:column; gap:16px; padding: 24px 24px 24px 0; }
+
+.forum-toolbar {
+  background: white;
+  border-radius: 14px;
+  padding: 14px 18px;
+  display: flex;
+  gap: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+}
+.forum-toolbar input {
+  flex:1; border:2px solid #e8f5e9; border-radius:10px;
+  padding:10px 14px; font-size:0.9rem; outline:none; transition:border-color 0.2s;
+}
+.forum-toolbar input:focus { border-color:#2e7d32; }
+.forum-toolbar select {
+  border:2px solid #e8f5e9; border-radius:10px;
+  padding:10px 14px; font-size:0.88rem; outline:none; background:white; cursor:pointer;
+}
+
+/* TOPIK CARD */
+.topik-card {
+  background: white;
+  border-radius: 16px;
+  padding: 20px 24px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+  display: flex;
+  gap: 16px;
+  transition: all 0.2s;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+.topik-card:hover { border-color:#c8e6c9; transform:translateY(-2px); box-shadow:0 8px 28px rgba(46,125,50,0.1); }
+.topik-card.pinned { border-color:#ffd54f; background:#fffde7; }
+
+.topik-avatar { font-size:2.2rem; flex-shrink:0; }
+
+.topik-body { flex:1; }
+.topik-meta { display:flex; align-items:center; gap:8px; margin-bottom:6px; flex-wrap:wrap; }
+.topik-kategori-badge {
+  font-size:0.72rem; font-weight:700; padding:3px 10px;
+  border-radius:99px; background:#e8f5e9; color:#2e7d32;
+}
+.topik-card.pinned .topik-kategori-badge { background:#fff9c4; color:#f57f17; }
+.topik-pin { font-size:0.75rem; color:#f57f17; font-weight:700; }
+.topik-waktu { font-size:0.75rem; color:#bbb; }
+
+.topik-body h3 { font-size:0.98rem; color:#1a1a1a; font-weight:700; margin-bottom:6px; line-height:1.4; }
+.topik-body p  { font-size:0.85rem; color:#777; line-height:1.5; margin-bottom:10px; }
+
+.topik-stats { display:flex; gap:16px; }
+.topik-stats span { font-size:0.8rem; color:#aaa; display:flex; align-items:center; gap:4px; }
+
+/* MODAL */
+.modal-overlay {
+  display:none; position:fixed; inset:0;
+  background:rgba(0,0,0,0.4); z-index:1000; backdrop-filter:blur(4px);
+}
+.modal-overlay.open { display:block; }
+.modal {
+  display:none; position:fixed; top:50%; left:50%;
+  transform:translate(-50%,-50%) scale(0.95);
+  background:white; border-radius:20px; padding:0;
+  width:min(560px,95vw); z-index:1001;
+  box-shadow:0 20px 60px rgba(0,0,0,0.2);
+  transition:transform 0.2s;
+}
+.modal.open { display:block; transform:translate(-50%,-50%) scale(1); }
+.modal-header {
+  display:flex; justify-content:space-between; align-items:center;
+  padding:20px 24px; border-bottom:2px solid #f0f0f0;
+}
+.modal-header h3 { font-size:1.1rem; color:#1b5e20; font-weight:800; }
+.modal-header button { background:none; border:none; font-size:1.3rem; cursor:pointer; color:#aaa; }
+.modal-body { padding:24px; display:flex; flex-direction:column; gap:14px; }
+.modal-body label { font-size:0.82rem; font-weight:700; color:#555; text-transform:uppercase; letter-spacing:0.5px; }
+.modal-body input, .modal-body select, .modal-body textarea {
+  border:2px solid #e8f5e9; border-radius:10px;
+  padding:12px 14px; font-size:0.92rem; outline:none;
+  font-family:inherit; transition:border-color 0.2s; width:100%;
+}
+.modal-body input:focus, .modal-body select:focus, .modal-body textarea:focus { border-color:#2e7d32; }
+.btn-submit {
+  background:linear-gradient(135deg,#2e7d32,#43a047);
+  color:white; border:none; padding:14px;
+  border-radius:12px; font-size:1rem; font-weight:800;
+  cursor:pointer; transition:all 0.2s;
+  box-shadow:0 4px 14px rgba(46,125,50,0.3);
+}
+.btn-submit:hover { transform:translateY(-2px); box-shadow:0 8px 24px rgba(46,125,50,0.4); }
+
+@media(max-width:768px){
+  .forum-layout { grid-template-columns:1fr; }
+  .forum-sidebar { position:static; }
+  .forum-hero h2 { font-size:1.7rem; }
+}
+
+@keyframes popIn {
+  from { transform: scale(.85); opacity: 0; }
+  to   { transform: scale(1);   opacity: 1; }
+}

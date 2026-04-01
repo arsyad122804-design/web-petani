@@ -1,0 +1,152 @@
+/* ===== HERO BACKGROUND PATTERN - berlaku untuk semua halaman ===== */
+
+.keu-hero,
+.forum-hero,
+.mp-hero,
+.berita-page-hero,
+.diagnosa-hero,
+.panduan-hero,
+.pupuk-hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.keu-hero::after,
+.forum-hero::after,
+.mp-hero::after,
+.berita-page-hero::after,
+.diagnosa-hero::after,
+.panduan-hero::after,
+.pupuk-hero::after {
+  content: '';
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.06);
+  top: -120px;
+  right: -80px;
+  pointer-events: none;
+}
+
+.hero-circle-sm {
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.05);
+  bottom: -60px;
+  left: -40px;
+  pointer-events: none;
+}
+
+.hero-dots {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(255,255,255,0.12) 1px, transparent 1px);
+  background-size: 28px 28px;
+  pointer-events: none;
+}
+
+.hero-line {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border: 40px solid rgba(255,255,255,0.05);
+  border-radius: 50%;
+  bottom: -100px;
+  right: 15%;
+  pointer-events: none;
+}
+
+.keu-hero > *:not(.hero-dots):not(.hero-circle-sm):not(.hero-line),
+.forum-hero > *:not(.hero-dots):not(.hero-circle-sm):not(.hero-line),
+.mp-hero > *:not(.hero-dots):not(.hero-circle-sm):not(.hero-line),
+.berita-page-hero > *:not(.hero-dots):not(.hero-circle-sm):not(.hero-line),
+.diagnosa-hero > *:not(.hero-dots):not(.hero-circle-sm):not(.hero-line),
+.panduan-hero > *:not(.hero-dots):not(.hero-circle-sm):not(.hero-line),
+.pupuk-hero > *:not(.hero-dots):not(.hero-circle-sm):not(.hero-line) {
+  position: relative;
+  z-index: 1;
+}
+
+/* ===== CARD TETAP PUTIH DI ATAS BG HIJAU ===== */
+.berita-filter,
+.berita-item-card,
+.topik-card,
+.sidebar-card,
+.forum-toolbar,
+.mp-filter-card,
+.mp-toolbar,
+.produk-card,
+.summary-card,
+.keu-form-section,
+.keu-table-section,
+.panduan-konten,
+.kategori-list,
+.upload-box,
+.hasil-wrapper,
+.loading,
+.step-section,
+.jadwal-section,
+.hasil-header .hasil-tanaman-info {
+  box-shadow: 0 4px 24px rgba(0,0,0,0.13) !important;
+}
+
+/* ===== KONTEN OVERLAP HERO ===== */
+.keu-hero,
+.forum-hero,
+.mp-hero,
+.berita-page-hero,
+.diagnosa-hero,
+.panduan-hero,
+.pupuk-hero {
+  padding-bottom: 120px !important;
+}
+
+.diagnosa-container {
+  margin-top: -80px !important;
+  position: relative;
+  z-index: 10;
+}
+
+.panduan-container {
+  margin-top: -80px !important;
+  position: relative;
+  z-index: 10;
+}
+
+.form-wrapper {
+  margin-top: -80px !important;
+  position: relative;
+  z-index: 10;
+}
+
+.forum-layout {
+  margin-top: -80px !important;
+  position: relative;
+  z-index: 10;
+}
+
+.mp-layout {
+  margin-top: -80px !important;
+  position: relative;
+  z-index: 10;
+}
+
+.keu-wrapper {
+  margin-top: -80px !important;
+  position: relative;
+  z-index: 10;
+}
+
+.berita-filter-wrapper {
+  margin-top: -80px !important;
+  position: relative;
+  z-index: 10;
+}
+
+.berita-main-grid {
+  position: relative;
+  z-index: 10;
+}

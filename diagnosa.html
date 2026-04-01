@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#2e7d32" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="Tani App" />
+  <title>Diagnosa Tanaman</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="diagnosa.css" />
+  <link rel="stylesheet" href="navbar.css" />
+  <link rel="stylesheet" href="hero.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Portal Pertanian 🌽</h1>
+    <button class="hamburger" onclick="toggleNav()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="mainNav">
+      <a href="home.html">🏠 Beranda</a>
+      <a href="berita.html">📰 Berita</a>
+      <a href="forum.html">👥 Forum</a>
+      <a href="marketplace.html">🛒 Marketplace</a>
+      <a href="keuangan.html">📒 Keuangan</a>
+      <a href="akun.html" id="navAkun" style="display:none">👤 Akun</a>
+    </nav>
+  </header>
+
+  <div class="diagnosa-wrapper">
+
+    <div class="diagnosa-hero">
+    <div class="hero-dots"></div><div class="hero-circle-sm"></div><div class="hero-line"></div>
+      <h2>🔬 Diagnosa Tanaman</h2>
+      <p>Upload foto daun tanamanmu, kami akan mendeteksi penyakit, penyebab, dan solusinya.</p>
+    </div>
+
+    <div class="diagnosa-container">
+
+      <!-- Upload Area -->
+      <div class="upload-box" id="uploadBox">
+        <input type="file" id="fotoInput" accept="image/*" hidden />
+        <div class="upload-content" id="uploadContent">
+          <span class="upload-icon">🍃</span>
+          <p>Seret foto ke sini atau</p>
+          <button onclick="document.getElementById('fotoInput').click()">Pilih Foto</button>
+          <p class="upload-hint">Format: JPG, PNG, WEBP — Maks 5MB</p>
+        </div>
+        <img id="previewImg" src="" alt="Preview" hidden />
+        <button class="ganti-foto" id="gantiBtn" hidden onclick="gantiPhoto()">🔄 Ganti Foto</button>
+      </div>
+
+      <!-- Tombol Diagnosa -->
+      <button class="btn-diagnosa" id="btnDiagnosa" onclick="diagnosa()" disabled>
+        🔍 Diagnosa Sekarang
+      </button>
+
+      <!-- Loading -->
+      <div class="loading" id="loading" hidden>
+        <div class="spinner"></div>
+        <p>Sedang menganalisis tanaman kamu...</p>
+      </div>
+
+      <!-- Hasil -->
+      <div class="hasil-wrapper" id="hasilWrapper" hidden>
+        <h3>📋 Hasil Diagnosa</h3>
+        <div class="hasil-grid">
+
+          <div class="hasil-card penyakit">
+            <div class="hasil-icon">🦠</div>
+            <div class="hasil-info">
+              <span class="label">Penyakit Terdeteksi</span>
+              <span class="nilai" id="hasilPenyakit">-</span>
+            </div>
+          </div>
+
+          <div class="hasil-card sebab">
+            <div class="hasil-icon">⚠️</div>
+            <div class="hasil-info">
+              <span class="label">Penyebab</span>
+              <span class="nilai" id="hasilSebab">-</span>
+            </div>
+          </div>
+
+          <div class="hasil-card solusi">
+            <div class="hasil-icon">💡</div>
+            <div class="hasil-info">
+              <span class="label">Solusi</span>
+              <span class="nilai" id="hasilSolusi">-</span>
+            </div>
+          </div>
+
+          <div class="hasil-card tingkat">
+            <div class="hasil-icon">📊</div>
+            <div class="hasil-info">
+              <span class="label">Tingkat Keparahan</span>
+              <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+              </div>
+              <span class="nilai-kecil" id="hasilTingkat">-</span>
+            </div>
+          </div>
+
+        </div>
+
+        <button class="btn-ulang" onclick="ulang()">🔄 Diagnosa Ulang</button>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2026 Portal Pertanian Indonesia</p>
+  </footer>
+
+  <script src="diagnosa.js"></script>
+  <script src="navbar.js"></script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#2e7d32" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="Tani App" />
+  <title>Harga Pasar</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="navbar.css" />
+  <link rel="stylesheet" href="hero.css" />
+  <link rel="stylesheet" href="harga-pasar.css" />
+</head>
+<body>
+  <header>
+    <h1>Portal Pertanian 🌽</h1>
+    <button class="hamburger" onclick="toggleNav()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="mainNav">
+      <a href="home.html">🏠 Beranda</a>
+      <a href="berita.html">📰 Berita</a>
+      <a href="forum.html">👥 Forum</a>
+      <a href="marketplace.html">🛒 Marketplace</a>
+      <a href="keuangan.html">📒 Keuangan</a>
+      <a href="akun.html" id="navAkun" style="display:none">👤 Akun</a>
+    </nav>
+  </header>
+
+  <div class="hp-page">
+    <div class="hp-hero">
+      <div class="hero-dots"></div>
+      <div class="hero-circle-sm"></div>
+      <div class="hero-line"></div>
+      <h2>💰 Harga Pasar Hari Ini</h2>
+      <p>Pantau harga panenan sayur dan buah di berbagai kota Indonesia secara real-time.</p>
+      <div class="hp-tanggal" id="hpTanggal"></div>
+    </div>
+
+    <div class="hp-wrapper">
+      <!-- Pilih Kota -->
+      <div class="kota-section">
+        <h3>📍 Pilih Kota</h3>
+        <div class="kota-slider-wrapper">
+          <button class="kota-slider-btn" onclick="slideKota(-1)">&#8249;</button>
+          <div class="kota-track-outer">
+            <div class="kota-track" id="kotaGrid"></div>
+          </div>
+          <button class="kota-slider-btn" onclick="slideKota(1)">&#8250;</button>
+        </div>
+      </div>
+
+      <!-- Info Kota + Maps -->
+      <div class="hp-content" id="hpContent" style="display:none">
+        <div class="hp-kota-header" id="hpKotaHeader"></div>
+
+        <div class="hp-layout">
+          <!-- Tabel Harga -->
+          <div class="hp-tabel-section">
+            <div class="hp-tabs">
+              <button class="hp-tab aktif" onclick="switchKomoditas('sayur',this)">🥬 Sayuran</button>
+              <button class="hp-tab" onclick="switchKomoditas('buah',this)">🍎 Buah-buahan</button>
+              <button class="hp-tab" onclick="switchKomoditas('panen',this)">🌾 Hasil Panen</button>
+            </div>
+            <div class="hp-tabel-wrapper">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Komoditas</th>
+                    <th>Harga (Rp/kg)</th>
+                    <th>Perubahan</th>
+                    <th>Trend</th>
+                  </tr>
+                </thead>
+                <tbody id="hpTabelBody"></tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Maps -->
+          <div class="hp-maps-section">
+            <h4>🗺️ Lokasi Pasar</h4>
+            <div class="maps-container" id="mapsContainer"></div>
+            <div class="pasar-list" id="pasarList"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Placeholder -->
+      <div class="hp-placeholder" id="hpPlaceholder">
+        <span>🗺️</span>
+        <p>Pilih kota di atas untuk melihat harga pasar dan lokasi pasar terdekat.</p>
+      </div>
+    </div>
+  </div>
+
+  <footer><p>© 2026 Portal Pertanian Indonesia</p></footer>
+  <script src="harga-pasar.js"></script>
+  <script src="navbar.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#2e7d32" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="Tani App" />
+  <title>Berita Pertanian</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="berita.css" />
+  <link rel="stylesheet" href="navbar.css" />
+  <link rel="stylesheet" href="hero.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Portal Pertanian 🌽</h1>
+    <button class="hamburger" onclick="toggleNav()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="mainNav">
+      <a href="home.html">🏠 Beranda</a>
+      <a href="berita.html">📰 Berita</a>
+      <a href="forum.html">👥 Forum</a>
+      <a href="marketplace.html">🛒 Marketplace</a>
+      <a href="keuangan.html">📒 Keuangan</a>
+      <a href="akun.html" id="navAkun" style="display:none">👤 Akun</a>
+      <a href="login.html" id="navLogin">🔐 Login</a>
+    </nav>
+  </header>
+
+  <div class="berita-page">
+    <!-- Hero -->
+    <div class="berita-page-hero">
+    <div class="hero-dots"></div><div class="hero-circle-sm"></div><div class="hero-line"></div>
+      <h2>📰 Berita Pertanian</h2>
+      <p>Update terkini seputar dunia pertanian Indonesia — dari sawah hingga pasar.</p>
+    </div>
+
+    <!-- Filter Kategori -->
+    <div class="berita-filter-wrapper">
+      <div class="berita-filter" id="filterBar">
+        <button class="filter-btn aktif" onclick="filterBerita('semua', this)">Semua</button>
+        <button class="filter-btn" onclick="filterBerita('panen', this)">🌾 Panen</button>
+        <button class="filter-btn" onclick="filterBerita('harga', this)">💰 Harga</button>
+        <button class="filter-btn" onclick="filterBerita('teknologi', this)">🤖 Teknologi</button>
+        <button class="filter-btn" onclick="filterBerita('kebijakan', this)">📋 Kebijakan</button>
+        <button class="filter-btn" onclick="filterBerita('cuaca', this)">🌦️ Cuaca</button>
+      </div>
+    </div>
+
+    <!-- Grid Berita -->
+    <div class="berita-main-grid" id="beritaGrid"></div>
+  </div>
+
+  <footer>
+    <p>© 2026 Portal Pertanian Indonesia</p>
+  </footer>
+
+  <script src="berita.js"></script>
+  <script src="navbar.js"></script>
+</body>
+</html>

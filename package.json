@@ -1,0 +1,13 @@
+{
+  "name": "web-pertanian",
+  "version": "1.0.0",
+  "description": "Portal informasi pertanian Indonesia",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx live-server",
+    "dev": "npx live-server"
+  },
+  "keywords": ["pertanian", "portal"],
+  "author": "",
+  "license": "ISC"
+}

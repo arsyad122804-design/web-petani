@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#2e7d32" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="Tani App" />
+  <title>Detail Produk</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="navbar.css" />
+  <link rel="stylesheet" href="keranjang.css" />
+  <link rel="stylesheet" href="produk-detail.css" />
+</head>
+<body>
+  <header>
+    <h1>Portal Pertanian 🌽</h1>
+    <button class="hamburger" onclick="toggleNav()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="mainNav">
+      <a href="home.html">🏠 Beranda</a>
+      <a href="berita.html">📰 Berita</a>
+      <a href="forum.html">👥 Forum</a>
+      <a href="marketplace.html">🛒 Marketplace</a>
+      <a href="keuangan.html">📒 Keuangan</a>
+      <a href="akun.html" id="navAkun" style="display:none">👤 Akun</a>
+      <a href="login.html" id="navLogin">🔐 Login</a>
+    </nav>
+  </header>
+
+  <div class="detail-page">
+    <div class="detail-breadcrumb">
+      <a href="marketplace.html">← Kembali ke Marketplace</a>
+    </div>
+    <div class="detail-wrapper" id="detailWrapper"></div>
+  </div>
+
+  <!-- Keranjang FAB -->
+  <button class="keranjang-fab" onclick="toggleKeranjang()">
+    🛒 <span class="keranjang-badge" id="keranjangBadge">0</span>
+  </button>
+  <div class="keranjang-overlay" id="keranjangOverlay" onclick="toggleKeranjang()"></div>
+  <div class="keranjang-panel" id="keranjangPanel">
+    <div class="keranjang-header">
+      <h3>🛒 Keranjang Belanja</h3>
+      <button onclick="toggleKeranjang()">✕</button>
+    </div>
+    <div class="keranjang-body" id="keranjangBody"></div>
+    <div class="keranjang-footer" id="keranjangFooter"></div>
+  </div>
+
+  <footer><p>© 2026 Portal Pertanian Indonesia</p></footer>
+  <script src="marketplace.js"></script>
+  <script src="keranjang.js"></script>
+  <script src="produk-detail.js"></script>
+  <script src="supabase.js"></script>
+  <script src="navbar.js"></script>
+</body>
+</html>

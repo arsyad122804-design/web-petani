@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#2e7d32" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="Tani App" />
+  <title>Panduan Bertani</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="panduan.css" />
+  <link rel="stylesheet" href="navbar.css" />
+  <link rel="stylesheet" href="hero.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Portal Pertanian 🌽</h1>
+    <button class="hamburger" onclick="toggleNav()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="mainNav">
+      <a href="home.html">🏠 Beranda</a>
+      <a href="berita.html">📰 Berita</a>
+      <a href="forum.html">👥 Forum</a>
+      <a href="marketplace.html">🛒 Marketplace</a>
+      <a href="keuangan.html">📒 Keuangan</a>
+      <a href="akun.html" id="navAkun" style="display:none">👤 Akun</a>
+    </nav>
+  </header>
+
+  <div class="panduan-wrapper">
+
+    <div class="panduan-hero">
+    <div class="hero-dots"></div><div class="hero-circle-sm"></div><div class="hero-line"></div>
+      <h2>📖 Panduan Bertani</h2>
+      <p>Pilih jenis tanaman untuk melihat panduan pemupukan, cara tanam, dan panen.</p>
+    </div>
+
+    <div class="panduan-container">
+
+      <!-- Sidebar Kategori -->
+      <aside class="kategori-list">
+        <h3>🌱 Pilih Tanaman</h3>
+        <ul id="kategoriUl"></ul>
+      </aside>
+
+      <!-- Konten Panduan -->
+      <main class="panduan-konten" id="panduanKonten">
+        <div class="panduan-placeholder">
+          <span>🌾</span>
+          <p>Pilih tanaman di sebelah kiri untuk melihat panduan lengkapnya.</p>
+        </div>
+      </main>
+
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2026 Portal Pertanian Indonesia</p>
+  </footer>
+
+  <script src="panduan.js"></script>
+  <script src="navbar.js"></script>
+</body>
+</html>

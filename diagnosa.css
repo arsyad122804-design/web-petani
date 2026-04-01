@@ -1,0 +1,319 @@
+﻿/* ===== WRAPPER ===== */
+.diagnosa-wrapper {
+  min-height: calc(100vh - 130px);
+  background: #f0f7f0;
+}
+
+/* ===== HERO ===== */
+.diagnosa-hero {
+  background: linear-gradient(135deg, #1b5e20 0%, #43a047 60%, #66bb6a 100%);
+  padding: 60px 20px 100px;
+  text-align: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.diagnosa-hero::before {
+  content: 'ðŸƒ';
+  position: absolute;
+  font-size: 12rem;
+  opacity: 0.07;
+  top: -20px;
+  left: -30px;
+}
+
+.diagnosa-hero::after {
+  content: 'ðŸ”¬';
+  position: absolute;
+  font-size: 10rem;
+  opacity: 0.07;
+  bottom: -20px;
+  right: 20px;
+}
+
+.diagnosa-hero h2 {
+  font-size: 2.4rem;
+  margin-bottom: 12px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.diagnosa-hero p {
+  font-size: 1.05rem;
+  opacity: 0.88;
+  max-width: 500px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* ===== CONTAINER ===== */
+.diagnosa-container {
+  max-width: 700px;
+  margin: -50px auto 60px;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ===== UPLOAD BOX ===== */
+.upload-box {
+  width: 100%;
+  background: white;
+  border: 2.5px dashed #a5d6a7;
+  border-radius: 20px;
+  padding: 48px 24px;
+  text-align: center;
+  position: relative;
+  transition: all 0.3s;
+  min-height: 240px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 32px rgba(46,125,50,0.08);
+}
+
+.upload-box.dragover {
+  border-color: #2e7d32;
+  background: #f1f8e9;
+  transform: scale(1.01);
+}
+
+.upload-icon {
+  font-size: 4rem;
+  display: block;
+  margin-bottom: 14px;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.upload-content p {
+  color: #777;
+  margin-bottom: 16px;
+  font-size: 1rem;
+}
+
+.upload-content button {
+  background: linear-gradient(135deg, #2e7d32, #43a047);
+  color: white;
+  border: none;
+  padding: 12px 32px;
+  border-radius: 99px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 700;
+  transition: all 0.2s;
+  box-shadow: 0 4px 14px rgba(46,125,50,0.3);
+}
+
+.upload-content button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(46,125,50,0.4);
+}
+
+.upload-hint {
+  font-size: 0.78rem;
+  color: #bbb;
+  margin-top: 12px;
+}
+
+#previewImg {
+  width: 100%;
+  max-height: 320px;
+  object-fit: contain;
+  border-radius: 14px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+
+.ganti-foto {
+  margin-top: 14px;
+  background: transparent;
+  border: 2px solid #a5d6a7;
+  color: #2e7d32;
+  padding: 8px 22px;
+  border-radius: 99px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.ganti-foto:hover {
+  background: #e8f5e9;
+  border-color: #2e7d32;
+}
+
+/* ===== TOMBOL DIAGNOSA ===== */
+.btn-diagnosa {
+  width: 100%;
+  padding: 18px;
+  background: linear-gradient(135deg, #2e7d32, #43a047);
+  color: white;
+  border: none;
+  border-radius: 14px;
+  font-size: 1.1rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.2s;
+  letter-spacing: 0.5px;
+  box-shadow: 0 6px 20px rgba(46,125,50,0.3);
+}
+
+.btn-diagnosa:hover:not(:disabled) {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(46,125,50,0.4);
+}
+
+.btn-diagnosa:disabled {
+  background: #c8e6c9;
+  color: #aaa;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* ===== LOADING ===== */
+.loading {
+  text-align: center;
+  padding: 32px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.07);
+}
+
+.spinner {
+  width: 56px;
+  height: 56px;
+  border: 5px solid #e8f5e9;
+  border-top-color: #2e7d32;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin: 0 auto 16px;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.loading p {
+  color: #555;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* ===== HASIL ===== */
+.hasil-wrapper {
+  width: 100%;
+  background: white;
+  border-radius: 20px;
+  padding: 32px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+}
+
+.hasil-wrapper h3 {
+  font-size: 1.25rem;
+  color: #1b5e20;
+  margin-bottom: 24px;
+  text-align: center;
+  font-weight: 800;
+}
+
+.hasil-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.hasil-card {
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  transition: transform 0.2s;
+}
+
+.hasil-card:hover { transform: translateY(-2px); }
+
+.hasil-card.penyakit { background: linear-gradient(135deg, #fce4ec, #f8bbd0); }
+.hasil-card.sebab    { background: linear-gradient(135deg, #fff8e1, #ffecb3); }
+.hasil-card.solusi   { background: linear-gradient(135deg, #e8f5e9, #c8e6c9); }
+.hasil-card.tingkat  { background: linear-gradient(135deg, #e3f2fd, #bbdefb); }
+
+.hasil-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+}
+
+.hasil-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  flex: 1;
+}
+
+.label {
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #999;
+  letter-spacing: 1px;
+}
+
+.nilai {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  line-height: 1.4;
+}
+
+.nilai-kecil {
+  font-size: 0.8rem;
+  color: #555;
+  font-weight: 600;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background: rgba(255,255,255,0.6);
+  border-radius: 99px;
+  overflow: hidden;
+  margin-top: 6px;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 99px;
+  width: 0%;
+  transition: width 1.2s cubic-bezier(0.4,0,0.2,1);
+}
+
+.btn-ulang {
+  display: block;
+  margin: 24px auto 0;
+  background: transparent;
+  border: 2px solid #2e7d32;
+  color: #2e7d32;
+  padding: 12px 32px;
+  border-radius: 99px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-ulang:hover {
+  background: #e8f5e9;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 500px) {
+  .hasil-grid { grid-template-columns: 1fr; }
+  .diagnosa-hero h2 { font-size: 1.8rem; }
+}
