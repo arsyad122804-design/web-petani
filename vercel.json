@@ -1,0 +1,6 @@
+{
+  "outputDirectory": ".",
+  "buildCommand": "",
+  "devCommand": "npx live-server",
+  "framework": null
+}
