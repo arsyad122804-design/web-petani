@@ -17,8 +17,12 @@ function loadStats() {
   // Produk dari Supabase
   window.sb.from('produk').select('id', { count: 'exact', head: true })
     .then(function(res) {
+      var count = res.count || 0;
       var el = document.getElementById('statProduk');
-      if (el) el.textContent = (res.count || 0);
+      if (el) el.textContent = count;
+      // Update juga hero stats
+      var hero = document.getElementById('heroProdukNum');
+      if (hero) hero.textContent = count > 0 ? count + '+' : '0';
     });
 }
 
@@ -163,15 +167,22 @@ initFiturDots();
 
 // ===== SLIDER BERITA =====
 let currentSlide = 0;
-const perPage = 3;
 const totalBerita = 6;
-const totalPages = Math.ceil(totalBerita / perPage); // = 2
+
+function getPerPage() {
+  return window.innerWidth <= 768 ? 1 : 3;
+}
+
+function getTotalPages() {
+  return Math.ceil(totalBerita / getPerPage());
+}
 
 function initDots() {
   const dots = document.getElementById('sliderDots');
   if (!dots) return;
+  const pages = getTotalPages();
   dots.innerHTML = '';
-  for (let i = 0; i < totalPages; i++) {
+  for (let i = 0; i < pages; i++) {
     const d = document.createElement('div');
     d.className = 'dot' + (i === 0 ? ' aktif' : '');
     d.onclick = () => goToSlide(i);
@@ -180,7 +191,8 @@ function initDots() {
 }
 
 function goToSlide(index) {
-  currentSlide = (index + totalPages) % totalPages;
+  const pages = getTotalPages();
+  currentSlide = (index + pages) % pages;
   const outer = document.querySelector('.slider-track-outer');
   if (!outer) return;
   const offset = currentSlide * outer.offsetWidth;
@@ -193,7 +205,7 @@ function slideBerita(dir) {
 }
 
 setInterval(() => goToSlide(currentSlide + 1), 4000);
-window.addEventListener('resize', () => goToSlide(currentSlide));
+window.addEventListener('resize', () => { currentSlide = 0; initDots(); goToSlide(0); });
 initDots();
 
 // ===== HARGA =====

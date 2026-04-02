@@ -79,3 +79,23 @@ function onSupabaseReady() {
     }
   });
 }
+
+async function loginGoogle() {
+  if (!window.sb) { alert('Koneksi belum siap, coba lagi.'); return; }
+  var redirect = new URLSearchParams(window.location.search).get('redirect') || 'home.html';
+  var { error } = await window.sb.auth.signInWithOAuth({
+    provider: 'google',
+    options: { redirectTo: window.location.origin + '/' + redirect }
+  });
+  if (error) alert('Gagal login Google: ' + error.message);
+}
+
+async function loginFacebook() {
+  if (!window.sb) { alert('Koneksi belum siap, coba lagi.'); return; }
+  var redirect = new URLSearchParams(window.location.search).get('redirect') || 'home.html';
+  var { error } = await window.sb.auth.signInWithOAuth({
+    provider: 'facebook',
+    options: { redirectTo: window.location.origin + '/' + redirect }
+  });
+  if (error) alert('Gagal login Facebook: ' + error.message);
+}

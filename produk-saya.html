@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Produk Saya</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="navbar.css" />
+  <link rel="stylesheet" href="hero.css" />
+  <link rel="stylesheet" href="akun.css" />
+</head>
+<body>
+  <header>
+    <h1>Portal Pertanian 🌽</h1>
+    <button class="hamburger" onclick="toggleNav()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="mainNav">
+      <a href="home.html">🏠 Beranda</a>
+      <a href="berita.html">📰 Berita</a>
+      <a href="forum.html">👥 Forum</a>
+      <a href="marketplace.html">🛒 Marketplace</a>
+      <a href="keuangan.html">📒 Keuangan</a>
+      <a href="akun.html" id="navAkun" style="display:none">👤 Akun</a>
+      <a href="login.html" id="navLogin">🔐 Login</a>
+    </nav>
+  </header>
+
+  <div class="akun-page">
+    <div class="akun-hero">
+      <h2>📦 Produk Saya</h2>
+      <p>Kelola semua produk yang kamu jual di Marketplace Pertanian.</p>
+    </div>
+
+    <div style="max-width:100%;padding:0">
+      <div class="akun-form" style="border-radius:0;box-shadow:none;padding:28px 32px">
+
+        <div class="produk-saya-toolbar">
+          <span id="jumlahProdukSaya" class="jp-label">0 produk</span>
+          <button class="btn-tambah-produk" onclick="window.location='jual-produk.html'">+ Tambah Produk Baru</button>
+        </div>
+
+        <!-- Form Tambah Produk -->
+        <div class="form-produk-baru" id="formProdukBaru" style="display:none">
+          <div class="fpb-title">📦 Tambah Produk Baru</div>
+          <div class="form-row-2">
+            <div class="fg"><label>Nama Produk</label><input type="text" id="pNama" placeholder="Contoh: Cabai Merah Segar" /></div>
+            <div class="fg"><label>Kategori</label>
+              <select id="pKategori">
+                <option value="hasil">🌾 Hasil Panen</option>
+                <option value="bibit">🌱 Bibit & Benih</option>
+                <option value="pupuk">🌿 Pupuk</option>
+                <option value="alat">🔧 Alat Pertanian</option>
+                <option value="pestisida">🧪 Pestisida</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row-2">
+            <div class="fg"><label>Harga (Rp)</label><input type="number" id="pHarga" placeholder="Contoh: 35000" min="0" /></div>
+            <div class="fg"><label>Satuan</label>
+              <select id="pSatuan">
+                <option value="per kg">per kg</option>
+                <option value="per pak">per pak</option>
+                <option value="per unit">per unit</option>
+                <option value="per botol">per botol</option>
+                <option value="per sak">per sak</option>
+              </select>
+            </div>
+          </div>
+          <div class="fg"><label>Stok</label><input type="number" id="pStok" placeholder="Contoh: 100" min="0" /></div>
+          <div class="fg"><label>Deskripsi</label><textarea id="pDeskripsi" rows="3" placeholder="Deskripsi produk..."></textarea></div>
+          <div class="fpb-actions">
+            <button class="btn-batal-produk" onclick="toggleFormProduk()">Batal</button>
+            <button class="btn-simpan-produk" onclick="simpanProdukBaru()">💾 Simpan Produk</button>
+          </div>
+        </div>
+
+        <!-- List Produk -->
+        <div id="listProdukSaya" style="display:flex;flex-direction:column;gap:12px;margin-top:16px"></div>
+      </div>
+    </div>
+  </div>
+
+  <footer><p>© 2026 Portal Pertanian Indonesia</p></footer>
+  <script src="supabase.js"></script>
+  <script src="akun.js"></script>
+  <script src="navbar.js"></script>
+</body>
+</html>

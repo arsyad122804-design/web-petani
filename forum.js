@@ -155,6 +155,23 @@ function onSupabaseReady() {
       });
     });
     renderForum();
+    updateBadgeKategori();
+  });
+}
+
+function updateBadgeKategori() {
+  var total = topikData.length;
+  var map = {
+    badgeSemua:   total,
+    badgeTanaman: topikData.filter(function(t){ return t.kategori === 'tanaman'; }).length,
+    badgeHama:    topikData.filter(function(t){ return t.kategori === 'hama'; }).length,
+    badgePupuk:   topikData.filter(function(t){ return t.kategori === 'pupuk'; }).length,
+    badgePasar:   topikData.filter(function(t){ return t.kategori === 'pasar'; }).length,
+    badgeAlat:    topikData.filter(function(t){ return t.kategori === 'alat'; }).length,
+  };
+  Object.keys(map).forEach(function(id) {
+    var el = document.getElementById(id);
+    if (el) el.textContent = map[id];
   });
 }
 

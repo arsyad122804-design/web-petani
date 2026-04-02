@@ -82,7 +82,12 @@ section h2::before {
 .dot { width:8px; height:8px; border-radius:50%; background:#c8e6c9; cursor:pointer; transition:all .2s; }
 .dot.aktif { background:#2e7d32; width:24px; border-radius:4px; }
 
-@media(max-width:700px){ .berita-card { min-width:100%; } }
+@media(max-width:768px){
+  .slider-track { width:600%; gap:12px; }
+  .berita-card { width:calc(100%/6 - 10px); min-width:calc(100%/6 - 10px); }
+  .berita-card img { height:170px; }
+  .slider-btn { width:34px; height:34px; font-size:1.1rem; }
+}
 
 /* ===== FITUR ===== */
 .fitur { background:white; width:100%; padding:48px 40px; }
@@ -175,4 +180,47 @@ footer p::after  { content: ' 🌾'; }
 }
 @media(max-width:480px){
   .fitur-grid-static { grid-template-columns: 1fr; }
+}
+
+/* ===== MOBILE BERITA SLIDER ===== */
+@media (max-width: 768px) {
+  .berita { padding: 24px 16px; }
+  .slider-wrapper { gap: 8px; }
+
+  /* Fitur grid mobile */
+  .fitur { padding: 24px 16px; }
+  .fitur-grid-static { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .fitur-card { padding: 18px 12px; }
+  .fitur-card .icon { font-size: 2.2rem; }
+  .fitur-card h3 { font-size: .88rem; }
+  .fitur-card p  { font-size: .75rem; }
+
+  /* Harga table mobile */
+  .harga { padding: 24px 16px; }
+  thead th { padding: 10px 12px; font-size: .68rem; }
+  tbody td { padding: 10px 12px; font-size: .85rem; }
+
+  /* Hero mobile */
+  .home-hero { flex-direction: column; padding: 28px 16px 48px; gap: 20px; }
+  .hero-text h1 { font-size: 1.7rem; }
+  .hero-text p  { font-size: .88rem; }
+  .hero-img { width: 100%; height: 200px; }
+  .hero-btns { flex-direction: column; gap: 10px; }
+  .hero-btn-primary, .hero-btn-secondary { width: 100%; justify-content: center; padding: 12px 20px; }
+  .hero-stats { gap: 16px; }
+  .hero-stat .hs-num { font-size: 1.3rem; }
+  .hero-stat .hs-label { font-size: .7rem; }
+
+  /* Stats bar mobile */
+  .stats-bar { grid-template-columns: repeat(2, 1fr); }
+  .stat-item { padding: 14px 12px; gap: 10px; }
+  .stat-icon { font-size: 1.5rem; }
+  .stat-num  { font-size: 1.1rem; }
+  .stat-label{ font-size: .7rem; }
+}
+
+@media (max-width: 480px) {
+  .fitur-grid-static { grid-template-columns: 1fr 1fr; }
+  .berita-section-header h2 { font-size: 1.1rem; }
+  .lihat-semua { font-size: .78rem; padding: 5px 12px; }
 }

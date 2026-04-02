@@ -80,3 +80,34 @@
   transition: color .2s;
 }
 .btn-skip:hover { color: #2e7d32; }
+
+/* ===== SOCIAL LOGIN ===== */
+.social-btns {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.btn-social {
+  width: 100%;
+  padding: 13px 16px;
+  border-radius: 12px;
+  border: 2px solid #e8e8e8;
+  background: white;
+  font-size: .9rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all .2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: #333;
+}
+.btn-social:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0,0,0,.1);
+}
+
+.btn-google:hover  { border-color: #EA4335; background: #fff5f5; }
+.btn-facebook:hover { border-color: #1877F2; background: #f0f5ff; }
