@@ -8,7 +8,10 @@
     "dev": "npx live-server",
     "build": "echo Build selesai - project ini HTML statis, tidak perlu build"
   },
-  "keywords": ["pertanian", "portal"],
+  "keywords": [
+    "pertanian",
+    "portal"
+  ],
   "author": "",
   "license": "ISC"
 }
