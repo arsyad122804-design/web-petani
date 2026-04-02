@@ -1,3 +1,44 @@
+// ===== NAVIGATE WITH LOADING =====
+function navigateTo(href) {
+  // Trigger page transition yang sama dengan navbar
+  var overlay = document.getElementById('pageTransition');
+  var statusSets = {
+    'diagnosa.html':    ['Memuat Diagnosa...','Menyiapkan AI...','Hampir selesai...'],
+    'panduan.html':     ['Memuat Panduan...','Mengambil data tanaman...','Hampir selesai...'],
+    'pupuk.html':       ['Memuat Rekomendasi Pupuk...','Menyiapkan data...','Hampir selesai...'],
+    'harga-pasar.html': ['Memuat Harga Pasar...','Mengambil data harga...','Hampir selesai...'],
+    'cuaca.html':       ['Memuat Info Cuaca...','Mengambil data provinsi...','Hampir selesai...'],
+    'sewa.html':        ['Memuat Sewa Tanah & Petani...','Mengambil data...','Hampir selesai...'],
+  };
+  var list = statusSets[href] || ['Memuat...','Menyiapkan...','Hampir selesai...'];
+
+  if (overlay) {
+    var el = document.getElementById('ptStatus');
+    if (el) el.textContent = list[0];
+    overlay.style.opacity = '1';
+    overlay.style.visibility = 'visible';
+    overlay.style.pointerEvents = 'all';
+    var si = 0;
+    var t = setInterval(function() {
+      si = (si + 1) % list.length;
+      var el2 = document.getElementById('ptStatus');
+      if (!el2) return;
+      el2.style.animation = 'none';
+      el2.offsetHeight;
+      el2.style.animation = 'fadeStatus .5s ease';
+      el2.textContent = list[si];
+    }, 700);
+    setTimeout(function() {
+      clearInterval(t);
+      var el3 = document.getElementById('ptStatus');
+      if (el3) el3.textContent = '✅ Siap!';
+      setTimeout(function() { window.location.href = href; }, 400);
+    }, 1800);
+  } else {
+    window.location.href = href;
+  }
+}
+
 // ===== STATS BAR DARI SUPABASE =====
 function loadStats() {
   if (!window.sb) return;

@@ -147,3 +147,131 @@ function doLogout() {
     });
   }
 }
+
+// ===== PAGE TRANSITION LOADING =====
+(function() {
+  var emojis = ['🍃','🌿','🌱','🍀','🌾'];
+  var ptTimer = null;
+
+  function buatOverlay() {
+    // Pastikan loading.css sudah ada
+    if (!document.querySelector('link[href="loading.css"]')) {
+      var link = document.createElement('link');
+      link.rel = 'stylesheet'; link.href = 'loading.css';
+      document.head.appendChild(link);
+    }
+
+    var overlay = document.createElement('div');
+    overlay.id = 'pageTransition';
+    overlay.className = ''; // pakai class loading.css
+    overlay.style.cssText =
+      'position:fixed;inset:0;z-index:99999;' +
+      'background:linear-gradient(135deg,#0a2e0a 0%,#1b5e20 40%,#2e7d32 70%,#43a047 100%);' +
+      'display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;' +
+      'opacity:0;visibility:hidden;transition:opacity .3s ease,visibility .3s ease;pointer-events:none;overflow:hidden;';
+
+    // Daun jatuh
+    var leaves = document.createElement('div');
+    leaves.className = 'loading-leaves';
+    for (var i = 0; i < 12; i++) {
+      var leaf = document.createElement('span');
+      leaf.className = 'loading-leaf';
+      leaf.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+      leaf.style.left = Math.random() * 100 + 'vw';
+      leaf.style.animationDuration = (6 + Math.random() * 7) + 's';
+      leaf.style.animationDelay    = (Math.random() * 5) + 's';
+      leaf.style.fontSize = (.8 + Math.random() * 1) + 'rem';
+      leaves.appendChild(leaf);
+    }
+    overlay.appendChild(leaves);
+
+    overlay.innerHTML +=
+      '<div class="loading-spinner-wrap">' +
+        '<div class="loading-ring-outer"></div>' +
+        '<div class="loading-ring-mid"></div>' +
+        '<div class="loading-ring-inner"></div>' +
+        '<span class="loading-icon">🌽</span>' +
+      '</div>' +
+      '<div class="loading-title">Portal Pertanian<br/><span>Indonesia</span></div>' +
+      '<div class="loading-dots">' +
+        '<div class="loading-dot"></div>' +
+        '<div class="loading-dot"></div>' +
+        '<div class="loading-dot"></div>' +
+      '</div>' +
+      '<div class="loading-status" id="ptStatus">Memuat...</div>';
+
+    document.body.appendChild(overlay);
+    return overlay;
+  }
+
+  var overlay = buatOverlay();
+
+  var statusSets = {
+    'home.html':        ['Memuat Beranda...','Menyiapkan konten...','Hampir selesai...'],
+    'berita.html':      ['Memuat Berita...','Mengambil artikel...','Hampir selesai...'],
+    'forum.html':       ['Memuat Forum...','Mengambil topik...','Hampir selesai...'],
+    'marketplace.html': ['Memuat Marketplace...','Menghubungkan database...','Menyiapkan produk...','Hampir selesai...'],
+    'keuangan.html':    ['Memuat Keuangan...','Mengambil data...','Hampir selesai...'],
+    'akun.html':        ['Memuat Profil...','Mengambil data akun...','Hampir selesai...'],
+    'diagnosa.html':    ['Memuat Diagnosa...','Menyiapkan AI...','Hampir selesai...'],
+    'panduan.html':     ['Memuat Panduan...','Mengambil data tanaman...','Hampir selesai...'],
+    'pupuk.html':       ['Memuat Rekomendasi Pupuk...','Menyiapkan data...','Hampir selesai...'],
+    'harga-pasar.html': ['Memuat Harga Pasar...','Mengambil data harga...','Hampir selesai...'],
+    'cuaca.html':       ['Memuat Info Cuaca...','Mengambil data provinsi...','Hampir selesai...'],
+    'sewa.html':        ['Memuat Sewa Tanah & Petani...','Mengambil data...','Hampir selesai...'],
+    'jual-produk.html': ['Memuat Form Jual Produk...','Menyiapkan form...','Hampir selesai...'],
+    'produk-saya.html': ['Memuat Produk Saya...','Mengambil data produk...','Hampir selesai...'],
+    'login.html':       ['Menuju Halaman Login...','Menyiapkan autentikasi...','Hampir selesai...'],
+  };
+
+  function showTransition(page) {
+    var list = statusSets[page] || ['Memuat...','Menyiapkan...','Hampir selesai...'];
+    var si = 0;
+    var el = document.getElementById('ptStatus');
+    if (el) el.textContent = list[0];
+
+    overlay.style.opacity = '1';
+    overlay.style.visibility = 'visible';
+    overlay.style.pointerEvents = 'all';
+
+    clearInterval(ptTimer);
+    ptTimer = setInterval(function() {
+      si = (si + 1) % list.length;
+      var el2 = document.getElementById('ptStatus');
+      if (!el2) return;
+      el2.style.animation = 'none';
+      el2.offsetHeight;
+      el2.style.animation = 'fadeStatus .5s ease';
+      el2.textContent = list[si];
+    }, 700);
+  }
+
+  function hideTransition() {
+    clearInterval(ptTimer);
+    overlay.style.opacity = '0';
+    overlay.style.visibility = 'hidden';
+    overlay.style.pointerEvents = 'none';
+  }
+
+  document.addEventListener('click', function(e) {
+    var link = e.target.closest('a[href]');
+    if (!link) return;
+    var href = link.getAttribute('href');
+    if (!href || href.startsWith('#') || href.startsWith('http') || href.startsWith('mailto') || href.startsWith('tel')) return;
+    if (link.target === '_blank') return;
+    if (link.closest('#akunDropdown')) return; // dropdown sudah handle sendiri
+    var page = href.split('/').pop().split('?')[0];
+    showTransition(page);
+    e.preventDefault();
+    setTimeout(function() {
+      var el2 = document.getElementById('ptStatus');
+      if (el2) el2.textContent = '✅ Siap!';
+      setTimeout(function() {
+        window.location.href = href;
+      }, 400);
+    }, 1800);
+  });
+
+  window.addEventListener('pageshow', hideTransition);
+  window.addEventListener('load', function() { setTimeout(hideTransition, 400); });
+})();
