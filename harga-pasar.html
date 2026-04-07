@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
@@ -14,17 +14,17 @@
   <link rel="stylesheet" href="harga-pasar.css" /></head>
 <body>
   <header>
-    <h1>Portal Pertanian 🌽</h1>
+    <h1>Portal Pertanian ??</h1>
     <button class="hamburger" onclick="toggleNav()" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
     <nav id="mainNav">
-      <a href="home.html">🏠 Beranda</a>
-      <a href="berita.html">📰 Berita</a>
-      <a href="forum.html">👥 Forum</a>
-      <a href="marketplace.html">🛒 Marketplace</a>
-      <a href="keuangan.html">📒 Keuangan</a>
-      <a href="akun.html" id="navAkun" style="display:none">👤 Akun</a>
+      <a href="home.html">?? Beranda</a>
+      <a href="berita.html">?? Berita</a>
+      <a href="forum.html">?? Forum</a>
+      <a href="marketplace.html">?? Marketplace</a>
+      <a href="keuangan.html">?? Keuangan</a>
+      <a href="akun.html" id="navAkun" style="display:none">?? Akun</a>
     </nav>
   </header>
 
@@ -33,7 +33,7 @@
       <div class="hero-dots"></div>
       <div class="hero-circle-sm"></div>
       <div class="hero-line"></div>
-      <h2>💰 Harga Pasar Hari Ini</h2>
+      <h2>?? Harga Pasar Hari Ini</h2>
       <p>Pantau harga panenan sayur dan buah di berbagai kota Indonesia secara real-time.</p>
       <div class="hp-tanggal" id="hpTanggal"></div>
     </div>
@@ -41,7 +41,7 @@
     <div class="hp-wrapper">
       <!-- Pilih Kota -->
       <div class="kota-section">
-        <h3>📍 Pilih Kota</h3>
+        <h3>?? Pilih Kota</h3>
         <div class="kota-slider-wrapper">
           <button class="kota-slider-btn" onclick="slideKota(-1)">&#8249;</button>
           <div class="kota-track-outer">
@@ -59,9 +59,9 @@
           <!-- Tabel Harga -->
           <div class="hp-tabel-section">
             <div class="hp-tabs">
-              <button class="hp-tab aktif" onclick="switchKomoditas('sayur',this)">🥬 Sayuran</button>
-              <button class="hp-tab" onclick="switchKomoditas('buah',this)">🍎 Buah-buahan</button>
-              <button class="hp-tab" onclick="switchKomoditas('panen',this)">🌾 Hasil Panen</button>
+              <button class="hp-tab aktif" onclick="switchKomoditas('sayur',this)">?? Sayuran</button>
+              <button class="hp-tab" onclick="switchKomoditas('buah',this)">?? Buah-buahan</button>
+              <button class="hp-tab" onclick="switchKomoditas('panen',this)">?? Hasil Panen</button>
             </div>
             <div class="hp-tabel-wrapper">
               <table>
@@ -80,7 +80,7 @@
 
           <!-- Maps -->
           <div class="hp-maps-section">
-            <h4>🗺️ Lokasi Pasar</h4>
+            <h4>??? Lokasi Pasar</h4>
             <div class="maps-container" id="mapsContainer"></div>
             <div class="pasar-list" id="pasarList"></div>
           </div>
@@ -89,14 +89,15 @@
 
       <!-- Placeholder -->
       <div class="hp-placeholder" id="hpPlaceholder">
-        <span>🗺️</span>
+        <span>???</span>
         <p>Pilih kota di atas untuk melihat harga pasar dan lokasi pasar terdekat.</p>
       </div>
     </div>
   </div>
 
-  <footer><p>© 2026 Portal Pertanian Indonesia</p></footer>
+  <footer><p>� 2026 Portal Pertanian Indonesia</p></footer>
   <script src="harga-pasar.js"></script>
+  <script src="supabase.js"></script>
   <script src="navbar.js"></script>
 </body>
 </html>

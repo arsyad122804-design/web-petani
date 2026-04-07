@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
@@ -15,17 +15,17 @@
 <body>
 
   <header>
-    <h1>Portal Pertanian 🌽</h1>
+    <h1>Portal Pertanian ??</h1>
     <button class="hamburger" onclick="toggleNav()" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
     <nav id="mainNav">
-      <a href="home.html">🏠 Beranda</a>
-      <a href="berita.html">📰 Berita</a>
-      <a href="forum.html">👥 Forum</a>
-      <a href="marketplace.html">🛒 Marketplace</a>
-      <a href="keuangan.html">📒 Keuangan</a>
-      <a href="akun.html" id="navAkun" style="display:none">👤 Akun</a>
+      <a href="home.html">?? Beranda</a>
+      <a href="berita.html">?? Berita</a>
+      <a href="forum.html">?? Forum</a>
+      <a href="marketplace.html">?? Marketplace</a>
+      <a href="keuangan.html">?? Keuangan</a>
+      <a href="akun.html" id="navAkun" style="display:none">?? Akun</a>
     </nav>
   </header>
 
@@ -35,7 +35,7 @@
     <div class="pupuk-hero">
     <div class="hero-dots"></div><div class="hero-circle-sm"></div><div class="hero-line"></div>
       <div class="pupuk-hero-text">
-        <h2>🌿 Rekomendasi Pupuk</h2>
+        <h2>?? Rekomendasi Pupuk</h2>
         <p>Pilih tanaman dan masukkan umur tanaman untuk mendapatkan rekomendasi pupuk, dosis, dan jadwal yang tepat.</p>
       </div>
     </div>
@@ -48,12 +48,12 @@
         <div class="step-label"><span class="step-num-badge">1</span> Pilih Jenis Tanaman</div>
         <!-- Filter Kategori -->
         <div class="filter-kategori-wrap" id="pupukFilterWrap">
-          <button class="fk-btn aktif" data-kat="pangan">🌾 Pangan</button>
-          <button class="fk-btn" data-kat="sayuran">🥬 Sayuran</button>
-          <button class="fk-btn" data-kat="buah">🍎 Buah</button>
-          <button class="fk-btn" data-kat="perkebunan">🌴 Perkebunan</button>
-          <button class="fk-btn" data-kat="obat">🌿 Obat</button>
-          <button class="fk-btn" data-kat="hias">🌸 Hias</button>
+          <button class="fk-btn aktif" data-kat="pangan">?? Pangan</button>
+          <button class="fk-btn" data-kat="sayuran">?? Sayuran</button>
+          <button class="fk-btn" data-kat="buah">?? Buah</button>
+          <button class="fk-btn" data-kat="perkebunan">?? Perkebunan</button>
+          <button class="fk-btn" data-kat="obat">?? Obat</button>
+          <button class="fk-btn" data-kat="hias">?? Hias</button>
         </div>
         <div class="tanaman-grid" id="tanamanGrid"></div>
       </div>
@@ -70,7 +70,7 @@
               <option value="bst">BST (Bulan Setelah Tanam)</option>
             </select>
           </div>
-          <button class="btn-cari" onclick="cariRekomendasi()">🔍 Cari Rekomendasi</button>
+          <button class="btn-cari" onclick="cariRekomendasi()">?? Cari Rekomendasi</button>
         </div>
       </div>
 
@@ -81,20 +81,21 @@
         </div>
         <div class="rekomendasi-grid" id="rekomendasiGrid"></div>
         <div class="jadwal-section">
-          <h3>📅 Jadwal Pemupukan</h3>
+          <h3>?? Jadwal Pemupukan</h3>
           <div class="jadwal-timeline" id="jadwalTimeline"></div>
         </div>
-        <button class="btn-ulang" onclick="ulangPilih()">🔄 Pilih Tanaman Lain</button>
+        <button class="btn-ulang" onclick="ulangPilih()">?? Pilih Tanaman Lain</button>
       </div>
 
     </div>
   </div>
 
   <footer>
-    <p>© 2026 Portal Pertanian Indonesia</p>
+    <p>� 2026 Portal Pertanian Indonesia</p>
   </footer>
 
   <script src="pupuk.js"></script>
+  <script src="supabase.js"></script>
   <script src="navbar.js"></script>
 </body>
 </html>

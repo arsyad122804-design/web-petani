@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
@@ -15,17 +15,17 @@
 <body>
 
   <header>
-    <h1>Portal Pertanian 🌽</h1>
+    <h1>Portal Pertanian ??</h1>
     <button class="hamburger" onclick="toggleNav()" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
     <nav id="mainNav">
-      <a href="home.html">🏠 Beranda</a>
-      <a href="berita.html">📰 Berita</a>
-      <a href="forum.html">👥 Forum</a>
-      <a href="marketplace.html">🛒 Marketplace</a>
-      <a href="keuangan.html">📒 Keuangan</a>
-      <a href="akun.html" id="navAkun" style="display:none">👤 Akun</a>
+      <a href="home.html">?? Beranda</a>
+      <a href="berita.html">?? Berita</a>
+      <a href="forum.html">?? Forum</a>
+      <a href="marketplace.html">?? Marketplace</a>
+      <a href="keuangan.html">?? Keuangan</a>
+      <a href="akun.html" id="navAkun" style="display:none">?? Akun</a>
     </nav>
   </header>
 
@@ -33,7 +33,7 @@
 
     <div class="diagnosa-hero">
     <div class="hero-dots"></div><div class="hero-circle-sm"></div><div class="hero-line"></div>
-      <h2>🔬 Diagnosa Tanaman</h2>
+      <h2>?? Diagnosa Tanaman</h2>
       <p>Upload foto daun tanamanmu, kami akan mendeteksi penyakit, penyebab, dan solusinya.</p>
     </div>
 
@@ -43,18 +43,18 @@
       <div class="upload-box" id="uploadBox">
         <input type="file" id="fotoInput" accept="image/*" hidden />
         <div class="upload-content" id="uploadContent">
-          <span class="upload-icon">🍃</span>
+          <span class="upload-icon">??</span>
           <p>Seret foto ke sini atau</p>
           <button onclick="document.getElementById('fotoInput').click()">Pilih Foto</button>
-          <p class="upload-hint">Format: JPG, PNG, WEBP — Maks 5MB</p>
+          <p class="upload-hint">Format: JPG, PNG, WEBP � Maks 5MB</p>
         </div>
         <img id="previewImg" src="" alt="Preview" hidden />
-        <button class="ganti-foto" id="gantiBtn" hidden onclick="gantiPhoto()">🔄 Ganti Foto</button>
+        <button class="ganti-foto" id="gantiBtn" hidden onclick="gantiPhoto()">?? Ganti Foto</button>
       </div>
 
       <!-- Tombol Diagnosa -->
       <button class="btn-diagnosa" id="btnDiagnosa" onclick="diagnosa()" disabled>
-        🔍 Diagnosa Sekarang
+        ?? Diagnosa Sekarang
       </button>
 
       <!-- Loading -->
@@ -65,11 +65,11 @@
 
       <!-- Hasil -->
       <div class="hasil-wrapper" id="hasilWrapper" hidden>
-        <h3>📋 Hasil Diagnosa</h3>
+        <h3>?? Hasil Diagnosa</h3>
 
         <!-- Nama Tanaman Terdeteksi -->
         <div class="tanaman-terdeteksi">
-          <div class="tt-label">🔍 Tanaman Terdeteksi</div>
+          <div class="tt-label">?? Tanaman Terdeteksi</div>
           <div class="tt-nama" id="hasilNamaTanaman">-</div>
           <div class="tt-desk" id="hasilDeskTanaman">-</div>
         </div>
@@ -77,7 +77,7 @@
         <div class="hasil-grid">
 
           <div class="hasil-card penyakit">
-            <div class="hasil-icon">🦠</div>
+            <div class="hasil-icon">??</div>
             <div class="hasil-info">
               <span class="label">Penyakit Terdeteksi</span>
               <span class="nilai" id="hasilPenyakit">-</span>
@@ -85,7 +85,7 @@
           </div>
 
           <div class="hasil-card sebab">
-            <div class="hasil-icon">⚠️</div>
+            <div class="hasil-icon">??</div>
             <div class="hasil-info">
               <span class="label">Penyebab</span>
               <span class="nilai" id="hasilSebab">-</span>
@@ -93,7 +93,7 @@
           </div>
 
           <div class="hasil-card solusi">
-            <div class="hasil-icon">💡</div>
+            <div class="hasil-icon">??</div>
             <div class="hasil-info">
               <span class="label">Solusi</span>
               <span class="nilai" id="hasilSolusi">-</span>
@@ -101,7 +101,7 @@
           </div>
 
           <div class="hasil-card tingkat">
-            <div class="hasil-icon">📊</div>
+            <div class="hasil-icon">??</div>
             <div class="hasil-info">
               <span class="label">Tingkat Keparahan</span>
               <div class="progress-bar">
@@ -113,17 +113,18 @@
 
         </div>
 
-        <button class="btn-ulang" onclick="ulang()">🔄 Diagnosa Ulang</button>
+        <button class="btn-ulang" onclick="ulang()">?? Diagnosa Ulang</button>
       </div>
 
     </div>
   </div>
 
   <footer>
-    <p>© 2026 Portal Pertanian Indonesia</p>
+    <p>� 2026 Portal Pertanian Indonesia</p>
   </footer>
 
   <script src="diagnosa.js"></script>
+  <script src="supabase.js"></script>
   <script src="navbar.js"></script>
 </body>
 </html>

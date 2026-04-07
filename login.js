@@ -36,8 +36,8 @@ async function doLogin() {
   var profil = await sbGetProfil();
   if (profil) localStorage.setItem('akunProfil', JSON.stringify({ namaDepan: profil.nama_depan, namaBelakang: profil.nama_belakang, email: profil.email, noHp: profil.no_hp }));
 
-  // Redirect ke halaman sebelumnya atau marketplace
-  var redirect = new URLSearchParams(window.location.search).get('redirect') || 'marketplace.html';
+  // Redirect ke halaman sebelumnya atau home
+  var redirect = new URLSearchParams(window.location.search).get('redirect') || 'home.html';
   window.location.href = redirect;
 }
 
@@ -70,11 +70,11 @@ async function doRegister() {
   document.getElementById('loginEmail').value = email;
 }
 
-// Cek sudah login
+// Cek sudah login — juga handle OAuth callback via session
 function onSupabaseReady() {
-  sbGetUser().then(function(user) {
-    if (user) {
-      var redirect = new URLSearchParams(window.location.search).get('redirect') || 'marketplace.html';
+  window.sb.auth.getSession().then(function(res) {
+    if (res.data && res.data.session && res.data.session.user) {
+      var redirect = new URLSearchParams(window.location.search).get('redirect') || 'home.html';
       window.location.href = redirect;
     }
   });
@@ -85,7 +85,9 @@ async function loginGoogle() {
   var redirect = new URLSearchParams(window.location.search).get('redirect') || 'home.html';
   var { error } = await window.sb.auth.signInWithOAuth({
     provider: 'google',
-    options: { redirectTo: window.location.origin + '/' + redirect }
+    options: {
+      redirectTo: window.location.origin + '/' + redirect
+    }
   });
   if (error) alert('Gagal login Google: ' + error.message);
 }
