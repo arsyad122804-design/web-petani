@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
@@ -14,43 +14,43 @@
   <link rel="stylesheet" href="produk-detail.css" /></head>
 <body>
   <header>
-    <h1>Portal Pertanian 🌽</h1>
+    <a href="home.html" style="display:flex;align-items:center;text-decoration:none"><img src="logo.png" alt="Portal Pertanian" style="height:44px;width:auto;object-fit:contain" /></a>
     <button class="hamburger" onclick="toggleNav()" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
     <nav id="mainNav">
-      <a href="home.html">🏠 Beranda</a>
-      <a href="berita.html">📰 Berita</a>
-      <a href="forum.html">👥 Forum</a>
-      <a href="marketplace.html">🛒 Marketplace</a>
-      <a href="keuangan.html">📒 Keuangan</a>
-      <a href="akun.html" id="navAkun" style="display:none">👤 Akun</a>
-      <a href="login.html" id="navLogin">🔐 Login</a>
+      <a href="home.html">?? Beranda</a>
+      <a href="berita.html">?? Berita</a>
+      <a href="forum.html">?? Forum</a>
+      <a href="marketplace.html">?? Marketplace</a>
+      <a href="keuangan.html">?? Keuangan</a>
+      <a href="akun.html" id="navAkun" style="display:none">?? Akun</a>
+      <a href="login.html" id="navLogin">?? Login</a>
     </nav>
   </header>
 
   <div class="detail-page">
     <div class="detail-breadcrumb">
-      <a href="marketplace.html">← Kembali ke Marketplace</a>
+      <a href="marketplace.html">? Kembali ke Marketplace</a>
     </div>
     <div class="detail-wrapper" id="detailWrapper"></div>
   </div>
 
   <!-- Keranjang FAB -->
   <button class="keranjang-fab" onclick="toggleKeranjang()">
-    🛒 <span class="keranjang-badge" id="keranjangBadge">0</span>
+    ?? <span class="keranjang-badge" id="keranjangBadge">0</span>
   </button>
   <div class="keranjang-overlay" id="keranjangOverlay" onclick="toggleKeranjang()"></div>
   <div class="keranjang-panel" id="keranjangPanel">
     <div class="keranjang-header">
-      <h3>🛒 Keranjang Belanja</h3>
-      <button onclick="toggleKeranjang()">✕</button>
+      <h3>?? Keranjang Belanja</h3>
+      <button onclick="toggleKeranjang()">?</button>
     </div>
     <div class="keranjang-body" id="keranjangBody"></div>
     <div class="keranjang-footer" id="keranjangFooter"></div>
   </div>
 
-  <footer><p>© 2026 Portal Pertanian Indonesia</p></footer>
+  <footer><p>� 2026 Portal Pertanian Indonesia</p></footer>
   <script src="marketplace.js"></script>
   <script src="keranjang.js"></script>
   <script src="produk-detail.js"></script>

@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
@@ -14,25 +14,25 @@
   <link rel="stylesheet" href="keuangan.css" /></head>
 <body>
   <header>
-    <h1>Portal Pertanian 🌽</h1>
+    <a href="home.html" style="display:flex;align-items:center;text-decoration:none"><img src="logo.png" alt="Portal Pertanian" style="height:44px;width:auto;object-fit:contain" /></a>
     <button class="hamburger" onclick="toggleNav()" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
     <nav id="mainNav">
-      <a href="home.html">🏠 Beranda</a>
-      <a href="berita.html">📰 Berita</a>
-      <a href="forum.html">👥 Forum</a>
-      <a href="marketplace.html">🛒 Marketplace</a>
-      <a href="keuangan.html">📒 Keuangan</a>
-      <a href="akun.html" id="navAkun" style="display:none">👤 Akun</a>
-      <a href="login.html" id="navLogin">🔐 Login</a>
+      <a href="home.html">?? Beranda</a>
+      <a href="berita.html">?? Berita</a>
+      <a href="forum.html">?? Forum</a>
+      <a href="marketplace.html">?? Marketplace</a>
+      <a href="keuangan.html">?? Keuangan</a>
+      <a href="akun.html" id="navAkun" style="display:none">?? Akun</a>
+      <a href="login.html" id="navLogin">?? Login</a>
     </nav>
   </header>
 
   <div class="keu-page">
     <div class="keu-hero">
     <div class="hero-dots"></div><div class="hero-circle-sm"></div><div class="hero-line"></div>
-      <h2>📒 Catatan Keuangan Tani</h2>
+      <h2>?? Catatan Keuangan Tani</h2>
       <p>Catat modal, hasil panen, dan pantau untung rugi usaha tanimu secara otomatis.</p>
     </div>
 
@@ -40,28 +40,28 @@
       <!-- Ringkasan -->
       <div class="keu-summary">
         <div class="summary-card modal-card">
-          <span class="s-icon">💸</span>
+          <span class="s-icon">??</span>
           <div>
             <div class="s-label">Total Modal</div>
             <div class="s-val" id="totalModal">Rp 0</div>
           </div>
         </div>
         <div class="summary-card panen-card">
-          <span class="s-icon">🌾</span>
+          <span class="s-icon">??</span>
           <div>
             <div class="s-label">Total Hasil Panen</div>
             <div class="s-val" id="totalPanen">Rp 0</div>
           </div>
         </div>
         <div class="summary-card hasil-card" id="hasilCard">
-          <span class="s-icon" id="hasilIcon">📊</span>
+          <span class="s-icon" id="hasilIcon">??</span>
           <div>
             <div class="s-label">Untung / Rugi</div>
             <div class="s-val" id="totalHasil">Rp 0</div>
           </div>
         </div>
         <div class="summary-card roi-card">
-          <span class="s-icon">📈</span>
+          <span class="s-icon">??</span>
           <div>
             <div class="s-label">ROI</div>
             <div class="s-val" id="totalROI">0%</div>
@@ -74,8 +74,8 @@
         <!-- Form Input -->
         <div class="keu-form-section">
           <div class="form-tabs">
-            <button class="form-tab aktif" id="tabModal" onclick="switchTab('modal')">💸 Input Modal</button>
-            <button class="form-tab" id="tabPanen" onclick="switchTab('panen')">🌾 Input Hasil Panen</button>
+            <button class="form-tab aktif" id="tabModal" onclick="switchTab('modal')">?? Input Modal</button>
+            <button class="form-tab" id="tabPanen" onclick="switchTab('panen')">?? Input Hasil Panen</button>
           </div>
 
           <div class="form-body" id="formModal">
@@ -90,12 +90,12 @@
             <div class="form-group">
               <label>Kategori</label>
               <select id="modalKat">
-                <option value="Pupuk">🌿 Pupuk</option>
-                <option value="Bibit">🌱 Bibit/Benih</option>
-                <option value="Tenaga Kerja">👷 Tenaga Kerja</option>
-                <option value="Alat">🔧 Alat & Mesin</option>
-                <option value="Pengairan">💧 Pengairan</option>
-                <option value="Lainnya">📦 Lainnya</option>
+                <option value="Pupuk">?? Pupuk</option>
+                <option value="Bibit">?? Bibit/Benih</option>
+                <option value="Tenaga Kerja">?? Tenaga Kerja</option>
+                <option value="Alat">?? Alat & Mesin</option>
+                <option value="Pengairan">?? Pengairan</option>
+                <option value="Lainnya">?? Lainnya</option>
               </select>
             </div>
             <div class="form-group">
@@ -133,13 +133,13 @@
         <!-- Tabel Transaksi -->
         <div class="keu-table-section">
           <div class="table-header">
-            <h3>📋 Riwayat Transaksi</h3>
+            <h3>?? Riwayat Transaksi</h3>
             <div class="table-filter">
               <button class="tf-btn aktif" onclick="filterTabel('semua',this)">Semua</button>
               <button class="tf-btn" onclick="filterTabel('modal',this)">Modal</button>
               <button class="tf-btn" onclick="filterTabel('panen',this)">Panen</button>
             </div>
-            <button class="btn-hapus-semua" onclick="hapusSemua()">🗑️ Hapus Semua</button>
+            <button class="btn-hapus-semua" onclick="hapusSemua()">??? Hapus Semua</button>
           </div>
           <div class="table-wrapper">
             <table id="tabelTransaksi">
@@ -156,7 +156,7 @@
               <tbody id="tabelBody"></tbody>
             </table>
             <div class="empty-tabel" id="emptyTabel">
-              <span>📝</span>
+              <span>??</span>
               <p>Belum ada transaksi. Mulai catat modal atau hasil panenmu.</p>
             </div>
           </div>
@@ -165,7 +165,7 @@
     </div>
   </div>
 
-  <footer><p>© 2026 Portal Pertanian Indonesia</p></footer>
+  <footer><p>� 2026 Portal Pertanian Indonesia</p></footer>
   <script src="keuangan.js"></script>
   <script src="supabase.js"></script>
   <script src="navbar.js"></script>

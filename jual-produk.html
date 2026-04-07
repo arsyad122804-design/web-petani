@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
@@ -10,31 +10,31 @@
   <link rel="stylesheet" href="jual-produk.css" /></head>
 <body>
   <header>
-    <h1>Portal Pertanian 🌽</h1>
+    <a href="home.html" style="display:flex;align-items:center;text-decoration:none"><img src="logo.png" alt="Portal Pertanian" style="height:44px;width:auto;object-fit:contain" /></a>
     <button class="hamburger" onclick="toggleNav()" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
     <nav id="mainNav">
-      <a href="home.html">🏠 Beranda</a>
-      <a href="berita.html">📰 Berita</a>
-      <a href="forum.html">👥 Forum</a>
-      <a href="marketplace.html">🛒 Marketplace</a>
-      <a href="keuangan.html">📒 Keuangan</a>
-      <a href="akun.html" id="navAkun" style="display:none">👤 Akun</a>
-      <a href="login.html" id="navLogin">🔐 Login</a>
+      <a href="home.html">?? Beranda</a>
+      <a href="berita.html">?? Berita</a>
+      <a href="forum.html">?? Forum</a>
+      <a href="marketplace.html">?? Marketplace</a>
+      <a href="keuangan.html">?? Keuangan</a>
+      <a href="akun.html" id="navAkun" style="display:none">?? Akun</a>
+      <a href="login.html" id="navLogin">?? Login</a>
     </nav>
   </header>
 
   <div class="jp-page">
     <div class="jp-hero">
       <div class="hero-dots"></div><div class="hero-circle-sm"></div><div class="hero-line"></div>
-      <h2>🌾 Jual Produkmu</h2>
+      <h2>?? Jual Produkmu</h2>
       <p>Isi detail produk yang ingin kamu jual di Marketplace Pertanian Indonesia.</p>
     </div>
 
     <div class="jp-wrapper">
       <div class="jp-breadcrumb">
-        <a href="marketplace.html">← Kembali ke Marketplace</a>
+        <a href="marketplace.html">? Kembali ke Marketplace</a>
       </div>
 
       <div class="jp-layout">
@@ -43,16 +43,16 @@
         <div class="jp-form-card">
 
           <!-- Info Produk -->
-          <div class="jp-section-label">📦 Informasi Produk</div>
+          <div class="jp-section-label">?? Informasi Produk</div>
           <div class="fg"><label>Nama Produk</label><input type="text" id="jpNama" placeholder="Contoh: Cabai Merah Keriting Segar" /></div>
           <div class="form-row-2">
             <div class="fg"><label>Kategori</label>
               <select id="jpKategori">
-                <option value="hasil">🌾 Hasil Panen</option>
-                <option value="bibit">🌱 Bibit & Benih</option>
-                <option value="pupuk">🌿 Pupuk</option>
-                <option value="alat">🔧 Alat Pertanian</option>
-                <option value="pestisida">🧪 Pestisida</option>
+                <option value="hasil">?? Hasil Panen</option>
+                <option value="bibit">?? Bibit & Benih</option>
+                <option value="pupuk">?? Pupuk</option>
+                <option value="alat">?? Alat Pertanian</option>
+                <option value="pestisida">?? Pestisida</option>
               </select>
             </div>
             <div class="fg"><label>Satuan</label>
@@ -73,10 +73,10 @@
             <div class="fg"><label>Harga (Rp)</label><input type="number" id="jpHarga" placeholder="Contoh: 35000" min="0" oninput="updatePreview()" /></div>
             <div class="fg"><label>Stok Tersedia</label><input type="number" id="jpStok" placeholder="Contoh: 100" min="0" /></div>
           </div>
-          <div class="fg"><label>Deskripsi Produk</label><textarea id="jpDeskripsi" rows="4" placeholder="Ceritakan detail produkmu — kondisi, keunggulan, cara penyimpanan, dll..."></textarea></div>
+          <div class="fg"><label>Deskripsi Produk</label><textarea id="jpDeskripsi" rows="4" placeholder="Ceritakan detail produkmu � kondisi, keunggulan, cara penyimpanan, dll..."></textarea></div>
 
           <!-- Lokasi Penjual -->
-          <div class="jp-section-label">📍 Lokasi Penjual</div>
+          <div class="jp-section-label">?? Lokasi Penjual</div>
           <div class="fg"><label>Nama Penjual / Toko</label><input type="text" id="jpPenjual" placeholder="Contoh: Pak Budi - Kebun Organik" /></div>
           <div class="form-row-2">
             <div class="fg"><label>Kota / Kabupaten</label><input type="text" id="jpKota" placeholder="Contoh: Karawang" /></div>
@@ -104,37 +104,37 @@
           <div class="fg"><label>Link Google Maps Lokasi (opsional)</label><input type="url" id="jpMaps" placeholder="https://maps.google.com/..." /></div>
 
           <!-- Foto Produk -->
-          <div class="jp-section-label">📷 Foto Produk</div>
+          <div class="jp-section-label">?? Foto Produk</div>
           <div class="jp-foto-upload" id="jpFotoArea" onclick="document.getElementById('jpFotoInput').click()">
             <input type="file" id="jpFotoInput" accept="image/*" hidden onchange="previewFoto(this)" />
             <div id="jpFotoPlaceholder">
-              <span>📷</span>
+              <span>??</span>
               <p>Klik untuk upload foto produk</p>
-              <small>JPG, PNG — Maks 5MB</small>
+              <small>JPG, PNG � Maks 5MB</small>
             </div>
             <img id="jpFotoPreview" src="" alt="" style="display:none" />
           </div>
 
           <!-- Ulasan dari Penjual -->
-          <div class="jp-section-label">💬 Pesan dari Penjual</div>
+          <div class="jp-section-label">?? Pesan dari Penjual</div>
           <div class="fg"><textarea id="jpPesan" rows="3" placeholder="Tulis pesan atau jaminan kualitas untuk pembeli... Contoh: Produk segar dipanen langsung hari ini, pengiriman cepat, garansi uang kembali jika tidak sesuai."></textarea></div>
 
-          <button class="btn-publish" onclick="publishProduk()">🚀 Publikasikan Produk</button>
+          <button class="btn-publish" onclick="publishProduk()">?? Publikasikan Produk</button>
         </div>
 
         <!-- PREVIEW -->
         <div class="jp-preview-card" id="jpPreview">
-          <div class="jp-preview-label">👁️ Preview Produk</div>
+          <div class="jp-preview-label">??? Preview Produk</div>
           <div class="preview-img-wrap">
             <img id="prevImg" src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=300&h=200&fit=crop" alt="preview" />
             <span class="preview-badge" id="prevKat">hasil</span>
           </div>
           <div class="preview-body">
             <div class="preview-nama" id="prevNama">Nama Produk</div>
-            <div class="preview-penjual" id="prevPenjual">🏪 Nama Penjual</div>
+            <div class="preview-penjual" id="prevPenjual">?? Nama Penjual</div>
             <div class="preview-harga" id="prevHarga">Rp 0</div>
             <div class="preview-satuan" id="prevSatuan">per kg</div>
-            <div class="preview-rating">⭐⭐⭐⭐⭐ <span style="color:#aaa;font-size:.75rem">(Baru)</span></div>
+            <div class="preview-rating">????? <span style="color:#aaa;font-size:.75rem">(Baru)</span></div>
           </div>
         </div>
 
@@ -145,7 +145,7 @@
   <!-- Success Modal -->
   <div class="success-overlay" id="successOverlay" style="display:none">
     <div class="success-modal">
-      <div class="success-icon">🎉</div>
+      <div class="success-icon">??</div>
       <h3>Produk Berhasil Dipublikasikan!</h3>
       <p>Produkmu sudah tampil di Marketplace Pertanian dan bisa dilihat oleh pembeli.</p>
       <div style="display:flex;gap:10px;justify-content:center;margin-top:20px">
@@ -155,7 +155,7 @@
     </div>
   </div>
 
-  <footer><p>© 2026 Portal Pertanian Indonesia</p></footer>
+  <footer><p>� 2026 Portal Pertanian Indonesia</p></footer>
   <script src="supabase.js"></script>
   <script src="jual-produk.js"></script>
   <script src="navbar.js"></script>

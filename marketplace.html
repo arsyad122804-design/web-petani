@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
@@ -16,28 +16,28 @@
   <link rel="stylesheet" href="keranjang.css" /></head>
 <body>
   <header>
-    <h1>Portal Pertanian 🌽</h1>
+    <a href="home.html" style="display:flex;align-items:center;text-decoration:none"><img src="logo.png" alt="Portal Pertanian" style="height:44px;width:auto;object-fit:contain" /></a>
     <button class="hamburger" onclick="toggleNav()" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
     <nav id="mainNav">
-      <a href="home.html">🏠 Beranda</a>
-      <a href="berita.html">📰 Berita</a>
-      <a href="forum.html">👥 Forum</a>
-      <a href="marketplace.html">🛒 Marketplace</a>
-      <a href="keuangan.html">📒 Keuangan</a>
-      <a href="akun.html" id="navAkun" style="display:none">👤 Akun</a>
-      <a href="login.html" id="navLogin">🔐 Login</a>
+      <a href="home.html">?? Beranda</a>
+      <a href="berita.html">?? Berita</a>
+      <a href="forum.html">?? Forum</a>
+      <a href="marketplace.html">?? Marketplace</a>
+      <a href="keuangan.html">?? Keuangan</a>
+      <a href="akun.html" id="navAkun" style="display:none">?? Akun</a>
+      <a href="login.html" id="navLogin">?? Login</a>
     </nav>
   </header>
 
   <div class="mp-page">
     <div class="mp-hero">
     <div class="hero-dots"></div><div class="hero-circle-sm"></div><div class="hero-line"></div>
-      <h2>🛒 Marketplace Pertanian</h2>
+      <h2>?? Marketplace Pertanian</h2>
       <p>Jual beli hasil panen, bibit, pupuk, dan peralatan pertanian langsung dari petani ke pembeli.</p>
       <div class="mp-search-bar">
-        <input type="text" id="mpSearch" placeholder="🔍 Cari produk pertanian..." oninput="renderProduk()" />
+        <input type="text" id="mpSearch" placeholder="?? Cari produk pertanian..." oninput="renderProduk()" />
         <button onclick="renderProduk()">Cari</button>
       </div>
       <button class="btn-jual-produk" onclick="cekLoginJual()">+ Jual Produkmu</button>
@@ -47,32 +47,32 @@
       <!-- Sidebar Filter -->
       <aside class="mp-sidebar">
         <div class="mp-filter-card">
-          <h4>🗂️ Kategori</h4>
+          <h4>??? Kategori</h4>
           <ul class="mp-kategori" id="mpKategori">
-            <li class="aktif" onclick="setKategori('semua',this)">🌐 Semua Produk</li>
-            <li onclick="setKategori('hasil',this)">🌾 Hasil Panen</li>
-            <li onclick="setKategori('bibit',this)">🌱 Bibit & Benih</li>
-            <li onclick="setKategori('pupuk',this)">🌿 Pupuk</li>
-            <li onclick="setKategori('alat',this)">🔧 Alat Pertanian</li>
-            <li onclick="setKategori('pestisida',this)">🧪 Pestisida</li>
+            <li class="aktif" onclick="setKategori('semua',this)">?? Semua Produk</li>
+            <li onclick="setKategori('hasil',this)">?? Hasil Panen</li>
+            <li onclick="setKategori('bibit',this)">?? Bibit & Benih</li>
+            <li onclick="setKategori('pupuk',this)">?? Pupuk</li>
+            <li onclick="setKategori('alat',this)">?? Alat Pertanian</li>
+            <li onclick="setKategori('pestisida',this)">?? Pestisida</li>
           </ul>
         </div>
         <div class="mp-filter-card">
-          <h4>💰 Rentang Harga</h4>
+          <h4>?? Rentang Harga</h4>
           <div class="harga-range">
             <input type="range" id="maxHarga" min="0" max="500000" step="10000" value="500000" oninput="updateHargaLabel(); renderProduk()" />
             <div class="harga-label">Maks: <span id="hargaLabel">Rp 500.000</span></div>
           </div>
         </div>
         <div class="mp-filter-card">
-          <h4>⭐ Rating</h4>
+          <h4>? Rating</h4>
           <ul class="rating-filter">
             <li class="aktif" onclick="setRating(0,this)">Semua Rating</li>
-            <li onclick="setRating(5,this)"><span style="color:#f57f17">★★★★★</span> 5</li>
-            <li onclick="setRating(4,this)"><span style="color:#f57f17">★★★★</span><span style="color:#e0e0e0">★</span> 4+</li>
-            <li onclick="setRating(3,this)"><span style="color:#f57f17">★★★</span><span style="color:#e0e0e0">★★</span> 3+</li>
-            <li onclick="setRating(2,this)"><span style="color:#f57f17">★★</span><span style="color:#e0e0e0">★★★</span> 2+</li>
-            <li onclick="setRating(1,this)"><span style="color:#f57f17">★</span><span style="color:#e0e0e0">★★★★</span> 1+</li>
+            <li onclick="setRating(5,this)"><span style="color:#f57f17">?????</span> 5</li>
+            <li onclick="setRating(4,this)"><span style="color:#f57f17">????</span><span style="color:#e0e0e0">?</span> 4+</li>
+            <li onclick="setRating(3,this)"><span style="color:#f57f17">???</span><span style="color:#e0e0e0">??</span> 3+</li>
+            <li onclick="setRating(2,this)"><span style="color:#f57f17">??</span><span style="color:#e0e0e0">???</span> 2+</li>
+            <li onclick="setRating(1,this)"><span style="color:#f57f17">?</span><span style="color:#e0e0e0">????</span> 1+</li>
           </ul>
         </div>
       </aside>
@@ -93,19 +93,19 @@
     </div>
   </div>
 
-  <footer><p>© 2026 Portal Pertanian Indonesia</p></footer>
+  <footer><p>� 2026 Portal Pertanian Indonesia</p></footer>
 
   <!-- Tombol Keranjang -->
   <button class="keranjang-fab" onclick="toggleKeranjang()">
-    🛒 <span class="keranjang-badge" id="keranjangBadge">0</span>
+    ?? <span class="keranjang-badge" id="keranjangBadge">0</span>
   </button>
 
   <!-- Panel Keranjang -->
   <div class="keranjang-overlay" id="keranjangOverlay" onclick="toggleKeranjang()"></div>
   <div class="keranjang-panel" id="keranjangPanel">
     <div class="keranjang-header">
-      <h3>🛒 Keranjang Belanja</h3>
-      <button onclick="toggleKeranjang()">✕</button>
+      <h3>?? Keranjang Belanja</h3>
+      <button onclick="toggleKeranjang()">?</button>
     </div>
     <div class="keranjang-body" id="keranjangBody"></div>
     <div class="keranjang-footer" id="keranjangFooter"></div>
