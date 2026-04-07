@@ -259,7 +259,8 @@ function doLogout() {
     var href = link.getAttribute('href');
     if (!href || href.startsWith('#') || href.startsWith('http') || href.startsWith('mailto') || href.startsWith('tel')) return;
     if (link.target === '_blank') return;
-    if (link.closest('#akunDropdown')) return; // dropdown sudah handle sendiri
+    if (link.closest('#akunDropdown')) return;
+    if (e.target.closest('button')) return; // semua button tidak trigger loading
     var page = href.split('/').pop().split('?')[0];
     showTransition(page);
     e.preventDefault();

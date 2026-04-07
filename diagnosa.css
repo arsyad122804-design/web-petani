@@ -317,3 +317,31 @@
   .hasil-grid { grid-template-columns: 1fr; }
   .diagnosa-hero h2 { font-size: 1.8rem; }
 }
+
+/* ===== TANAMAN TERDETEKSI ===== */
+.tanaman-terdeteksi {
+  background: linear-gradient(135deg, #e8f5e9, #f1f8e9);
+  border-radius: 14px;
+  padding: 16px 20px;
+  margin-bottom: 16px;
+  border: 2px solid #c8e6c9;
+}
+.tt-label {
+  font-size: .72rem;
+  font-weight: 800;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+}
+.tt-nama {
+  font-size: 1.3rem;
+  font-weight: 900;
+  color: #1b5e20;
+  margin-bottom: 4px;
+}
+.tt-desk {
+  font-size: .82rem;
+  color: #555;
+  line-height: 1.5;
+}

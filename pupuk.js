@@ -1,23 +1,81 @@
 const tanamanList = [
-  { id: "padi",    nama: "Padi",         emoji: "🌾" },
-  { id: "jagung",  nama: "Jagung",       emoji: "🌽" },
-  { id: "cabai",   nama: "Cabai",        emoji: "🌶️" },
-  { id: "tomat",   nama: "Tomat",        emoji: "🍅" },
-  { id: "terong",  nama: "Terong",       emoji: "🍆" },
-  { id: "bawang",  nama: "Bawang Merah", emoji: "🧅" },
-  { id: "kangkung",nama: "Kangkung",     emoji: "🥬" },
-  { id: "bayam",   nama: "Bayam",        emoji: "🌿" },
-  { id: "wortel",  nama: "Wortel",       emoji: "🥕" },
-  { id: "semangka",nama: "Semangka",     emoji: "🍉" },
-  { id: "mentimun",nama: "Mentimun",     emoji: "🥒" },
-  { id: "kacang",  nama: "Kacang Panjang",emoji: "🫘" },
-  { id: "singkong",nama: "Singkong",     emoji: "🥔" },
-  { id: "pisang",  nama: "Pisang",       emoji: "🍌" },
-  { id: "pepaya",  nama: "Pepaya",       emoji: "🍈" },
-  { id: "kedelai", nama: "Kedelai",      emoji: "🫘" },
+  // PANGAN
+  { id:"padi",        nama:"Padi",           emoji:"🌾", kategori:"pangan" },
+  { id:"jagung",      nama:"Jagung",         emoji:"🌽", kategori:"pangan" },
+  { id:"kedelai",     nama:"Kedelai",        emoji:"🫘", kategori:"pangan" },
+  { id:"singkong",    nama:"Singkong",       emoji:"🥔", kategori:"pangan" },
+  { id:"ubi_jalar",   nama:"Ubi Jalar",      emoji:"🍠", kategori:"pangan" },
+  { id:"kacang_tanah",nama:"Kacang Tanah",   emoji:"🥜", kategori:"pangan" },
+  { id:"sorgum",      nama:"Sorgum",         emoji:"🌾", kategori:"pangan" },
+  { id:"gandum",      nama:"Gandum",         emoji:"🌾", kategori:"pangan" },
+  // SAYURAN
+  { id:"cabai",       nama:"Cabai",          emoji:"🌶️", kategori:"sayuran" },
+  { id:"tomat",       nama:"Tomat",          emoji:"🍅", kategori:"sayuran" },
+  { id:"terong",      nama:"Terong",         emoji:"🍆", kategori:"sayuran" },
+  { id:"bawang",      nama:"Bawang Merah",   emoji:"🧅", kategori:"sayuran" },
+  { id:"kangkung",    nama:"Kangkung",       emoji:"🥬", kategori:"sayuran" },
+  { id:"bayam",       nama:"Bayam",          emoji:"🌿", kategori:"sayuran" },
+  { id:"wortel",      nama:"Wortel",         emoji:"🥕", kategori:"sayuran" },
+  { id:"mentimun",    nama:"Mentimun",       emoji:"🥒", kategori:"sayuran" },
+  { id:"kacang",      nama:"Kacang Panjang", emoji:"🫘", kategori:"sayuran" },
+  { id:"brokoli",     nama:"Brokoli",        emoji:"🥦", kategori:"sayuran" },
+  { id:"kubis",       nama:"Kubis",          emoji:"🥬", kategori:"sayuran" },
+  { id:"selada",      nama:"Selada",         emoji:"🥗", kategori:"sayuran" },
+  { id:"buncis",      nama:"Buncis",         emoji:"🫘", kategori:"sayuran" },
+  { id:"labu_siam",   nama:"Labu Siam",      emoji:"🥦", kategori:"sayuran" },
+  { id:"bawang_putih",nama:"Bawang Putih",   emoji:"🧄", kategori:"sayuran" },
+  { id:"kentang",     nama:"Kentang",        emoji:"🥔", kategori:"sayuran" },
+  { id:"paprika",     nama:"Paprika",        emoji:"🫑", kategori:"sayuran" },
+  // BUAH
+  { id:"semangka",    nama:"Semangka",       emoji:"🍉", kategori:"buah" },
+  { id:"pisang",      nama:"Pisang",         emoji:"🍌", kategori:"buah" },
+  { id:"pepaya",      nama:"Pepaya",         emoji:"🍈", kategori:"buah" },
+  { id:"mangga",      nama:"Mangga",         emoji:"🥭", kategori:"buah" },
+  { id:"jeruk",       nama:"Jeruk",          emoji:"🍊", kategori:"buah" },
+  { id:"jambu",       nama:"Jambu Biji",     emoji:"🍐", kategori:"buah" },
+  { id:"rambutan",    nama:"Rambutan",       emoji:"🍈", kategori:"buah" },
+  { id:"durian",      nama:"Durian",         emoji:"🍈", kategori:"buah" },
+  { id:"nanas",       nama:"Nanas",          emoji:"🍍", kategori:"buah" },
+  { id:"melon",       nama:"Melon",          emoji:"🍈", kategori:"buah" },
+  { id:"anggur",      nama:"Anggur",         emoji:"🍇", kategori:"buah" },
+  { id:"alpukat",     nama:"Alpukat",        emoji:"🥑", kategori:"buah" },
+  // PERKEBUNAN
+  { id:"kopi",        nama:"Kopi",           emoji:"☕", kategori:"perkebunan" },
+  { id:"kakao",       nama:"Kakao",          emoji:"🍫", kategori:"perkebunan" },
+  { id:"kelapa_sawit",nama:"Kelapa Sawit",   emoji:"🌴", kategori:"perkebunan" },
+  { id:"teh",         nama:"Teh",            emoji:"🍵", kategori:"perkebunan" },
+  { id:"karet",       nama:"Karet",          emoji:"🌳", kategori:"perkebunan" },
+  { id:"vanili",      nama:"Vanili",         emoji:"🌿", kategori:"perkebunan" },
+  { id:"lada",        nama:"Lada",           emoji:"🌶️", kategori:"perkebunan" },
+  { id:"cengkeh",     nama:"Cengkeh",        emoji:"🌿", kategori:"perkebunan" },
+  { id:"pala",        nama:"Pala",           emoji:"🌰", kategori:"perkebunan" },
+  { id:"kelapa",      nama:"Kelapa",         emoji:"🥥", kategori:"perkebunan" },
+  // OBAT
+  { id:"jahe",        nama:"Jahe",           emoji:"🫚", kategori:"obat" },
+  { id:"kunyit",      nama:"Kunyit",         emoji:"🟡", kategori:"obat" },
+  { id:"temulawak",   nama:"Temulawak",      emoji:"🌿", kategori:"obat" },
+  { id:"lidah_buaya", nama:"Lidah Buaya",    emoji:"🌵", kategori:"obat" },
+  { id:"sambiloto",   nama:"Sambiloto",      emoji:"🌱", kategori:"obat" },
+  { id:"sirih",       nama:"Sirih",          emoji:"🌿", kategori:"obat" },
+  { id:"pegagan",     nama:"Pegagan",        emoji:"🌿", kategori:"obat" },
+  { id:"kayu_manis",  nama:"Kayu Manis",     emoji:"🌳", kategori:"obat" },
+  { id:"kencur",      nama:"Kencur",         emoji:"🫚", kategori:"obat" },
+  { id:"lengkuas",    nama:"Lengkuas",       emoji:"🫚", kategori:"obat" },
+  // HIAS
+  { id:"mawar",       nama:"Mawar",          emoji:"🌹", kategori:"hias" },
+  { id:"anggrek",     nama:"Anggrek",        emoji:"🌸", kategori:"hias" },
+  { id:"melati",      nama:"Melati",         emoji:"🤍", kategori:"hias" },
+  { id:"kamboja",     nama:"Kamboja",        emoji:"🌺", kategori:"hias" },
+  { id:"bougenville", nama:"Bougenville",    emoji:"💐", kategori:"hias" },
+  { id:"krisan",      nama:"Krisan",         emoji:"🌼", kategori:"hias" },
+  { id:"heliconia",   nama:"Heliconia",      emoji:"🌺", kategori:"hias" },
+  { id:"anthurium",   nama:"Anthurium",      emoji:"🌸", kategori:"hias" },
+  { id:"adenium",     nama:"Adenium",        emoji:"🌸", kategori:"hias" },
+  { id:"bromelia",    nama:"Bromelia",       emoji:"🌺", kategori:"hias" },
 ];
 
 let tanamanDipilih = null;
+let kategoriAktifPupuk = 'pangan';
 
 // Data rekomendasi pupuk per tanaman
 const dataPupuk = {
@@ -115,13 +173,33 @@ const dataPupuk = {
 // ===== RENDER TANAMAN =====
 function renderTanaman() {
   const grid = document.getElementById('tanamanGrid');
-  grid.innerHTML = tanamanList.map(t => `
+  const filtered = tanamanList.filter(t => t.kategori === kategoriAktifPupuk);
+  grid.innerHTML = filtered.map(t => `
     <div class="tanaman-item" id="ti-${t.id}" onclick="pilihTanaman('${t.id}')">
       <span class="t-emoji">${t.emoji}</span>
       <span class="t-nama">${t.nama}</span>
     </div>
   `).join('');
 }
+
+// Filter kategori
+window.addEventListener('load', function() {
+  const wrap = document.getElementById('pupukFilterWrap');
+  if (!wrap) return;
+  wrap.addEventListener('click', function(e) {
+    const btn = e.target.closest('.fk-btn');
+    if (!btn) return;
+    e.stopPropagation();
+    e.preventDefault();
+    kategoriAktifPupuk = btn.dataset.kat;
+    wrap.querySelectorAll('.fk-btn').forEach(b => b.classList.remove('aktif'));
+    btn.classList.add('aktif');
+    tanamanDipilih = null;
+    document.getElementById('stepUmur').style.display = 'none';
+    document.getElementById('hasilSection').style.display = 'none';
+    renderTanaman();
+  });
+});
 
 function pilihTanaman(id) {
   tanamanDipilih = tanamanList.find(t => t.id === id);

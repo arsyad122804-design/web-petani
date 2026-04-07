@@ -1,6 +1,9 @@
 // ===== NAVIGATE WITH LOADING =====
 function navigateTo(href) {
-  // Trigger page transition yang sama dengan navbar
+  // Jangan trigger kalau sedang di halaman yang sama
+  var current = window.location.pathname.split('/').pop();
+  if (current === href) return;
+
   var overlay = document.getElementById('pageTransition');
   var statusSets = {
     'diagnosa.html':    ['Memuat Diagnosa...','Menyiapkan AI...','Hampir selesai...'],

@@ -413,3 +413,25 @@
   .pupuk-hero { padding: 40px 20px; }
   .tanaman-grid { grid-template-columns: repeat(3, 1fr); }
 }
+
+/* ===== FILTER KATEGORI PUPUK ===== */
+.filter-kategori-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+.fk-btn {
+  padding: 7px 14px;
+  border-radius: 99px;
+  border: 2px solid #e8f5e9;
+  background: white;
+  color: #555;
+  font-size: .78rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all .2s;
+  white-space: nowrap;
+}
+.fk-btn:hover { border-color: #81c784; color: #2e7d32; background: #f0f7f0; }
+.fk-btn.aktif { background: linear-gradient(135deg,#2e7d32,#43a047); color: white; border-color: #2e7d32; }

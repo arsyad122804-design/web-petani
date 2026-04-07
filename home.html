@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
@@ -10,8 +10,9 @@
   <title>Portal Pertanian</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="navbar.css" />
+  <link rel="stylesheet" href="home.css" />
   <link rel="stylesheet" href="hero.css" />
-  <link rel="stylesheet" href="home.css" /></head>
+</head>
 <body>
 
   <header>
@@ -37,6 +38,15 @@
       <span class="hero-tag">🌾 Platform Pertanian Digital #1</span>
       <h1>Tani Lebih Cerdas,<br/><span>Panen Lebih Banyak</span></h1>
       <p>Portal pertanian terlengkap untuk petani Indonesia — berita terkini, harga pasar real-time, panduan bertani, diagnosa tanaman, dan komunitas petani.</p>
+      <div class="hero-btns">
+        <a href="diagnosa.html" class="hero-btn-primary">🔬 Diagnosa Tanaman</a>
+        <a href="harga-pasar.html" class="hero-btn-secondary">💰 Cek Harga Pasar</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat"><div class="hs-num">50+</div><div class="hs-label">Kota Terpantau</div></div>
+        <div class="hero-stat"><div class="hs-num">16</div><div class="hs-label">Jenis Tanaman</div></div>
+        <div class="hero-stat"><div class="hs-num">70+</div><div class="hs-label">Produk Tersedia</div></div>
+      </div>
     </div>
     <div class="hero-img" id="heroStack">
       <div class="stack-container" id="stackContainer"></div>
@@ -61,54 +71,12 @@
       <button class="slider-btn prev" onclick="slideBerita(-1)">&#8249;</button>
       <div class="slider-track-outer">
         <div class="slider-track" id="sliderTrack">
-          <div class="berita-card">
-            <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=400&h=220&fit=crop" alt="Berita 1" />
-            <div class="berita-card-body">
-              <h3>Panen Padi Meningkat 20% di Jawa Tengah</h3>
-              <p>Petani di Jawa Tengah berhasil meningkatkan hasil panen berkat teknologi irigasi modern.</p>
-              <a href="#">Baca selengkapnya →</a>
-            </div>
-          </div>
-          <div class="berita-card">
-            <img src="https://images.unsplash.com/photo-1583119022894-919a68a3d0e3?w=400&h=220&fit=crop" alt="Berita 2" />
-            <div class="berita-card-body">
-              <h3>Harga Cabai Stabil Jelang Lebaran</h3>
-              <p>Pemerintah memastikan pasokan cabai mencukupi kebutuhan masyarakat menjelang hari raya.</p>
-              <a href="#">Baca selengkapnya →</a>
-            </div>
-          </div>
-          <div class="berita-card">
-            <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=400&h=220&fit=crop" alt="Berita 3" />
-            <div class="berita-card-body">
-              <h3>Pupuk Organik Jadi Solusi Pertanian Berkelanjutan</h3>
-              <p>Penggunaan pupuk organik semakin diminati petani karena ramah lingkungan dan hemat biaya.</p>
-              <a href="#">Baca selengkapnya →</a>
-            </div>
-          </div>
-          <div class="berita-card">
-            <img src="https://images.unsplash.com/photo-1586771107445-d3ca888129ff?w=400&h=220&fit=crop" alt="Berita 4" />
-            <div class="berita-card-body">
-              <h3>Teknologi Drone Bantu Petani Semprot Pestisida</h3>
-              <p>Penggunaan drone pertanian mulai meluas di berbagai daerah untuk efisiensi penyemprotan lahan.</p>
-              <a href="#">Baca selengkapnya →</a>
-            </div>
-          </div>
-          <div class="berita-card">
-            <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=400&h=220&fit=crop" alt="Berita 5" />
-            <div class="berita-card-body">
-              <h3>Ekspor Komoditas Pertanian Naik 15% Kuartal Ini</h3>
-              <p>Nilai ekspor produk pertanian Indonesia meningkat signifikan didorong permintaan dari pasar Asia.</p>
-              <a href="#">Baca selengkapnya →</a>
-            </div>
-          </div>
-          <div class="berita-card">
-            <img src="https://images.unsplash.com/photo-1536657464919-892534f60d6e?w=400&h=220&fit=crop" alt="Berita 6" />
-            <div class="berita-card-body">
-              <h3>Program Subsidi Benih Unggul Diperluas ke 20 Provinsi</h3>
-              <p>Kementerian Pertanian memperluas program subsidi benih unggul untuk meningkatkan produktivitas petani.</p>
-              <a href="#">Baca selengkapnya →</a>
-            </div>
-          </div>
+          <div class="berita-card"><img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=400&h=220&fit=crop" alt="Berita 1" /><div class="berita-card-body"><h3>Panen Padi Meningkat 20% di Jawa Tengah</h3><p>Petani di Jawa Tengah berhasil meningkatkan hasil panen berkat teknologi irigasi modern.</p><a href="#">Baca selengkapnya →</a></div></div>
+          <div class="berita-card"><img src="https://images.unsplash.com/photo-1583119022894-919a68a3d0e3?w=400&h=220&fit=crop" alt="Berita 2" /><div class="berita-card-body"><h3>Harga Cabai Stabil Jelang Lebaran</h3><p>Pemerintah memastikan pasokan cabai mencukupi kebutuhan masyarakat menjelang hari raya.</p><a href="#">Baca selengkapnya →</a></div></div>
+          <div class="berita-card"><img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=400&h=220&fit=crop" alt="Berita 3" /><div class="berita-card-body"><h3>Pupuk Organik Jadi Solusi Pertanian Berkelanjutan</h3><p>Penggunaan pupuk organik semakin diminati petani karena ramah lingkungan dan hemat biaya.</p><a href="#">Baca selengkapnya →</a></div></div>
+          <div class="berita-card"><img src="https://images.unsplash.com/photo-1586771107445-d3ca888129ff?w=400&h=220&fit=crop" alt="Berita 4" /><div class="berita-card-body"><h3>Teknologi Drone Bantu Petani Semprot Pestisida</h3><p>Penggunaan drone pertanian mulai meluas di berbagai daerah untuk efisiensi penyemprotan lahan.</p><a href="#">Baca selengkapnya →</a></div></div>
+          <div class="berita-card"><img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=400&h=220&fit=crop" alt="Berita 5" /><div class="berita-card-body"><h3>Ekspor Komoditas Pertanian Naik 15% Kuartal Ini</h3><p>Nilai ekspor produk pertanian Indonesia meningkat signifikan didorong permintaan dari pasar Asia.</p><a href="#">Baca selengkapnya →</a></div></div>
+          <div class="berita-card"><img src="https://images.unsplash.com/photo-1536657464919-892534f60d6e?w=400&h=220&fit=crop" alt="Berita 6" /><div class="berita-card-body"><h3>Program Subsidi Benih Unggul Diperluas ke 20 Provinsi</h3><p>Kementerian Pertanian memperluas program subsidi benih unggul untuk meningkatkan produktivitas petani.</p><a href="#">Baca selengkapnya →</a></div></div>
         </div>
       </div>
       <button class="slider-btn next" onclick="slideBerita(1)">&#8250;</button>
@@ -161,24 +129,42 @@
       <h2>Info Harga Hari Ini</h2>
       <a href="harga-pasar.html" class="lihat-semua">Lihat Semua →</a>
     </div>
-    <div class="harga-table-wrapper">
+    <div class="harga-table-wrapper" style="max-height:420px;overflow-y:auto;border-radius:16px;box-shadow:0 8px 32px rgba(0,0,0,.2);">
       <table>
-        <thead>
-          <tr>
-            <th>Komoditas</th>
-            <th>Harga (Rp/kg)</th>
-            <th>Perubahan</th>
-          </tr>
+        <thead style="position:sticky;top:0;z-index:2;background:rgba(0,0,0,.25);">
+          <tr><th>Komoditas</th><th>Harga (Rp/kg)</th><th>Perubahan</th></tr>
         </thead>
         <tbody>
-          <tr><td>🌾 Beras</td><td>Rp 12.000</td><td class="naik">▲ +200</td></tr>
+          <tr><td>🌾 Beras Medium</td><td>Rp 12.000</td><td class="naik">▲ +200</td></tr>
+          <tr><td>🌾 Beras Premium</td><td>Rp 15.000</td><td class="stabil">— Stabil</td></tr>
           <tr><td>🌶️ Cabai Merah</td><td>Rp 35.000</td><td class="turun">▼ -1.000</td></tr>
+          <tr><td>🌶️ Cabai Rawit</td><td>Rp 42.000</td><td class="naik">▲ +2.000</td></tr>
           <tr><td>🧅 Bawang Merah</td><td>Rp 28.000</td><td class="stabil">— Stabil</td></tr>
+          <tr><td>🧄 Bawang Putih</td><td>Rp 32.000</td><td class="naik">▲ +500</td></tr>
           <tr><td>🌽 Jagung</td><td>Rp 5.500</td><td class="naik">▲ +100</td></tr>
           <tr><td>🫘 Kedelai</td><td>Rp 9.000</td><td class="turun">▼ -500</td></tr>
           <tr><td>🥬 Kangkung</td><td>Rp 3.000</td><td class="stabil">— Stabil</td></tr>
+          <tr><td>🌿 Bayam</td><td>Rp 3.500</td><td class="naik">▲ +200</td></tr>
           <tr><td>🍅 Tomat</td><td>Rp 9.000</td><td class="naik">▲ +500</td></tr>
           <tr><td>🥕 Wortel</td><td>Rp 12.000</td><td class="turun">▼ -300</td></tr>
+          <tr><td>🥔 Kentang</td><td>Rp 14.000</td><td class="stabil">— Stabil</td></tr>
+          <tr><td>🍆 Terong</td><td>Rp 7.000</td><td class="turun">▼ -500</td></tr>
+          <tr><td>🥒 Mentimun</td><td>Rp 5.000</td><td class="stabil">— Stabil</td></tr>
+          <tr><td>🥦 Brokoli</td><td>Rp 18.000</td><td class="naik">▲ +1.000</td></tr>
+          <tr><td>🍌 Pisang</td><td>Rp 8.000</td><td class="stabil">— Stabil</td></tr>
+          <tr><td>🍈 Pepaya</td><td>Rp 6.000</td><td class="turun">▼ -200</td></tr>
+          <tr><td>🥭 Mangga</td><td>Rp 20.000</td><td class="naik">▲ +1.500</td></tr>
+          <tr><td>🍊 Jeruk</td><td>Rp 18.000</td><td class="stabil">— Stabil</td></tr>
+          <tr><td>🍉 Semangka</td><td>Rp 5.000</td><td class="turun">▼ -500</td></tr>
+          <tr><td>🥜 Kacang Tanah</td><td>Rp 22.000</td><td class="naik">▲ +300</td></tr>
+          <tr><td>🥔 Singkong</td><td>Rp 3.000</td><td class="stabil">— Stabil</td></tr>
+          <tr><td>🍠 Ubi Jalar</td><td>Rp 8.000</td><td class="naik">▲ +200</td></tr>
+          <tr><td>☕ Kopi Robusta</td><td>Rp 28.000</td><td class="naik">▲ +500</td></tr>
+          <tr><td>🍫 Kakao</td><td>Rp 35.000</td><td class="stabil">— Stabil</td></tr>
+          <tr><td>🌴 Kelapa</td><td>Rp 5.000</td><td class="turun">▼ -200</td></tr>
+          <tr><td>🫚 Jahe</td><td>Rp 25.000</td><td class="naik">▲ +1.000</td></tr>
+          <tr><td>🟡 Kunyit</td><td>Rp 15.000</td><td class="stabil">— Stabil</td></tr>
+          <tr><td>🌿 Temulawak</td><td>Rp 18.000</td><td class="naik">▲ +500</td></tr>
         </tbody>
       </table>
     </div>
