@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿﻿<!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="hero.css" />
   <link rel="stylesheet" href="jual-produk.css" />  <meta property="og:type" content="website" />
   <meta property="og:title" content="Portal Pertanian Indonesia" />
-  <meta property="og:description" content="Portal pertanian terlengkap untuk petani Indonesia � berita terkini, harga pasar, diagnosa tanaman, dan komunitas petani." />
+  <meta property="og:description" content="Portal pertanian terlengkap untuk petani Indonesia � berita terkini, harga pasar, diagnosa tanaman, dan komunitas petani." />
   <meta property="og:image" content="https://web-petani-indonesia.vercel.app/bg-hero.jpg" />
   <meta property="og:url" content="https://web-petani-indonesia.vercel.app" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -17,18 +17,18 @@
 </head>
 <body>
   <header>
-    <a href="home.html" style="display:flex;align-items:center;text-decoration:none;flex-shrink:0"><img src="logo.png" alt="Portal Pertanian" style="height:72px;width:auto;max-width:220px;object-fit:contain;filter:brightness(10) drop-shadow(0 1px 3px rgba(0,0,0,.4));" /></a>
+    <a href="home.html" style="display:flex;align-items:center;text-decoration:none;flex-shrink:0"><img src="logo.png" alt="Portal Pertanian" style="height:90px;width:auto;max-width:220px;object-fit:contain;filter:brightness(10) drop-shadow(0 1px 3px rgba(0,0,0,.4));" /></a>
     <button class="hamburger" onclick="toggleNav()" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
     <nav id="mainNav">
-      <a href="home.html">?? Beranda</a>
-      <a href="berita.html">?? Berita</a>
-      <a href="forum.html">?? Forum</a>
-      <a href="marketplace.html">?? Marketplace</a>
-      <a href="keuangan.html">?? Keuangan</a>
-      <a href="akun.html" id="navAkun" style="display:none">?? Akun</a>
-      <a href="login.html" id="navLogin">?? Login</a>
+      <a href="home.html">🏠 Beranda</a>
+      <a href="berita.html">📰 Berita</a>
+      <a href="forum.html">👥 Forum</a>
+      <a href="marketplace.html">🛒 Marketplace</a>
+      <a href="keuangan.html">📒 Keuangan</a>
+      <a href="akun.html" id="navAkun" style="display:none">👤 Akun</a>
+      <a href="login.html" id="navLogin">🔐 Login</a>
     </nav>
   </header>
 
@@ -80,10 +80,10 @@
             <div class="fg"><label>Harga (Rp)</label><input type="number" id="jpHarga" placeholder="Contoh: 35000" min="0" oninput="updatePreview()" /></div>
             <div class="fg"><label>Stok Tersedia</label><input type="number" id="jpStok" placeholder="Contoh: 100" min="0" /></div>
           </div>
-          <div class="fg"><label>Deskripsi Produk</label><textarea id="jpDeskripsi" rows="4" placeholder="Ceritakan detail produkmu � kondisi, keunggulan, cara penyimpanan, dll..."></textarea></div>
+          <div class="fg"><label>Deskripsi Produk</label><textarea id="jpDeskripsi" rows="4" placeholder="Ceritakan detail produkmu � kondisi, keunggulan, cara penyimpanan, dll..."></textarea></div>
 
           <!-- Lokasi Penjual -->
-          <div class="jp-section-label">?? Lokasi Penjual</div>
+          <div class="jp-section-label">📍 Lokasi Penjual</div>
           <div class="fg"><label>Nama Penjual / Toko</label><input type="text" id="jpPenjual" placeholder="Contoh: Pak Budi - Kebun Organik" /></div>
           <div class="form-row-2">
             <div class="fg"><label>Kota / Kabupaten</label><input type="text" id="jpKota" placeholder="Contoh: Karawang" /></div>
@@ -117,7 +117,7 @@
             <div id="jpFotoPlaceholder">
               <span>??</span>
               <p>Klik untuk upload foto produk</p>
-              <small>JPG, PNG � Maks 5MB</small>
+              <small>JPG, PNG � Maks 5MB</small>
             </div>
             <img id="jpFotoPreview" src="" alt="" style="display:none" />
           </div>
@@ -162,7 +162,7 @@
     </div>
   </div>
 
-  <footer><p>� 2026 Portal Pertanian Indonesia</p></footer>
+  <footer><p>� 2026 Portal Pertanian Indonesia</p></footer>
   <script src="supabase.js"></script>
   <script src="jual-produk.js"></script>
   <script src="navbar.js"></script>

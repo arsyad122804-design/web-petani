@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿﻿<!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="hero.css" />
   <link rel="stylesheet" href="akun.css" />  <meta property="og:type" content="website" />
   <meta property="og:title" content="Portal Pertanian Indonesia" />
-  <meta property="og:description" content="Portal pertanian terlengkap untuk petani Indonesia � berita terkini, harga pasar, diagnosa tanaman, dan komunitas petani." />
+  <meta property="og:description" content="Portal pertanian terlengkap untuk petani Indonesia � berita terkini, harga pasar, diagnosa tanaman, dan komunitas petani." />
   <meta property="og:image" content="https://web-petani-indonesia.vercel.app/bg-hero.jpg" />
   <meta property="og:url" content="https://web-petani-indonesia.vercel.app" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -21,25 +21,25 @@
 </head>
 <body>
   <header>
-    <a href="home.html" style="display:flex;align-items:center;text-decoration:none;flex-shrink:0"><img src="logo.png" alt="Portal Pertanian" style="height:72px;width:auto;max-width:220px;object-fit:contain;filter:brightness(10) drop-shadow(0 1px 3px rgba(0,0,0,.4));" /></a>
+    <a href="home.html" style="display:flex;align-items:center;text-decoration:none;flex-shrink:0"><img src="logo.png" alt="Portal Pertanian" style="height:90px;width:auto;max-width:220px;object-fit:contain;filter:brightness(10) drop-shadow(0 1px 3px rgba(0,0,0,.4));" /></a>
     <button class="hamburger" onclick="toggleNav()" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
     <nav id="mainNav">
-      <a href="home.html">?? Beranda</a>
-      <a href="berita.html">?? Berita</a>
-      <a href="forum.html">?? Forum</a>
-      <a href="marketplace.html">?? Marketplace</a>
-      <a href="keuangan.html">?? Keuangan</a>
-      <a href="akun.html" id="navAkun" style="display:none">?? Akun</a>
-      <a href="login.html" id="navLogin">?? Login</a>
+      <a href="home.html">🏠 Beranda</a>
+      <a href="berita.html">📰 Berita</a>
+      <a href="forum.html">👥 Forum</a>
+      <a href="marketplace.html">🛒 Marketplace</a>
+      <a href="keuangan.html">📒 Keuangan</a>
+      <a href="akun.html" id="navAkun" style="display:none">👤 Akun</a>
+      <a href="login.html" id="navLogin">🔐 Login</a>
     </nav>
   </header>
 
   <div class="akun-page">
     <div class="akun-hero">
       <div class="hero-dots"></div><div class="hero-circle-sm"></div><div class="hero-line"></div>
-      <h2>?? Profil Saya</h2>
+      <h2>👤 Profil Saya</h2>
       <p>Kelola informasi akun dan data pribadimu.</p>
     </div>
 
@@ -52,16 +52,16 @@
             <!-- Foto Profil -->
             <div class="foto-wrapper">
               <div class="foto-circle" id="fotoCircle">
-                <span id="fotoEmoji">?????</span>
+                <span id="fotoEmoji">👤</span>
                 <img id="fotoImg" src="" alt="Foto Profil" style="display:none" />
               </div>
-              <label class="foto-upload-btn" for="fotoInput">?? Ganti Foto</label>
+              <label class="foto-upload-btn" for="fotoInput">📷 Ganti Foto</label>
               <input type="file" id="fotoInput" accept="image/*" hidden onchange="gantiPhoto(this)" />
             </div>
             <div class="profil-nama" id="sidebarNama">Nama Pengguna</div>
-            <div class="profil-lokasi" id="sidebarLokasi">?? Lokasi belum diisi</div>
-            <div class="profil-badge">?? Petani Aktif</div>
-            <button onclick="isiContoh()" style="margin-top:12px;background:#f0f7f0;color:#2e7d32;border:2px solid #c8e6c9;padding:8px 16px;border-radius:99px;font-size:.78rem;font-weight:700;cursor:pointer;transition:.2s" onmouseover="this.style.background='#c8e6c9'" onmouseout="this.style.background='#f0f7f0'">?? Isi Data Contoh</button>
+            <div class="profil-lokasi" id="sidebarLokasi">📍 Lokasi belum diisi</div>
+            <div class="profil-badge">🌾 Petani Aktif</div>
+            <button onclick="isiContoh()" style="margin-top:12px;background:#f0f7f0;color:#2e7d32;border:2px solid #c8e6c9;padding:8px 16px;border-radius:99px;font-size:.78rem;font-weight:700;cursor:pointer;transition:.2s" onmouseover="this.style.background='#c8e6c9'" onmouseout="this.style.background='#f0f7f0'">✏️ Isi Data Contoh</button>
           </div>
 
           
@@ -73,7 +73,7 @@
           <!-- DATA PRIBADI -->
           <div class="akun-section aktif" id="sec-profil">
             <div class="section-head">
-              <h3>?? Data Pribadi</h3>
+              <h3>📋 Data Pribadi</h3>
               <p>Informasi dasar tentang dirimu.</p>
             </div>
             <div class="akun-form">
@@ -96,14 +96,14 @@
                 <div class="fg"><label>Email</label><input type="email" id="email" placeholder="email@contoh.com" /></div>
               </div>
               <div class="fg"><label>Bio Singkat</label><textarea id="bio" rows="3" placeholder="Ceritakan sedikit tentang dirimu..."></textarea></div>
-              <button class="btn-simpan" onclick="simpanProfil()">?? Simpan Perubahan</button>
+              <button class="btn-simpan" onclick="simpanProfil()">💾 Simpan Perubahan</button>
             </div>
           </div>
 
           <!-- ALAMAT & LOKASI -->
           <div class="akun-section aktif" id="sec-alamat">
             <div class="section-head">
-              <h3>?? Alamat & Lokasi</h3>
+              <h3>📍 Alamat & Lokasi</h3>
               <p>Informasi tempat tinggal dan lokasi lahan pertanianmu.</p>
             </div>
             <div class="akun-form">
@@ -136,7 +136,7 @@
               </div>
 
               <div class="maps-section">
-                <label>?? Tandai Lokasi di Maps</label>
+                <label>📍 Tandai Lokasi di Maps</label>
                 <div class="maps-embed">
                   <iframe id="mapsFrame"
                     src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15865!2d107.6!3d-6.9!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sid!2sid!4v1"
@@ -146,17 +146,17 @@
                   <label>Link Google Maps (opsional)</label>
                   <input type="url" id="linkMaps" placeholder="https://maps.google.com/..." />
                 </div>
-                <a class="btn-buka-maps" href="https://maps.google.com" target="_blank">??? Buka Google Maps untuk Cari Lokasi</a>
+                <a class="btn-buka-maps" href="https://maps.google.com" target="_blank">🗺️ Buka Google Maps untuk Cari Lokasi</a>
               </div>
 
-              <button class="btn-simpan" onclick="simpanAlamat()">?? Simpan Alamat</button>
+              <button class="btn-simpan" onclick="simpanAlamat()">💾 Simpan Alamat</button>
             </div>
           </div>
 
           <!-- INFO PERTANIAN -->
           <div class="akun-section aktif" id="sec-pertanian">
             <div class="section-head">
-              <h3>?? Info Pertanian</h3>
+              <h3>🌾 Info Pertanian</h3>
               <p>Data tentang kegiatan pertanianmu.</p>
             </div>
             <div class="akun-form">
@@ -186,24 +186,24 @@
               </div>
               <div class="fg"><label>Komoditas Utama</label>
                 <div class="checkbox-grid-akun">
-                  <label class="cb-akun"><input type="checkbox" /> ?? Padi</label>
-                  <label class="cb-akun"><input type="checkbox" /> ?? Jagung</label>
-                  <label class="cb-akun"><input type="checkbox" /> ??? Cabai</label>
-                  <label class="cb-akun"><input type="checkbox" /> ?? Tomat</label>
-                  <label class="cb-akun"><input type="checkbox" /> ?? Bawang</label>
-                  <label class="cb-akun"><input type="checkbox" /> ?? Sayuran</label>
-                  <label class="cb-akun"><input type="checkbox" /> ?? Buah</label>
-                  <label class="cb-akun"><input type="checkbox" /> ?? Lainnya</label>
+                  <label class="cb-akun"><input type="checkbox" /> 🌾 Padi</label>
+                  <label class="cb-akun"><input type="checkbox" /> 🌽 Jagung</label>
+                  <label class="cb-akun"><input type="checkbox" /> 🌶️ Cabai</label>
+                  <label class="cb-akun"><input type="checkbox" /> 🍅 Tomat</label>
+                  <label class="cb-akun"><input type="checkbox" /> 🧅 Bawang</label>
+                  <label class="cb-akun"><input type="checkbox" /> 🥬 Sayuran</label>
+                  <label class="cb-akun"><input type="checkbox" /> 🍎 Buah</label>
+                  <label class="cb-akun"><input type="checkbox" /> 🌿 Lainnya</label>
                 </div>
               </div>
-              <button class="btn-simpan" onclick="simpanPertanian()">?? Simpan Info Pertanian</button>
+              <button class="btn-simpan" onclick="simpanPertanian()">💾 Simpan Info Pertanian</button>
             </div>
           </div>
 
           <!-- KEAMANAN -->
           <div class="akun-section aktif" id="sec-keamanan">
             <div class="section-head">
-              <h3>?? Keamanan Akun</h3>
+              <h3>🔒 Keamanan Akun</h3>
               <p>Ubah password dan pengaturan keamanan.</p>
             </div>
             <div class="akun-form">
@@ -211,14 +211,14 @@
               <div class="fg"><label>Password Baru</label><input type="password" id="passBaru" placeholder="Minimal 8 karakter" /></div>
               <div class="fg"><label>Konfirmasi Password Baru</label><input type="password" id="passKonfirm" placeholder="Ulangi password baru" /></div>
               <div class="pass-strength" id="passStrength"></div>
-              <button class="btn-simpan" onclick="gantiPassword()">?? Ubah Password</button>
+              <button class="btn-simpan" onclick="gantiPassword()">🔑 Ubah Password</button>
             </div>
           </div>
 
           <!-- PRODUK SAYA -->
           <div class="akun-section aktif" id="sec-produk">
             <div class="section-head">
-              <h3>?? Produk Saya</h3>
+              <h3>📦 Produk Saya</h3>
               <p>Kelola produk yang kamu jual di Marketplace Pertanian.</p>
             </div>
             <div class="akun-form">
@@ -229,16 +229,16 @@
 
               <!-- Form Tambah Produk -->
               <div class="form-produk-baru" id="formProdukBaru" style="display:none">
-                <div class="fpb-title">?? Tambah Produk Baru</div>
+                <div class="fpb-title">➕ Tambah Produk Baru</div>
                 <div class="form-row-2">
                   <div class="fg"><label>Nama Produk</label><input type="text" id="pNama" placeholder="Contoh: Cabai Merah Segar" /></div>
                   <div class="fg"><label>Kategori</label>
                     <select id="pKategori">
-                      <option value="hasil">?? Hasil Panen</option>
-                      <option value="bibit">?? Bibit & Benih</option>
-                      <option value="pupuk">?? Pupuk</option>
-                      <option value="alat">?? Alat Pertanian</option>
-                      <option value="pestisida">?? Pestisida</option>
+                      <option value="hasil">🌾 Hasil Panen</option>
+                      <option value="bibit">🌱 Bibit & Benih</option>
+                      <option value="pupuk">🌿 Pupuk</option>
+                      <option value="alat">🔧 Alat Pertanian</option>
+                      <option value="pestisida">🧪 Pestisida</option>
                     </select>
                   </div>
                 </div>
@@ -262,7 +262,7 @@
                 </div>
                 <div class="fpb-actions">
                   <button class="btn-batal-produk" onclick="toggleFormProduk()">Batal</button>
-                  <button class="btn-simpan-produk" onclick="simpanProdukBaru()">?? Simpan Produk</button>
+                  <button class="btn-simpan-produk" onclick="simpanProdukBaru()">💾 Simpan Produk</button>
                 </div>
               </div>
 
@@ -276,7 +276,7 @@
     </div>
   </div>
 
-  <footer><p>� 2026 Portal Pertanian Indonesia</p></footer>
+  <footer><p>© 2026 Portal Pertanian Indonesia</p></footer>
   <script src="akun.js"></script>
   <script src="supabase.js"></script>
   <script src="navbar.js"></script>
