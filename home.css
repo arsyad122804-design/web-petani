@@ -1,6 +1,6 @@
 /* ===== HERO BANNER ===== */
 .home-hero {
-  background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 40%, #43a047 75%, #66bb6a 100%);
+  background: url('bg-hero.jpg') center center / cover no-repeat;
   padding: 64px 40px 80px;
   color: white;
   position: relative;
@@ -13,15 +13,14 @@
 .home-hero::before {
   content: '';
   position: absolute; inset: 0;
-  background-image: radial-gradient(rgba(255,255,255,.08) 1px, transparent 1px);
-  background-size: 28px 28px;
+  background: linear-gradient(135deg, rgba(10,46,10,.82) 0%, rgba(27,94,32,.75) 50%, rgba(46,125,50,.55) 100%);
   pointer-events: none;
 }
 .home-hero::after {
-  content: '🌾';
-  position: absolute;
-  font-size: 18rem; opacity: .05;
-  right: -40px; bottom: -40px;
+  content: '';
+  position: absolute; inset: 0;
+  background-image: radial-gradient(rgba(255,255,255,.06) 1px, transparent 1px);
+  background-size: 28px 28px;
   pointer-events: none;
 }
 .hero-text { position: relative; z-index: 1; max-width: 560px; }
