@@ -11,9 +11,10 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="navbar.css" />
   <link rel="stylesheet" href="hero.css" />
-  <link rel="stylesheet" href="sewa.css" />  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="sewa.css" />
+  <meta property="og:type" content="website" />
   <meta property="og:title" content="Portal Pertanian Indonesia" />
-  <meta property="og:description" content="Portal pertanian terlengkap untuk petani Indonesia � berita terkini, harga pasar, diagnosa tanaman, dan komunitas petani." />
+  <meta property="og:description" content="Portal pertanian terlengkap untuk petani Indonesia — berita terkini, harga pasar, diagnosa tanaman, dan komunitas petani." />
   <meta property="og:image" content="https://web-petani-indonesia.vercel.app/bg-hero.jpg" />
   <meta property="og:url" content="https://web-petani-indonesia.vercel.app" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -22,9 +23,7 @@
 <body>
   <header>
     <a href="home.html" style="display:flex;align-items:center;text-decoration:none;flex-shrink:0"><img src="logo.png" alt="Portal Pertanian" style="height:90px;width:auto;max-width:220px;object-fit:contain;filter:brightness(10) drop-shadow(0 1px 3px rgba(0,0,0,.4));" /></a>
-    <button class="hamburger" onclick="toggleNav()" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
+    <button class="hamburger" onclick="toggleNav()" aria-label="Menu"><span></span><span></span><span></span></button>
     <nav id="mainNav">
       <a href="home.html">🏠 Beranda</a>
       <a href="berita.html">📰 Berita</a>
@@ -32,29 +31,29 @@
       <a href="marketplace.html">🛒 Marketplace</a>
       <a href="keuangan.html">📒 Keuangan</a>
       <a href="akun.html" id="navAkun" style="display:none">👤 Akun</a>
+      <a href="login.html" id="navLogin">🔐 Login</a>
     </nav>
   </header>
 
   <div class="sewa-page">
     <div class="sewa-hero">
       <div class="hero-dots"></div><div class="hero-circle-sm"></div><div class="hero-line"></div>
-      <h2>?? Sewa Tanah & Petani</h2>
+      <h2>🤝 Sewa Tanah & Petani</h2>
       <p>Temukan lahan pertanian, cari petani berpengalaman, atau daftarkan dirimu.</p>
     </div>
 
-    <!-- Tab Navbar -->
     <div class="sewa-tabs">
-      <button class="sewa-tab aktif" onclick="switchTab('sewa-tanah', this)">?? Sewa Tanah</button>
-      <button class="sewa-tab" onclick="switchTab('sewa-petani', this)">????? Sewa Petani</button>
-      <button class="sewa-tab" onclick="switchTab('daftar-petani', this)">?? Daftar sebagai Petani</button>
-      <button class="sewa-tab" onclick="switchTab('daftar-lahan', this)">?? Daftar Sewa Lahan</button>
+      <button class="sewa-tab aktif" onclick="switchTab('sewa-tanah', this)">🌾 Sewa Tanah</button>
+      <button class="sewa-tab" onclick="switchTab('sewa-petani', this)">👨‍🌾 Sewa Petani</button>
+      <button class="sewa-tab" onclick="switchTab('daftar-petani', this)">📝 Daftar sebagai Petani</button>
+      <button class="sewa-tab" onclick="switchTab('daftar-lahan', this)">🗺️ Daftar Sewa Lahan</button>
     </div>
 
     <!-- TAB 1: SEWA TANAH -->
     <div class="tab-content aktif" id="sewa-tanah">
       <div class="tab-inner">
         <div class="section-title">
-          <h3>?? Daftar Lahan Tersedia</h3>
+          <h3>🌾 Daftar Lahan Tersedia</h3>
           <p>Temukan lahan pertanian yang bisa disewa di seluruh Indonesia.</p>
         </div>
         <div class="lahan-grid" id="lahanGrid"></div>
@@ -65,7 +64,7 @@
     <div class="tab-content" id="sewa-petani">
       <div class="tab-inner">
         <div class="section-title">
-          <h3>????? Daftar Petani Tersedia</h3>
+          <h3>👨‍🌾 Daftar Petani Tersedia</h3>
           <p>Cari petani berpengalaman yang siap membantu lahan pertanianmu.</p>
         </div>
         <div class="petani-grid" id="petaniGrid"></div>
@@ -76,7 +75,7 @@
     <div class="tab-content" id="daftar-petani">
       <div class="tab-inner">
         <div class="section-title">
-          <h3>?? Daftar sebagai Petani</h3>
+          <h3>📝 Daftar sebagai Petani</h3>
           <p>Isi data dirimu untuk terdaftar sebagai petani yang bisa disewa.</p>
         </div>
         <div class="form-card">
@@ -97,7 +96,7 @@
             <div class="form-group"><label>Kota / Kabupaten</label><input type="text" placeholder="Contoh: Bandung" /></div>
           </div>
 
-          <div class="form-section-label">?? Pendidikan</div>
+          <div class="form-section-label">🎓 Pendidikan</div>
           <div class="form-row">
             <div class="form-group"><label>Pendidikan Terakhir</label>
               <select id="pendidikanSelect" onchange="togglePendidikan()">
@@ -124,7 +123,7 @@
             <input type="number" placeholder="Contoh: 2018" min="1980" max="2026" />
           </div>
 
-          <div class="form-section-label">?? Keahlian Bertani</div>
+          <div class="form-section-label">🌾 Keahlian Bertani</div>
           <div class="form-group"><label>Pengalaman Bertani</label>
             <select>
               <option>Kurang dari 1 tahun</option>
@@ -136,14 +135,14 @@
           </div>
           <div class="form-group"><label>Keahlian Tanaman (pilih semua yang sesuai)</label>
             <div class="checkbox-grid">
-              <label class="cb-item"><input type="checkbox" /> ?? Padi</label>
-              <label class="cb-item"><input type="checkbox" /> ?? Jagung</label>
-              <label class="cb-item"><input type="checkbox" /> ??? Cabai</label>
-              <label class="cb-item"><input type="checkbox" /> ?? Tomat</label>
-              <label class="cb-item"><input type="checkbox" /> ?? Bawang</label>
-              <label class="cb-item"><input type="checkbox" /> ?? Sayuran</label>
-              <label class="cb-item"><input type="checkbox" /> ?? Buah-buahan</label>
-              <label class="cb-item"><input type="checkbox" /> ?? Tanaman Obat</label>
+              <label class="cb-item"><input type="checkbox" /> 🌾 Padi</label>
+              <label class="cb-item"><input type="checkbox" /> 🌽 Jagung</label>
+              <label class="cb-item"><input type="checkbox" /> 🌶️ Cabai</label>
+              <label class="cb-item"><input type="checkbox" /> 🍅 Tomat</label>
+              <label class="cb-item"><input type="checkbox" /> 🧅 Bawang</label>
+              <label class="cb-item"><input type="checkbox" /> 🥬 Sayuran</label>
+              <label class="cb-item"><input type="checkbox" /> 🍎 Buah-buahan</label>
+              <label class="cb-item"><input type="checkbox" /> 🌿 Tanaman Obat</label>
             </div>
           </div>
           <div class="form-group"><label>Upah yang Diharapkan (Rp/hari)</label>
@@ -152,7 +151,7 @@
           <div class="form-group"><label>Deskripsi Singkat</label>
             <textarea rows="3" placeholder="Ceritakan pengalaman dan keahlianmu..."></textarea>
           </div>
-          <button class="btn-submit" onclick="submitForm('petani')">?? Daftar sebagai Petani</button>
+          <button class="btn-submit" onclick="submitForm('petani')">📝 Daftar sebagai Petani</button>
         </div>
       </div>
     </div>
@@ -161,11 +160,11 @@
     <div class="tab-content" id="daftar-lahan">
       <div class="tab-inner">
         <div class="section-title">
-          <h3>?? Daftarkan Lahan untuk Disewa</h3>
+          <h3>🗺️ Daftarkan Lahan untuk Disewa</h3>
           <p>Isi detail lahanmu agar bisa ditemukan oleh calon penyewa.</p>
         </div>
         <div class="form-card">
-          <div class="form-section-label">?? Data Pemilik</div>
+          <div class="form-section-label">👤 Data Pemilik</div>
           <div class="form-row">
             <div class="form-group"><label>Nama Pemilik</label><input type="text" placeholder="Nama lengkap pemilik lahan" /></div>
             <div class="form-group"><label>No. HP / WhatsApp</label><input type="tel" placeholder="08xxxxxxxxxx" /></div>
@@ -181,7 +180,7 @@
             <input type="url" placeholder="https://maps.google.com/..." />
           </div>
 
-          <div class="form-section-label">?? Detail Lahan</div>
+          <div class="form-section-label">🌾 Detail Lahan</div>
           <div class="form-row">
             <div class="form-group"><label>Luas Lahan</label><input type="text" placeholder="Contoh: 0.5 hektar" /></div>
             <div class="form-group"><label>Jenis Lahan</label>
@@ -210,35 +209,34 @@
           </div>
           <div class="form-group"><label>Tanaman yang Cocok</label>
             <div class="checkbox-grid">
-              <label class="cb-item"><input type="checkbox" /> ?? Padi</label>
-              <label class="cb-item"><input type="checkbox" /> ?? Jagung</label>
-              <label class="cb-item"><input type="checkbox" /> ??? Cabai</label>
-              <label class="cb-item"><input type="checkbox" /> ?? Tomat</label>
-              <label class="cb-item"><input type="checkbox" /> ?? Bawang</label>
-              <label class="cb-item"><input type="checkbox" /> ?? Sayuran</label>
-              <label class="cb-item"><input type="checkbox" /> ?? Buah-buahan</label>
-              <label class="cb-item"><input type="checkbox" /> ?? Lainnya</label>
+              <label class="cb-item"><input type="checkbox" /> 🌾 Padi</label>
+              <label class="cb-item"><input type="checkbox" /> 🌽 Jagung</label>
+              <label class="cb-item"><input type="checkbox" /> 🌶️ Cabai</label>
+              <label class="cb-item"><input type="checkbox" /> 🍅 Tomat</label>
+              <label class="cb-item"><input type="checkbox" /> 🧅 Bawang</label>
+              <label class="cb-item"><input type="checkbox" /> 🥬 Sayuran</label>
+              <label class="cb-item"><input type="checkbox" /> 🍎 Buah-buahan</label>
+              <label class="cb-item"><input type="checkbox" /> 🌿 Lainnya</label>
             </div>
           </div>
           <div class="form-group"><label>Fasilitas Tersedia</label>
             <div class="checkbox-grid">
-              <label class="cb-item"><input type="checkbox" /> ?? Gubuk/Pondok</label>
-              <label class="cb-item"><input type="checkbox" /> ?? Traktor</label>
-              <label class="cb-item"><input type="checkbox" /> ?? Pompa Air</label>
-              <label class="cb-item"><input type="checkbox" /> ??? Akses Jalan</label>
+              <label class="cb-item"><input type="checkbox" /> 🏠 Gubuk/Pondok</label>
+              <label class="cb-item"><input type="checkbox" /> 🚜 Traktor</label>
+              <label class="cb-item"><input type="checkbox" /> 💧 Pompa Air</label>
+              <label class="cb-item"><input type="checkbox" /> 🛣️ Akses Jalan</label>
             </div>
           </div>
           <div class="form-group"><label>Deskripsi Lahan</label>
             <textarea rows="3" placeholder="Ceritakan kondisi lahan, keunggulan, dan informasi tambahan..."></textarea>
           </div>
-          <button class="btn-submit" onclick="submitForm('lahan')">?? Daftarkan Lahan</button>
+          <button class="btn-submit" onclick="submitForm('lahan')">🗺️ Daftarkan Lahan</button>
         </div>
       </div>
     </div>
-
   </div>
 
-  <footer><p>� 2026 Portal Pertanian Indonesia</p></footer>
+  <footer><p>© 2026 Portal Pertanian Indonesia</p></footer>
   <script src="supabase.js"></script>
   <script src="sewa.js"></script>
   <script src="navbar.js"></script>
