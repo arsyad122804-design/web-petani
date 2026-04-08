@@ -11,21 +11,19 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="panduan.css" />
   <link rel="stylesheet" href="navbar.css" />
-  <link rel="stylesheet" href="hero.css" />  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="hero.css" />
+  <meta property="og:type" content="website" />
   <meta property="og:title" content="Portal Pertanian Indonesia" />
-  <meta property="og:description" content="Portal pertanian terlengkap untuk petani Indonesia � berita terkini, harga pasar, diagnosa tanaman, dan komunitas petani." />
+  <meta property="og:description" content="Portal pertanian terlengkap untuk petani Indonesia — berita terkini, harga pasar, diagnosa tanaman, dan komunitas petani." />
   <meta property="og:image" content="https://web-petani-indonesia.vercel.app/bg-hero.jpg" />
   <meta property="og:url" content="https://web-petani-indonesia.vercel.app" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:image" content="https://web-petani-indonesia.vercel.app/bg-hero.jpg" />
 </head>
 <body>
-
   <header>
     <a href="home.html" style="display:flex;align-items:center;text-decoration:none;flex-shrink:0"><img src="logo.png" alt="Portal Pertanian" style="height:90px;width:auto;max-width:220px;object-fit:contain;filter:brightness(10) drop-shadow(0 1px 3px rgba(0,0,0,.4));" /></a>
-    <button class="hamburger" onclick="toggleNav()" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
+    <button class="hamburger" onclick="toggleNav()" aria-label="Menu"><span></span><span></span><span></span></button>
     <nav id="mainNav">
       <a href="home.html">🏠 Beranda</a>
       <a href="berita.html">📰 Berita</a>
@@ -33,51 +31,41 @@
       <a href="marketplace.html">🛒 Marketplace</a>
       <a href="keuangan.html">📒 Keuangan</a>
       <a href="akun.html" id="navAkun" style="display:none">👤 Akun</a>
+      <a href="login.html" id="navLogin">🔐 Login</a>
     </nav>
   </header>
 
   <div class="panduan-wrapper">
-
     <div class="panduan-hero">
-    <div class="hero-dots"></div><div class="hero-circle-sm"></div><div class="hero-line"></div>
-      <h2>?? Panduan Bertani</h2>
+      <div class="hero-dots"></div><div class="hero-circle-sm"></div><div class="hero-line"></div>
+      <h2>📖 Panduan Bertani</h2>
       <p>Pilih jenis tanaman untuk melihat panduan pemupukan, cara tanam, dan panen.</p>
     </div>
 
     <div class="panduan-container">
-
-      <!-- Sidebar Kategori -->
       <aside class="kategori-list">
-        <h3>?? Pilih Tanaman</h3>
-
-        <!-- Filter Kategori -->
+        <h3>🌿 Pilih Tanaman</h3>
         <div class="filter-kategori-wrap" id="filterKatWrap">
-          <button class="fk-btn aktif" data-kat="pangan">?? Pangan</button>
-          <button class="fk-btn" data-kat="sayuran">?? Sayuran</button>
-          <button class="fk-btn" data-kat="buah">?? Buah</button>
-          <button class="fk-btn" data-kat="perkebunan">?? Perkebunan</button>
-          <button class="fk-btn" data-kat="obat">?? Obat</button>
-          <button class="fk-btn" data-kat="hias">?? Hias</button>
+          <button class="fk-btn aktif" data-kat="pangan">🌾 Pangan</button>
+          <button class="fk-btn" data-kat="sayuran">🥬 Sayuran</button>
+          <button class="fk-btn" data-kat="buah">🍎 Buah</button>
+          <button class="fk-btn" data-kat="perkebunan">🌴 Perkebunan</button>
+          <button class="fk-btn" data-kat="obat">🌿 Obat</button>
+          <button class="fk-btn" data-kat="hias">🌸 Hias</button>
         </div>
-
         <ul id="kategoriUl"></ul>
       </aside>
 
-      <!-- Konten Panduan -->
       <main class="panduan-konten" id="panduanKonten">
         <div class="panduan-placeholder">
-          <span>??</span>
+          <span>📖</span>
           <p>Pilih tanaman di sebelah kiri untuk melihat panduan lengkapnya.</p>
         </div>
       </main>
-
     </div>
   </div>
 
-  <footer>
-    <p>� 2026 Portal Pertanian Indonesia</p>
-  </footer>
-
+  <footer><p>© 2026 Portal Pertanian Indonesia</p></footer>
   <script src="panduan.js"></script>
   <script src="supabase.js"></script>
   <script src="navbar.js"></script>

@@ -6,9 +6,10 @@
   <title>Login - Portal Pertanian</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="navbar.css" />
-  <link rel="stylesheet" href="login.css" />  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="login.css" />
+  <meta property="og:type" content="website" />
   <meta property="og:title" content="Portal Pertanian Indonesia" />
-  <meta property="og:description" content="Portal pertanian terlengkap untuk petani Indonesia � berita terkini, harga pasar, diagnosa tanaman, dan komunitas petani." />
+  <meta property="og:description" content="Portal pertanian terlengkap untuk petani Indonesia — berita terkini, harga pasar, diagnosa tanaman, dan komunitas petani." />
   <meta property="og:image" content="https://web-petani-indonesia.vercel.app/bg-hero.jpg" />
   <meta property="og:url" content="https://web-petani-indonesia.vercel.app" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -17,9 +18,7 @@
 <body>
   <header>
     <a href="home.html" style="display:flex;align-items:center;text-decoration:none;flex-shrink:0"><img src="logo.png" alt="Portal Pertanian" style="height:90px;width:auto;max-width:220px;object-fit:contain;filter:brightness(10) drop-shadow(0 1px 3px rgba(0,0,0,.4));" /></a>
-    <button class="hamburger" onclick="toggleNav()" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
+    <button class="hamburger" onclick="toggleNav()" aria-label="Menu"><span></span><span></span><span></span></button>
     <nav id="mainNav">
       <a href="home.html">🏠 Beranda</a>
       <a href="berita.html">📰 Berita</a>
@@ -32,46 +31,43 @@
 
   <div class="login-page">
     <div class="login-hero">
-      <div class="lh-deco">??</div>
-      <div class="lh-deco2">??</div>
+      <div class="lh-deco">🌾</div>
+      <div class="lh-deco2">🌱</div>
     </div>
 
     <div class="login-card">
-      <div class="login-logo">??</div>
+      <div class="login-logo">🌾</div>
       <h2 class="login-title">Selamat Datang</h2>
       <p class="login-sub">Masuk untuk mulai beli & jual produk pertanian</p>
 
-      <!-- Tab -->
       <div class="login-tabs">
         <button class="ltab aktif" id="tabMasuk" onclick="switchLoginTab('masuk')">Masuk</button>
         <button class="ltab" id="tabDaftar" onclick="switchLoginTab('daftar')">Daftar</button>
       </div>
 
-      <!-- Form Masuk -->
       <div id="formMasuk">
         <div class="lfg"><label>Email</label><input type="email" id="loginEmail" placeholder="email@contoh.com" /></div>
         <div class="lfg"><label>Password</label>
           <div class="pass-wrap">
             <input type="password" id="loginPass" placeholder="Password kamu" />
-            <button class="toggle-pass" onclick="togglePass('loginPass', this)">???</button>
+            <button class="toggle-pass" onclick="togglePass('loginPass', this)">👁️</button>
           </div>
         </div>
         <div class="login-error" id="loginError"></div>
-        <button class="btn-login" onclick="doLogin()">?? Masuk</button>
+        <button class="btn-login" onclick="doLogin()">🚀 Masuk</button>
       </div>
 
-      <!-- Form Daftar -->
       <div id="formDaftar" style="display:none">
         <div class="lfg"><label>Nama Lengkap</label><input type="text" id="regNama" placeholder="Nama lengkap kamu" /></div>
         <div class="lfg"><label>Email</label><input type="email" id="regEmail" placeholder="email@contoh.com" /></div>
         <div class="lfg"><label>Password</label>
           <div class="pass-wrap">
             <input type="password" id="regPass" placeholder="Minimal 6 karakter" />
-            <button class="toggle-pass" onclick="togglePass('regPass', this)">???</button>
+            <button class="toggle-pass" onclick="togglePass('regPass', this)">👁️</button>
           </div>
         </div>
         <div class="login-error" id="regError"></div>
-        <button class="btn-login" onclick="doRegister()">? Buat Akun</button>
+        <button class="btn-login" onclick="doRegister()">✅ Buat Akun</button>
       </div>
 
       <div class="login-divider"><span>atau masuk dengan</span></div>

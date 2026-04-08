@@ -11,9 +11,10 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="navbar.css" />
   <link rel="stylesheet" href="hero.css" />
-  <link rel="stylesheet" href="forum.css" />  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="forum.css" />
+  <meta property="og:type" content="website" />
   <meta property="og:title" content="Portal Pertanian Indonesia" />
-  <meta property="og:description" content="Portal pertanian terlengkap untuk petani Indonesia � berita terkini, harga pasar, diagnosa tanaman, dan komunitas petani." />
+  <meta property="og:description" content="Portal pertanian terlengkap untuk petani Indonesia — berita terkini, harga pasar, diagnosa tanaman, dan komunitas petani." />
   <meta property="og:image" content="https://web-petani-indonesia.vercel.app/bg-hero.jpg" />
   <meta property="og:url" content="https://web-petani-indonesia.vercel.app" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -22,9 +23,7 @@
 <body>
   <header>
     <a href="home.html" style="display:flex;align-items:center;text-decoration:none;flex-shrink:0"><img src="logo.png" alt="Portal Pertanian" style="height:90px;width:auto;max-width:220px;object-fit:contain;filter:brightness(10) drop-shadow(0 1px 3px rgba(0,0,0,.4));" /></a>
-    <button class="hamburger" onclick="toggleNav()" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
+    <button class="hamburger" onclick="toggleNav()" aria-label="Menu"><span></span><span></span><span></span></button>
     <nav id="mainNav">
       <a href="home.html">🏠 Beranda</a>
       <a href="berita.html">📰 Berita</a>
@@ -38,42 +37,40 @@
 
   <div class="forum-page">
     <div class="forum-hero">
-    <div class="hero-dots"></div><div class="hero-circle-sm"></div><div class="hero-line"></div>
+      <div class="hero-dots"></div><div class="hero-circle-sm"></div><div class="hero-line"></div>
       <h2>👥 Forum Komunitas Petani</h2>
       <p>Tempat berbagi pengalaman, bertanya, dan berdiskusi bersama sesama petani Indonesia.</p>
-      <button class="btn-buat-topik" onclick="toggleModal(true)">?? Buat Topik Baru</button>
+      <button class="btn-buat-topik" onclick="toggleModal(true)">✏️ Buat Topik Baru</button>
     </div>
 
     <div class="forum-layout">
-      <!-- Sidebar -->
       <aside class="forum-sidebar">
         <div class="sidebar-card">
-          <h4>?? Kategori</h4>
+          <h4>📋 Kategori</h4>
           <ul class="kategori-forum" id="kategoriForum">
-            <li class="aktif" onclick="filterForum('semua', this)"><span>??</span> Semua Topik <span class="badge" id="badgeSemua">0</span></li>
-            <li onclick="filterForum('tanaman', this)"><span>??</span> Budidaya Tanaman <span class="badge" id="badgeTanaman">0</span></li>
-            <li onclick="filterForum('hama', this)"><span>??</span> Hama & Penyakit <span class="badge" id="badgeHama">0</span></li>
-            <li onclick="filterForum('pupuk', this)"><span>??</span> Pupuk & Nutrisi <span class="badge" id="badgePupuk">0</span></li>
-            <li onclick="filterForum('pasar', this)"><span>??</span> Harga & Pasar <span class="badge" id="badgePasar">0</span></li>
-            <li onclick="filterForum('alat', this)"><span>??</span> Alat & Mesin <span class="badge" id="badgeAlat">0</span></li>
+            <li class="aktif" onclick="filterForum('semua', this)"><span>🌿</span> Semua Topik <span class="badge" id="badgeSemua">0</span></li>
+            <li onclick="filterForum('tanaman', this)"><span>🌱</span> Budidaya Tanaman <span class="badge" id="badgeTanaman">0</span></li>
+            <li onclick="filterForum('hama', this)"><span>🐛</span> Hama & Penyakit <span class="badge" id="badgeHama">0</span></li>
+            <li onclick="filterForum('pupuk', this)"><span>🌿</span> Pupuk & Nutrisi <span class="badge" id="badgePupuk">0</span></li>
+            <li onclick="filterForum('pasar', this)"><span>💰</span> Harga & Pasar <span class="badge" id="badgePasar">0</span></li>
+            <li onclick="filterForum('alat', this)"><span>🔧</span> Alat & Mesin <span class="badge" id="badgeAlat">0</span></li>
           </ul>
         </div>
         <div class="sidebar-card">
           <h4>🌾 Petani Aktif</h4>
           <div id="petaniAktifBox">
             <div style="text-align:center;padding:16px 8px;color:#bbb">
-              <div style="font-size:2rem;margin-bottom:8px">??</div>
+              <div style="font-size:2rem;margin-bottom:8px">👥</div>
               <p style="font-size:.78rem;line-height:1.5">Login untuk melihat petani aktif</p>
-              <a href="login.html?redirect=forum.html" style="display:inline-block;margin-top:10px;background:linear-gradient(135deg,#2e7d32,#43a047);color:white;font-size:.75rem;font-weight:700;padding:6px 14px;border-radius:99px;text-decoration:none">Login Yuk ?</a>
+              <a href="login.html?redirect=forum.html" style="display:inline-block;margin-top:10px;background:linear-gradient(135deg,#2e7d32,#43a047);color:white;font-size:.75rem;font-weight:700;padding:6px 14px;border-radius:99px;text-decoration:none">Login Yuk 🚀</a>
             </div>
           </div>
         </div>
       </aside>
 
-      <!-- Daftar Topik -->
       <main class="forum-main">
         <div class="forum-toolbar">
-          <input type="text" id="searchForum" placeholder="?? Cari topik..." oninput="renderForum()" />
+          <input type="text" id="searchForum" placeholder="🔍 Cari topik..." oninput="renderForum()" />
           <select id="sortForum" onchange="renderForum()">
             <option value="terbaru">Terbaru</option>
             <option value="populer">Terpopuler</option>
@@ -84,31 +81,30 @@
     </div>
   </div>
 
-  <!-- Modal Buat Topik -->
   <div class="modal-overlay" id="modalOverlay" onclick="toggleModal(false)"></div>
   <div class="modal" id="modalTopik">
     <div class="modal-header">
-      <h3>?? Buat Topik Baru</h3>
-      <button onclick="toggleModal(false)">?</button>
+      <h3>✏️ Buat Topik Baru</h3>
+      <button onclick="toggleModal(false)">✕</button>
     </div>
     <div class="modal-body">
       <label>Judul Topik</label>
       <input type="text" id="inputJudul" placeholder="Tulis judul topikmu..." />
       <label>Kategori</label>
       <select id="inputKategori">
-        <option value="tanaman">?? Budidaya Tanaman</option>
-        <option value="hama">?? Hama & Penyakit</option>
-        <option value="pupuk">?? Pupuk & Nutrisi</option>
-        <option value="pasar">?? Harga & Pasar</option>
-        <option value="alat">?? Alat & Mesin</option>
+        <option value="tanaman">🌱 Budidaya Tanaman</option>
+        <option value="hama">🐛 Hama & Penyakit</option>
+        <option value="pupuk">🌿 Pupuk & Nutrisi</option>
+        <option value="pasar">💰 Harga & Pasar</option>
+        <option value="alat">🔧 Alat & Mesin</option>
       </select>
       <label>Isi Pertanyaan / Diskusi</label>
       <textarea id="inputIsi" rows="5" placeholder="Ceritakan masalah atau topik yang ingin kamu diskusikan..."></textarea>
-      <button class="btn-submit" onclick="submitTopik()">?? Posting Topik</button>
+      <button class="btn-submit" onclick="submitTopik()">📤 Posting Topik</button>
     </div>
   </div>
 
-  <footer><p>� 2026 Portal Pertanian Indonesia</p></footer>
+  <footer><p>© 2026 Portal Pertanian Indonesia</p></footer>
   <script src="forum.js"></script>
   <script src="supabase.js"></script>
   <script src="navbar.js"></script>
